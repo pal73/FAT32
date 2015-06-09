@@ -1,0 +1,19 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: fat32.PcbDoc   10.01.2012  12:00:29
+---------------------------------------------------------------------------
+
+
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII File : NCDrillOutput.TXT
+EIA File   : NCDrillOutput.DRL
+
+Tool         Hole Size          Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.6mm (23.622mil)        64               365.00 mm (14.37 Inch)
+T2        1mm (39.37mil)           10               84.31 mm (3.32 Inch)
+T3        1.3mm (51.181mil)        14               97.42 mm (3.84 Inch)
+---------------------------------------------------------------------------
+Totals                             88               546.73 mm (21.52 Inch)
+
+Total Processing Time : 0:00:06

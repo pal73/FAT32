@@ -1,0 +1,7 @@
+DRC Rules Export File for PCB: E:\Users\Pal\DEVICES\FAT32\HARD\fat32.PcbDoc
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4,00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=7,87
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=9,84
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Keep_Out|Scope=Board|Minimum=11,81
+RuleKind=Clearance|RuleName=Poly|Scope=Board|Minimum=11,81

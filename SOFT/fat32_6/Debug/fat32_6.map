@@ -1,0 +1,647 @@
+
+Map of Debug\fat32_6.sm8 from link file Debug\fat32_6.lkf - Thu Dec 12 20:52:23 2013
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00008080 end 00008083 length     3 segment .const
+start 0000814f end 000092b9 length  4458 segment .text
+start 00004000 end 00004002 length     2 segment .eeprom
+start 00000000 end 000000bd length   189 segment .bsct, initialized
+start 00008090 end 0000814d length   189 segment .bsct, from
+start 000000bd end 000000ea length    45 segment .ubsct
+start 0000ea:0 end 0000eb:5 length    13 segment .bit, initialized
+start 0000814d end 0000814f length     2 segment .bit, from
+start 000000ec end 000000ec length     0 segment .share
+start 00000100 end 00000100 length     0 segment .data
+start 00000100 end 000002e0 length   480 segment .bss
+start 00000000 end 0000049d length  1181 segment .info.
+start 00000000 end 00002f47 length 12103 segment .debug
+start 00008000 end 00008080 length   128 segment .const
+start 00008083 end 00008090 length    13 segment .init
+
+
+                               -------
+                               Modules
+                               -------
+
+C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8:
+start 0000814f end 0000819a length    75 section .text
+start 00000100 end 00000100 length     0 section .bss
+start 000000bd end 000000bd length     0 section .ubsct
+start 00000000 end 0000002f length    47 section .info.
+
+Debug\main.o:
+start 0000819a end 00009168 length  4046 section .text
+start 00000100 end 000002e0 length   480 section .bss
+start 00000000 end 000000bd length   189 section .bsct
+start 000000bd end 000000e0 length    35 section .ubsct
+start 00000000 end 00002d98 length 11672 section .debug
+start 0000002f end 000000a9 length   122 section .info.
+start 00008080 end 00008083 length     3 section .const
+start 00004000 end 00004002 length     2 section .eeprom
+start 0000ea:0 end 0000eb:5 length    13 section .bit
+
+Debug\cmd.o:
+start 00002d98 end 00002ddc length    68 section .debug
+start 000000a9 end 00000122 length   121 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o:
+start 00009168 end 000091ce length   102 section .text
+start 00000122 end 00000152 length    48 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)itolx.o:
+start 000091ce end 000091dc length    14 section .text
+start 00000152 end 00000181 length    47 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ladc.o:
+start 000091dc end 000091ed length    17 section .text
+start 00000181 end 000001af length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lcmp.o:
+start 000091ed end 0000920d length    32 section .text
+start 000001af end 000001dd length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lgadc.o:
+start 0000920d end 0000921d length    16 section .text
+start 000001dd end 0000020c length    47 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lglsh.o:
+start 0000921d end 0000922b length    14 section .text
+start 0000020c end 0000023b length    47 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lgursh.o:
+start 0000922b end 00009239 length    14 section .text
+start 0000023b end 0000026b length    48 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lreg.o:
+start 000000e0 end 000000e4 length     4 section .ubsct
+start 0000026b end 00000299 length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ltor.o:
+start 00009239 end 0000924b length    18 section .text
+start 00000299 end 000002c7 length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)rtol.o:
+start 0000924b end 0000925d length    18 section .text
+start 000002c7 end 000002f5 length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)utolx.o:
+start 0000925d end 00009264 length     7 section .text
+start 000002f5 end 00000324 length    47 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)umul.o:
+start 00009264 end 000092a0 length    60 section .text
+start 00000324 end 00000352 length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)vmul.o:
+start 000092a0 end 000092b8 length    24 section .text
+start 00000352 end 00000380 length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o:
+start 000000e4 end 000000e7 length     3 section .ubsct
+start 00000380 end 000003ae length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o:
+start 000000e7 end 000000ea length     3 section .ubsct
+start 000003ae end 000003dc length    46 section .info.
+
+Debug\stm8_interrupt_vector.o:
+start 000092b8 end 000092b9 length     1 section .text
+start 00002ddc end 00002f47 length   363 section .debug
+start 000003dc end 00000467 length   139 section .info.
+start 00008000 end 00008080 length   128 section .const
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+Debug\main.o:
+_DF_buffer_read            15   (11)
+_DF_buffer_to_page_er       9   (5)
+_DF_buffer_write           15   (11)
+_DF_memo_to_256             6   (2)
+_DF_mf_dev_read            10   (6)
+_DF_page_to_buffer          9   (5)
+_DF_status_read             7   (3)
+_ST_RDID_read              10   (6)
+_ST_READ                   19   (15)
+_ST_WREN                    6   (2)
+_ST_WRITE                  19   (15)
+_ST_status_read             7   (3)
+_control_check             12   (6)
+_delay_ms                  19   (14)
+_gpio_init                  2   (2)
+_index_offset               6   (6)
+_main                  >   36   (2)
+_putchar                    3   (3)
+_rele_drv                   2   (2)
+_spi                        4   (4)
+_spi_init                   2   (2)
+_t2_init                    2   (2)
+_t4_init                    2   (2)
+_uart_in                   34   (4)
+_uart_in_an                30   (6)
+_uart_init                  2   (2)
+_uart_out                  24   (21)
+_uart_out_adr_block        15   (12)
+f_TIM4_UPD_Interrupt   >    5   (5)
+f_UARTRxInterrupt      >    5   (5)
+f_UARTTxInterrupt      >    5   (5)
+
+Debug\stm8_interrupt_vector.o:
+f_NonHandledInterrupt  >    5   (5)
+
+Stack size: 41
+
+
+                              ---------
+                              Call tree
+                              ---------
+   1 > __stext: (0)
+
+   2 > _main: (2)
+   3      + _DF_buffer_read: (11)
+   4      |    + _spi: (4)
+          | 
+   5      + _DF_mf_dev_read: (6)
+   6      |    + _spi --> 4
+          | 
+   7      + _DF_page_to_buffer: (5)
+   8      |    + _spi --> 4
+          | 
+   9      + _ST_RDID_read: (6)
+  10      |    + _spi --> 4
+          | 
+  11      + _ST_READ: (15)
+  12      |    + _spi --> 4
+          | 
+  13      + _delay_ms: (14)
+  14      + _gpio_init: (2)
+  15      + _rele_drv: (2)
+  16      + _spi_init: (2)
+  17      + _t2_init: (2)
+  18      + _t4_init: (2)
+  19      + _uart_in: (4)
+  20      |    + _control_check: (6)
+  21      |    |    + _index_offset: (6)
+          |    | 
+  22      |    + _index_offset --> 21
+  23      |    + _uart_in_an: (6)
+  24      |    |    + _DF_buffer_read --> 3
+  25      |    |    + _DF_buffer_to_page_er: (5)
+  26      |    |    |    + _spi --> 4
+          |    |    | 
+  27      |    |    + _DF_buffer_write: (11)
+  28      |    |    |    + _spi --> 4
+          |    |    | 
+  29      |    |    + _DF_memo_to_256: (2)
+  30      |    |    |    + _spi --> 4
+          |    |    | 
+  31      |    |    + _DF_mf_dev_read --> 5
+  32      |    |    + _DF_page_to_buffer --> 7
+  33      |    |    + _DF_status_read: (3)
+  34      |    |    |    + _spi --> 4
+          |    |    | 
+  35      |    |    + _ST_RDID_read --> 9
+  36      |    |    + _ST_READ --> 11
+  37      |    |    + _ST_WREN: (2)
+  38      |    |    |    + _spi --> 4
+          |    |    | 
+  39      |    |    + _ST_WRITE: (15)
+  40      |    |    |    + _spi --> 4
+          |    |    | 
+  41      |    |    + _ST_status_read: (3)
+  42      |    |    |    + _spi --> 4
+          |    |    | 
+  43      |    |    + _delay_ms --> 13
+  44      |    |    + _uart_out: (21)
+  45      |    |    |    + _putchar: (3)
+          |    |    | 
+  46      |    |    + _uart_out_adr_block: (12)
+  47      |    |    |    + _putchar --> 45
+          |    |    | 
+          |    | 
+          | 
+  48      + _uart_init: (2)
+       
+  49 > f_NonHandledInterrupt: (5)
+
+  50 > f_TIM4_UPD_Interrupt: (5)
+
+  51 > f_UARTRxInterrupt: (5)
+
+  52 > f_UARTTxInterrupt: (5)
+
+  53   _DF_buffer_read --> 3
+
+  54   _DF_buffer_to_page_er --> 25
+
+  55   _DF_buffer_write --> 27
+
+  56   _DF_memo_to_256 --> 29
+
+  57   _DF_mf_dev_read --> 5
+
+  58   _DF_page_to_buffer --> 7
+
+  59   _DF_status_read --> 33
+
+  60   _ST_RDID_read --> 9
+
+  61   _ST_READ --> 11
+
+  62   _ST_WREN --> 37
+
+  63   _ST_WRITE --> 39
+
+  64   _ST_status_read --> 41
+
+  65   _control_check --> 20
+
+  66   _delay_ms --> 13
+
+  67   _gpio_init --> 14
+
+  68   _index_offset --> 21
+
+  69   _putchar --> 45
+
+  70   _rele_drv --> 15
+
+  71   _spi --> 4
+
+  72   _spi_init --> 16
+
+  73   _t2_init --> 17
+
+  74   _t4_init --> 18
+
+  75   _uart_in --> 19
+
+  76   _uart_in_an --> 23
+
+  77   _uart_init --> 48
+
+  78   _uart_out --> 44
+
+  79   _uart_out_adr_block --> 46
+
+
+
+                               -------
+                               Symbols
+                               -------
+
+_ADC_AWCRH                0000540e   defined in Debug\main.o
+_ADC_AWCRL                0000540f   defined in Debug\main.o
+_ADC_AWSRH                0000540c   defined in Debug\main.o
+_ADC_AWSRL                0000540d   defined in Debug\main.o
+_ADC_CR1                  00005401   defined in Debug\main.o
+_ADC_CR2                  00005402   defined in Debug\main.o
+_ADC_CR3                  00005403   defined in Debug\main.o
+_ADC_CSR                  00005400   defined in Debug\main.o
+_ADC_DBR                  000053e0   defined in Debug\main.o
+_ADC_DRH                  00005404   defined in Debug\main.o
+_ADC_DRL                  00005405   defined in Debug\main.o
+_ADC_HTRH                 00005408   defined in Debug\main.o
+_ADC_HTRL                 00005409   defined in Debug\main.o
+_ADC_LTRH                 0000540a   defined in Debug\main.o
+_ADC_LTRL                 0000540b   defined in Debug\main.o
+_ADC_TDRH                 00005406   defined in Debug\main.o
+_ADC_TDRL                 00005407   defined in Debug\main.o
+_AWU_APR                  000050f1   defined in Debug\main.o
+_AWU_CSR1                 000050f0   defined in Debug\main.o
+_AWU_TBR                  000050f2   defined in Debug\main.o
+_BEEP_CSR                 000050f3   defined in Debug\main.o
+_CFG_GCR                  00007f60   defined in Debug\main.o
+_CLK_CANCCR               000050cb   defined in Debug\main.o
+_CLK_CCOR                 000050c9   defined in Debug\main.o
+_CLK_CKDIVR               000050c6   defined in Debug\main.o
+_CLK_CMSR                 000050c3   defined in Debug\main.o
+_CLK_CSSR                 000050c8   defined in Debug\main.o
+_CLK_ECKCR                000050c1   defined in Debug\main.o
+_CLK_HSITRIMR             000050cc   defined in Debug\main.o
+_CLK_ICKCR                000050c0   defined in Debug\main.o
+_CLK_PCKENR1              000050c7   defined in Debug\main.o
+_CLK_PCKENR2              000050ca   defined in Debug\main.o
+_CLK_SWCR                 000050c5   defined in Debug\main.o
+_CLK_SWIMCCR              000050cd   defined in Debug\main.o
+_CLK_SWR                  000050c4   defined in Debug\main.o
+_DF_buffer_read           00008c37   defined in Debug\main.o section .text
+_DF_buffer_to_page_er     00008c14   defined in Debug\main.o section .text
+_DF_buffer_write          00008c7d   defined in Debug\main.o section .text
+_DF_memo_to_256           00008bba   defined in Debug\main.o section .text
+_DF_mf_dev_read           00008b83   defined in Debug\main.o section .text
+_DF_page_to_buffer        00008bf1   defined in Debug\main.o section .text
+_DF_status_read           00008bd7   defined in Debug\main.o section .text
+_DM_BK1RE                 00007f90   defined in Debug\main.o
+_DM_BK1RH                 00007f91   defined in Debug\main.o
+_DM_BK1RL                 00007f92   defined in Debug\main.o
+_DM_BK2RE                 00007f93   defined in Debug\main.o
+_DM_BK2RH                 00007f94   defined in Debug\main.o
+_DM_BK2RL                 00007f95   defined in Debug\main.o
+_DM_CR1                   00007f96   defined in Debug\main.o
+_DM_CR2                   00007f97   defined in Debug\main.o
+_DM_CSR1                  00007f98   defined in Debug\main.o
+_DM_CSR2                  00007f99   defined in Debug\main.o
+_DM_ENFCTR                00007f9a   defined in Debug\main.o
+_EE_PAGE_LEN              00004000   defined in Debug\main.o section .eeprom
+_EXTI_CR1                 000050a0   defined in Debug\main.o
+_EXTI_CR2                 000050a1   defined in Debug\main.o
+_FLASH_CR1                0000505a   defined in Debug\main.o
+_FLASH_CR2                0000505b   defined in Debug\main.o
+                                     used in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o
+_FLASH_DUKR               00005064   defined in Debug\main.o
+_FLASH_FPR                0000505d   defined in Debug\main.o
+_FLASH_IAPSR              0000505f   defined in Debug\main.o
+                                     used in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o
+_FLASH_NCR2               0000505c   defined in Debug\main.o
+                                     used in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o
+_FLASH_NFPR               0000505e   defined in Debug\main.o
+_FLASH_PUKR               00005062   defined in Debug\main.o
+_I2C_CCRH                 0000521c   defined in Debug\main.o
+_I2C_CCRL                 0000521b   defined in Debug\main.o
+_I2C_CR1                  00005210   defined in Debug\main.o
+_I2C_CR2                  00005211   defined in Debug\main.o
+_I2C_DR                   00005216   defined in Debug\main.o
+_I2C_FREQR                00005212   defined in Debug\main.o
+_I2C_ITR                  0000521a   defined in Debug\main.o
+_I2C_OARH                 00005214   defined in Debug\main.o
+_I2C_OARL                 00005213   defined in Debug\main.o
+_I2C_PECR                 0000521e   defined in Debug\main.o
+_I2C_SR1                  00005217   defined in Debug\main.o
+_I2C_SR2                  00005218   defined in Debug\main.o
+_I2C_SR3                  00005219   defined in Debug\main.o
+_I2C_TRISER               0000521d   defined in Debug\main.o
+_ITC_SPR1                 00007f70   defined in Debug\main.o
+_ITC_SPR2                 00007f71   defined in Debug\main.o
+_ITC_SPR3                 00007f72   defined in Debug\main.o
+_ITC_SPR4                 00007f73   defined in Debug\main.o
+_ITC_SPR5                 00007f74   defined in Debug\main.o
+_ITC_SPR6                 00007f75   defined in Debug\main.o
+_ITC_SPR7                 00007f76   defined in Debug\main.o
+_ITC_SPR8                 00007f77   defined in Debug\main.o
+_IWDG_KR                  000050e0   defined in Debug\main.o
+_IWDG_PR                  000050e1   defined in Debug\main.o
+_IWDG_RLR                 000050e2   defined in Debug\main.o
+_PA_CR1                   00005003   defined in Debug\main.o
+_PA_CR2                   00005004   defined in Debug\main.o
+_PA_DDR                   00005002   defined in Debug\main.o
+_PA_IDR                   00005001   defined in Debug\main.o
+_PA_ODR                   00005000   defined in Debug\main.o
+_PB_CR1                   00005008   defined in Debug\main.o
+_PB_CR2                   00005009   defined in Debug\main.o
+_PB_DDR                   00005007   defined in Debug\main.o
+_PB_IDR                   00005006   defined in Debug\main.o
+_PB_ODR                   00005005   defined in Debug\main.o
+_PC_CR1                   0000500d   defined in Debug\main.o
+_PC_CR2                   0000500e   defined in Debug\main.o
+_PC_DDR                   0000500c   defined in Debug\main.o
+_PC_IDR                   0000500b   defined in Debug\main.o
+_PC_ODR                   0000500a   defined in Debug\main.o
+_PD_CR1                   00005012   defined in Debug\main.o
+_PD_CR2                   00005013   defined in Debug\main.o
+_PD_DDR                   00005011   defined in Debug\main.o
+_PD_IDR                   00005010   defined in Debug\main.o
+_PD_ODR                   0000500f   defined in Debug\main.o
+_PE_CR1                   00005017   defined in Debug\main.o
+_PE_CR2                   00005018   defined in Debug\main.o
+_PE_DDR                   00005016   defined in Debug\main.o
+_PE_IDR                   00005015   defined in Debug\main.o
+_PE_ODR                   00005014   defined in Debug\main.o
+_PF_CR1                   0000501c   defined in Debug\main.o
+_PF_CR2                   0000501d   defined in Debug\main.o
+_PF_DDR                   0000501b   defined in Debug\main.o
+_PF_IDR                   0000501a   defined in Debug\main.o
+_PF_ODR                   00005019   defined in Debug\main.o
+_RST_SR                   000050b3   defined in Debug\main.o
+_SPI_CR1                  00005200   defined in Debug\main.o
+_SPI_CR2                  00005201   defined in Debug\main.o
+_SPI_CRCPR                00005205   defined in Debug\main.o
+_SPI_DR                   00005204   defined in Debug\main.o
+_SPI_ICR                  00005202   defined in Debug\main.o
+_SPI_RXCRCR               00005206   defined in Debug\main.o
+_SPI_SR                   00005203   defined in Debug\main.o
+_SPI_TXCRCR               00005207   defined in Debug\main.o
+_ST_RDID_read             00008a98   defined in Debug\main.o section .text
+_ST_READ                  00008b35   defined in Debug\main.o section .text
+_ST_WREN                  00008adc   defined in Debug\main.o section .text
+_ST_WRITE                 00008ae9   defined in Debug\main.o section .text
+_ST_status_read           00008ac4   defined in Debug\main.o section .text
+_SWIM_CSR                 00007f80   defined in Debug\main.o
+_TIM1_ARRH                00005262   defined in Debug\main.o
+_TIM1_ARRL                00005263   defined in Debug\main.o
+_TIM1_BKR                 0000526d   defined in Debug\main.o
+_TIM1_CCER1               0000525c   defined in Debug\main.o
+_TIM1_CCER2               0000525d   defined in Debug\main.o
+_TIM1_CCMR1               00005258   defined in Debug\main.o
+_TIM1_CCMR2               00005259   defined in Debug\main.o
+_TIM1_CCMR3               0000525a   defined in Debug\main.o
+_TIM1_CCMR4               0000525b   defined in Debug\main.o
+_TIM1_CCR1H               00005265   defined in Debug\main.o
+_TIM1_CCR1L               00005266   defined in Debug\main.o
+_TIM1_CCR2H               00005267   defined in Debug\main.o
+_TIM1_CCR2L               00005268   defined in Debug\main.o
+_TIM1_CCR3H               00005269   defined in Debug\main.o
+_TIM1_CCR3L               0000526a   defined in Debug\main.o
+_TIM1_CCR4H               0000526b   defined in Debug\main.o
+_TIM1_CCR4L               0000526c   defined in Debug\main.o
+_TIM1_CNTRH               0000525e   defined in Debug\main.o
+_TIM1_CNTRL               0000525f   defined in Debug\main.o
+_TIM1_CR1                 00005250   defined in Debug\main.o
+_TIM1_CR2                 00005251   defined in Debug\main.o
+_TIM1_DTR                 0000526e   defined in Debug\main.o
+_TIM1_EGR                 00005257   defined in Debug\main.o
+_TIM1_ETR                 00005253   defined in Debug\main.o
+_TIM1_IER                 00005254   defined in Debug\main.o
+_TIM1_OISR                0000526f   defined in Debug\main.o
+_TIM1_PSCRH               00005260   defined in Debug\main.o
+_TIM1_PSCRL               00005261   defined in Debug\main.o
+_TIM1_RCR                 00005264   defined in Debug\main.o
+_TIM1_SMCR                00005252   defined in Debug\main.o
+_TIM1_SR1                 00005255   defined in Debug\main.o
+_TIM1_SR2                 00005256   defined in Debug\main.o
+_TIM2_ARRH                0000530f   defined in Debug\main.o
+_TIM2_ARRL                00005310   defined in Debug\main.o
+_TIM2_CCER1               0000530a   defined in Debug\main.o
+_TIM2_CCER2               0000530b   defined in Debug\main.o
+_TIM2_CCMR1               00005307   defined in Debug\main.o
+_TIM2_CCMR2               00005308   defined in Debug\main.o
+_TIM2_CCMR3               00005309   defined in Debug\main.o
+_TIM2_CCR1H               00005311   defined in Debug\main.o
+_TIM2_CCR1L               00005312   defined in Debug\main.o
+_TIM2_CCR2H               00005313   defined in Debug\main.o
+_TIM2_CCR2L               00005314   defined in Debug\main.o
+_TIM2_CCR3H               00005315   defined in Debug\main.o
+_TIM2_CCR3L               00005316   defined in Debug\main.o
+_TIM2_CNTRH               0000530c   defined in Debug\main.o
+_TIM2_CNTRL               0000530d   defined in Debug\main.o
+_TIM2_CR1                 00005300   defined in Debug\main.o
+_TIM2_EGR                 00005306   defined in Debug\main.o
+_TIM2_IER                 00005303   defined in Debug\main.o
+_TIM2_PSCR                0000530e   defined in Debug\main.o
+_TIM2_SR1                 00005304   defined in Debug\main.o
+_TIM2_SR2                 00005305   defined in Debug\main.o
+_TIM4_ARR                 00005348   defined in Debug\main.o
+_TIM4_CNTR                00005346   defined in Debug\main.o
+_TIM4_CR1                 00005340   defined in Debug\main.o
+_TIM4_EGR                 00005345   defined in Debug\main.o
+_TIM4_IER                 00005343   defined in Debug\main.o
+_TIM4_PSCR                00005347   defined in Debug\main.o
+_TIM4_SR                  00005344   defined in Debug\main.o
+_UART1_BRR1               00005232   defined in Debug\main.o
+_UART1_BRR2               00005233   defined in Debug\main.o
+_UART1_CR1                00005234   defined in Debug\main.o
+_UART1_CR2                00005235   defined in Debug\main.o
+_UART1_CR3                00005236   defined in Debug\main.o
+_UART1_CR4                00005237   defined in Debug\main.o
+_UART1_CR5                00005238   defined in Debug\main.o
+_UART1_DR                 00005231   defined in Debug\main.o
+_UART1_GTR                00005239   defined in Debug\main.o
+_UART1_PSCR               0000523a   defined in Debug\main.o
+_UART1_SR                 00005230   defined in Debug\main.o
+_UIB                      00000100   defined in Debug\main.o section .bss
+_WWDG_CR                  000050d1   defined in Debug\main.o
+_WWDG_WR                  000050d2   defined in Debug\main.o
+__endmem                  000001ff   defined in command file
+                                     *** not used ***
+__endzp                   000000ea   defined in command file section .ubsct
+                                     used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__idesc__                 00008083   defined in linker section .init
+                                     used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__memory                  000002e0   defined in command file section .bss
+                                     used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__stack                   000003ff   defined in command file
+                                     used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__startmem                000002e0   defined in command file section .bss
+                                     *** not used ***
+__stext                   0000814f   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+                                     used in Debug\stm8_interrupt_vector.o
+__vectab                  00008000   defined in Debug\stm8_interrupt_vector.o section .const
+_b100Hz                   0000eb:0   defined in Debug\main.o section .bit, initialized
+_b10Hz                    0000ea:7   defined in Debug\main.o section .bit, initialized
+_b1Hz                     0000ea:5   defined in Debug\main.o section .bit, initialized
+_b5Hz                     0000ea:6   defined in Debug\main.o section .bit, initialized
+_bBUFF_LOAD               0000eb:3   defined in Debug\main.o section .bit, initialized
+_bBUFF_READ_H             0000eb:2   defined in Debug\main.o section .bit, initialized
+_bBUFF_READ_L             0000eb:1   defined in Debug\main.o section .bit, initialized
+_bOUT_FREE                0000ea:3   defined in Debug\main.o section .bit, initialized
+_bRELEASE                 0000ea:0   defined in Debug\main.o section .bit, initialized
+_bRXIN                    0000ea:2   defined in Debug\main.o section .bit, initialized
+_bSTART                   0000eb:4   defined in Debug\main.o section .bit, initialized
+_buff                     00000150   defined in Debug\main.o section .bss
+_but_block_cnt            000000bd   defined in Debug\main.o section .ubsct
+_but_drv_cnt              000000b8   defined in Debug\main.o section .bsct, initialized
+_but_on_drv_cnt           000000b9   defined in Debug\main.o section .bsct, initialized
+_control_check            00008d9d   defined in Debug\main.o section .text
+_current_byte_in_buffer   000000c8   defined in Debug\main.o section .ubsct
+_current_page             000000cc   defined in Debug\main.o section .ubsct
+_delay_ms                 000081f6   defined in Debug\main.o section .text
+_dumm                     0000027c   defined in Debug\main.o section .bss
+_exit                     00008198   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+_file_lengt               000000c4   defined in Debug\main.o section .ubsct
+_file_lengt_in_pages      000000ce   defined in Debug\main.o section .ubsct
+_gpio_init                00008cbc   defined in Debug\main.o section .text
+_index_offset             00008d75   defined in Debug\main.o section .text
+_last_page                000000ca   defined in Debug\main.o section .ubsct
+_main                     00008f31   defined in Debug\main.o section .text
+                                     used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+_mdr0                     000000d3   defined in Debug\main.o section .ubsct
+_mdr1                     000000d2   defined in Debug\main.o section .ubsct
+_mdr2                     000000d1   defined in Debug\main.o section .ubsct
+_mdr3                     000000d0   defined in Debug\main.o section .ubsct
+_memory_manufacturer      000000bc   defined in Debug\main.o section .bsct, initialized
+_play                     0000ea:4   defined in Debug\main.o section .bit, initialized
+_putchar                  000089d7   defined in Debug\main.o section .text
+_pwm_fade_in              000000ba   defined in Debug\main.o section .bsct, initialized
+_rele_cnt                 000000c0   defined in Debug\main.o section .ubsct
+_rele_cnt_const           00008080   defined in Debug\main.o section .const
+_rele_cnt_index           000000bb   defined in Debug\main.o section .bsct, initialized
+_rele_drv                 000081e4   defined in Debug\main.o section .text
+_rx_buffer                00000054   defined in Debug\main.o section .bsct, initialized
+_rx_buffer_overflow       0000ea:1   defined in Debug\main.o section .bit, initialized
+_rx_counter               000000d9   defined in Debug\main.o section .ubsct
+_rx_data                  000000c2   defined in Debug\main.o section .ubsct
+_rx_offset                000000bf   defined in Debug\main.o section .ubsct
+_rx_rd_index              000000d5   defined in Debug\main.o section .ubsct
+_rx_status                000000c3   defined in Debug\main.o section .ubsct
+_rx_wr_index              000000d7   defined in Debug\main.o section .ubsct
+_sample                   000000d4   defined in Debug\main.o section .ubsct
+_sample_cnt               000000de   defined in Debug\main.o section .ubsct
+_spi                      00008a7a   defined in Debug\main.o section .text
+_spi_init                 00008a0d   defined in Debug\main.o section .text
+_t0_cnt0                  00000000   defined in Debug\main.o section .bsct, initialized
+_t0_cnt1                  00000001   defined in Debug\main.o section .bsct, initialized
+_t0_cnt2                  00000002   defined in Debug\main.o section .bsct, initialized
+_t0_cnt3                  00000003   defined in Debug\main.o section .bsct, initialized
+_t2_init                  0000819a   defined in Debug\main.o section .text
+_t4_init                  000081d3   defined in Debug\main.o section .text
+_tx_buffer                00000004   defined in Debug\main.o section .bsct, initialized
+_tx_counter               000000dd   defined in Debug\main.o section .ubsct
+_tx_rd_index              000000db   defined in Debug\main.o section .ubsct
+_tx_wr_index              000000dc   defined in Debug\main.o section .ubsct
+_uart_in                  00008ce5   defined in Debug\main.o section .text
+_uart_in_an               000083d2   defined in Debug\main.o section .text
+_uart_init                00008238   defined in Debug\main.o section .text
+_uart_out                 00008268   defined in Debug\main.o section .text
+_uart_out_adr_block       00008312   defined in Debug\main.o section .text
+c_eewrc                   0000917e   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o section .text
+                                     *** not used ***
+c_eewrd                   000091b1   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o section .text
+                                     *** not used ***
+c_eewrw                   00009168   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o section .text
+                                     used in Debug\main.o
+c_itolx                   000091ce   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)itolx.o section .text
+                                     used in Debug\main.o
+c_ladc                    000091dc   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ladc.o section .text
+                                     used in Debug\main.o
+c_lcmp                    000091ed   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lcmp.o section .text
+                                     used in Debug\main.o
+c_lgadc                   0000920d   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lgadc.o section .text
+                                     used in Debug\main.o
+c_lglsh                   0000921d   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lglsh.o section .text
+                                     used in Debug\main.o
+c_lgursh                  0000922b   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lgursh.o section .text
+                                     used in Debug\main.o
+c_lreg                    000000e0   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lreg.o section .ubsct
+                                     used in Debug\main.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)eeprom.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)itolx.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ladc.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)lcmp.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ltor.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)rtol.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)utolx.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)umul.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)vmul.o
+c_ltor                    00009239   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)ltor.o section .text
+                                     used in Debug\main.o
+c_rtol                    0000924b   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)rtol.o section .text
+                                     used in Debug\main.o
+c_uitolx                  0000925d   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)utolx.o section .text
+                                     used in Debug\main.o
+c_umul                    00009264   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)umul.o section .text
+                                     used in Debug\main.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)vmul.o
+c_vmul                    000092a0   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)vmul.o section .text
+                                     used in Debug\main.o
+c_x                       000000e4   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o section .ubsct
+                                     used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+                                             Debug\main.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)umul.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)vmul.o
+c_y                       000000e7   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o section .ubsct
+                                     used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)umul.o
+                                             (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)vmul.o
+f_NonHandledInterrupt     000092b8   defined in Debug\stm8_interrupt_vector.o section .text
+f_TIM4_UPD_Interrupt      00008e03   defined in Debug\main.o section .text
+                                     used in Debug\stm8_interrupt_vector.o
+f_UARTRxInterrupt         00008ef4   defined in Debug\main.o section .text
+                                     used in Debug\stm8_interrupt_vector.o
+f_UARTTxInterrupt         00008ecd   defined in Debug\main.o section .text
+                                     used in Debug\stm8_interrupt_vector.o

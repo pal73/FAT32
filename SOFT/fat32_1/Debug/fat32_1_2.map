@@ -1,0 +1,191 @@
+
+Map of Debug\fat32_1.sm8 from link file Debug\fat32_1.lkf - Fri Dec 03 01:47:05 2010
+
+
+                               --------
+                               Segments
+                               --------
+
+start 00008080 end 00008080 length     0 segment .const
+start 00008083 end 000082d4 length   593 segment .text
+start 00004000 end 00004000 length     0 segment .eeprom
+start 00000000 end 00000000 length     0 segment .bsct
+start 00000000 end 000000ac length   172 segment .ubsct
+start 000000ac end 000000ac length     0 segment .bit
+start 000000ac end 000000ac length     0 segment .share
+start 00000100 end 00000100 length     0 segment .data
+start 00000100 end 00000100 length     0 segment .bss
+start 00000000 end 000002ba length   698 segment .info.
+start 00000000 end 000009cc length  2508 segment .debug
+start 00008000 end 00008080 length   128 segment .const
+start 00008080 end 00008083 length     3 segment .init
+
+
+                               -------
+                               Modules
+                               -------
+
+C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8:
+start 00008083 end 000080ce length    75 section .text
+start 00000100 end 00000100 length     0 section .bss
+start 00000000 end 00000000 length     0 section .ubsct
+start 00000000 end 0000002f length    47 section .info.
+
+Debug\main.o:
+start 000080ce end 00008174 length   166 section .text
+start 00000000 end 00000008 length     8 section .ubsct
+start 00000000 end 000002aa length   682 section .debug
+start 0000002f end 000000a9 length   122 section .info.
+start ******** end ******** length     0 section .const *** removed ***
+
+Debug\cmd.o:
+start 000002aa end 000002ee length    68 section .debug
+start 000000a9 end 00000122 length   121 section .info.
+
+Debug\uart1.o:
+start 00008174 end 000082d3 length   351 section .text
+start ******** end ******** length     0 section .bsct *** removed ***
+start 00000008 end 000000a6 length   158 section .ubsct
+start 000002ee end 00000861 length  1395 section .debug
+start 00000122 end 0000019d length   123 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o:
+start 000000a6 end 000000a9 length     3 section .ubsct
+start 0000019d end 000001cb length    46 section .info.
+
+(C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o:
+start 000000a9 end 000000ac length     3 section .ubsct
+start 000001cb end 000001f9 length    46 section .info.
+
+Debug\stm8_interrupt_vector.o:
+start 000082d3 end 000082d4 length     1 section .text
+start 00000861 end 000009cc length   363 section .debug
+start 000001f9 end 00000284 length   139 section .info.
+start 00008000 end 00008080 length   128 section .const
+
+
+                             -----------
+                             Stack usage
+                             -----------
+
+Debug\main.o:
+_gpio_init                  2   (2)
+_main                  >   13   (2)
+_t4_init                    2   (2)
+f_TIM4_UPD_Interrupt   >    5   (5)
+
+Debug\stm8_interrupt_vector.o:
+f_NonHandledInterrupt  >    5   (5)
+
+Debug\uart1.o:
+_putchar                    3   (3)
+_uart_init                  2   (2)
+_uart_out              >   14   (11)
+_uart_out_adr              11   (8)
+f_UARTRxInterrupt      >    7   (7)
+f_UARTTxInterrupt      >    5   (5)
+
+Stack size: 21
+
+
+                              ---------
+                              Call tree
+                              ---------
+   1 > __stext: (0)
+
+   2 > _main: (2)
+   3      + _gpio_init: (2)
+   4      + _t4_init: (2)
+   5      + _uart_init: (2)
+   6      + _uart_out_adr: (8)
+   7      |    + _putchar: (3)
+          | 
+       
+   8 > _uart_out: (11)
+   9      + _putchar --> 7
+       
+  10 > f_NonHandledInterrupt: (5)
+
+  11 > f_TIM4_UPD_Interrupt: (5)
+
+  12 > f_UARTRxInterrupt: (7)
+
+  13 > f_UARTTxInterrupt: (5)
+
+  14   _gpio_init --> 3
+
+  15   _putchar --> 7
+
+  16   _t4_init --> 4
+
+  17   _uart_init --> 5
+
+  18   _uart_out_adr --> 6
+
+
+
+                               -------
+                               Symbols
+                               -------
+
+_UIB                    ********   *** removed from Debug\uart1.o ***
+_UOB                    00000092   defined in Debug\uart1.o section .ubsct
+__endmem                000001ff   defined in command file
+                                   *** not used ***
+__endzp                 000000ac   defined in command file section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__idesc__               00008080   defined in linker section .init
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__memory                00000100   defined in command file section .bss
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__stack                 000003ff   defined in command file
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+__startmem              00000100   defined in command file section .bss
+                                   *** not used ***
+__stext                 00008083   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+                                   used in Debug\stm8_interrupt_vector.o
+__vectab                00008000   defined in Debug\stm8_interrupt_vector.o section .const
+_b100Hz                 00000007   defined in Debug\main.o section .ubsct
+_b10Hz                  00000006   defined in Debug\main.o section .ubsct
+_b1Hz                   00000004   defined in Debug\main.o section .ubsct
+_b5Hz                   00000005   defined in Debug\main.o section .ubsct
+_bOUT_FREE              00000091   defined in Debug\uart1.o section .ubsct
+_bRXIN                  0000004d   defined in Debug\uart1.o section .ubsct
+_ccht                   ********   *** removed from Debug\main.o ***
+_exit                   000080cc   defined in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8 section .text
+_flag                   0000004c   defined in Debug\uart1.o section .ubsct
+_gpio_init              000080ce   defined in Debug\main.o section .text
+_main                   00008135   defined in Debug\main.o section .text
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+_putchar                00008244   defined in Debug\uart1.o section .text
+_rx_buffer              0000000c   defined in Debug\uart1.o section .ubsct
+_rx_buffer_overflow     00000008   defined in Debug\uart1.o section .ubsct
+_rx_counter             00000009   defined in Debug\uart1.o section .ubsct
+_rx_rd_index            0000000a   defined in Debug\uart1.o section .ubsct
+_rx_wr_index            0000000b   defined in Debug\uart1.o section .ubsct
+_t0_cnt0                00000003   defined in Debug\main.o section .ubsct
+_t0_cnt1                00000002   defined in Debug\main.o section .ubsct
+_t0_cnt2                00000001   defined in Debug\main.o section .ubsct
+_t0_cnt3                00000000   defined in Debug\main.o section .ubsct
+_t4_init                000080df   defined in Debug\main.o section .text
+_tx_buffer              00000051   defined in Debug\uart1.o section .ubsct
+_tx_counter             0000004e   defined in Debug\uart1.o section .ubsct
+_tx_rd_index            0000004f   defined in Debug\uart1.o section .ubsct
+_tx_wr_index            00000050   defined in Debug\uart1.o section .ubsct
+_uart_init              00008174   defined in Debug\uart1.o section .text
+                                   used in Debug\main.o
+_uart_out               00008188   defined in Debug\uart1.o section .text
+_uart_out_adr           00008204   defined in Debug\uart1.o section .text
+                                   used in Debug\main.o
+c_x                     000000a6   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)xreg.o section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+                                           Debug\uart1.o
+c_y                     000000a9   defined in (C:\Program Files\COSMIC\CXSTM8_32K\Lib\libm0.sm8)yreg.o section .ubsct
+                                   used in C:\Program Files\COSMIC\CXSTM8_32K\Lib\crtsi0.sm8
+f_NonHandledInterrupt   000082d3   defined in Debug\stm8_interrupt_vector.o section .text
+f_TIM4_UPD_Interrupt    000080f0   defined in Debug\main.o section .text
+                                   used in Debug\stm8_interrupt_vector.o
+f_UARTRxInterrupt       0000829b   defined in Debug\uart1.o section .text
+                                   used in Debug\stm8_interrupt_vector.o
+f_UARTTxInterrupt       00008277   defined in Debug\uart1.o section .text
+                                   used in Debug\stm8_interrupt_vector.o
