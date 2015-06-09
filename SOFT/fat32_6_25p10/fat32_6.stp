@@ -26,7 +26,7 @@ Debug=$(TargetFName)
 
 [Root]
 ElemType=Project
-PathName=fat32_4
+PathName=fat32_6+25p10
 Child=Root.Source Files
 Config.0=Root.Config.0
 Config.1=Root.Config.1
@@ -83,10 +83,10 @@ String.100.0=STM8S103F3P
 
 [Root.Config.0.Settings.3]
 String.2.0=Compiling $(InputFile)...
-String.3.0=cxstm8 +mods0 -customDebCompat -customOpt-no -customC-pp -customLst -l -dSTM8S103 -i..\include $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
+String.3.0=cxstm8 +mods0 -customDebCompat -customOpt-no -no -customC-pp -pp -customLst -l -dSTM8S103 -i..\include $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2012,1,7,2,25,20
+String.6.0=2015,6,10,1,25,39
 
 [Root.Config.0.Settings.4]
 String.2.0=Assembling $(InputFile)...
@@ -106,7 +106,7 @@ String.3.0=clnk $(ToolsetLibOpts) -o $(OutputPath)$(TargetSName).sm8 -fakeIntege
 String.3.1=cvdwarf $(OutputPath)$(TargetSName).sm8
 String.4.0=$(OutputPath)$(TargetFName)
 String.5.0=$(OutputPath)$(ProjectSFile).elf $(OutputPath)$(TargetSName).map
-String.6.0=2012,1,7,12,23,13
+String.6.0=2015,6,10,1,25,39
 String.100.0=
 String.101.0=crtsi.st7
 String.102.0=+seg .const -b 0x8080 -m 0x1f80 -n .const -it
@@ -246,7 +246,7 @@ String.2.0=Compiling $(InputFile)...
 String.3.0=cxstm8 +mods0 -customDebCompat -customOpt-no -customC-pp -customLst -l -dSTM8S103 -i..\include $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2012,1,7,2,25,20
+String.6.0=2015,6,10,1,29,51
 
 [Root.Source Files.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...
@@ -328,7 +328,7 @@ String.2.0=Compiling $(InputFile)...
 String.3.0=cxstm8 +mods0 -customDebCompat -customOpt-no -customC-pp -customLst -l -dSTM8S103 -i..\include $(ToolsetIncOpts) -cl$(IntermPath) -co$(IntermPath) $(InputFile)
 String.4.0=$(IntermPath)$(InputName).$(ObjectExt)
 String.5.0=$(IntermPath)$(InputName).ls
-String.6.0=2012,1,7,2,25,20
+String.6.0=2015,6,10,1,29,51
 
 [Root.Include Files.Config.0.Settings.2]
 String.2.0=Assembling $(InputFile)...

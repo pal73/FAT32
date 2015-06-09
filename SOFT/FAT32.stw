@@ -38,7 +38,11 @@ Dependencies=
 [Project8]
 Filename=fat32_m1_25p32\fat32_m1_25p32.stp
 Dependencies=
+
+[Project9]
+Filename=fat32\fat32.stp
+Dependencies=
 [Options]
-ActiveProject=fat32_M1_25p32
+ActiveProject=fat32
 ActiveConfig=Debug
 AddSortedElements=1

@@ -27,18 +27,18 @@
 # Segment configuration - section reserved for STVD
 #<BEGIN SEGMENT_CONF>
 # Segment Code,Constants:
-+seg .const -b 0x8080 -m 0x1f80 -n .const -it
-+seg .text -a .const -n .text
++seg .const -b 0x8080 -m 0x1f80  -n .const -it 
++seg .text -a .const  -n .text 
 # Segment Eeprom:
-+seg .eeprom -b 0x4000 -m 0x280 -n .eeprom
++seg .eeprom -b 0x4000 -m 0x80  -n .eeprom 
 # Segment Zero Page:
-+seg .bsct -b 0x0 -m 0x100 -n .bsct
-+seg .ubsct -a .bsct -n .ubsct
-+seg .bit -a .ubsct -n .bit -id
-+seg .share -a .bit -n .share -is
++seg .bsct -b 0x0 -m 0x100  -n .bsct 
++seg .ubsct -a .bsct  -n .ubsct 
++seg .bit -a .ubsct  -n .bit -id 
++seg .share -a .bit  -n .share -is 
 # Segment Ram:
-+seg .data -b 0x100 -m 0x241 -n .data
-+seg .bss -a .data -n .bss
++seg .data -b 0x100 -m 0x100  -n .data 
++seg .bss -a .data  -n .bss 
 #<END SEGMENT_CONF>
 
 
@@ -50,8 +50,8 @@ crtsi0.sm8
 
 # Object files list - section reserved for STVD
 #<BEGIN OBJECT_FILES>
-Debug\main.o
-Debug\cmd.o
+Release\main.o
+Release\cmd.o
 #<END OBJECT_FILES>
 
 
@@ -65,14 +65,14 @@ libm0.sm8
 # Interrupt vectors file - section reserved for STVD
 #<BEGIN VECTOR_FILE>
 +seg .const -b 0x8000 -k
-Debug\stm8_interrupt_vector.o
+Release\stm8_interrupt_vector.o
 #<END VECTOR_FILE>
 
 # Defines - section reserved for STVD
 #<BEGIN DEFINED_VARIABLES>
 +def __endzp=@.ubsct			# end of uninitialized zpage
 +def __memory=@.bss				# end of bss segment
-+def __startmem=@.bss				# end of bss segment
++def __startmem=@.bss
 +def __endmem=0x1ff
 +def __stack=0x3ff
 #<END DEFINED_VARIABLES>

@@ -26,7 +26,7 @@ Debug=$(TargetFName)
 
 [Root]
 ElemType=Project
-PathName=fat32_2
+PathName=fat32_3
 Child=Root.Source Files
 Config.0=Root.Config.0
 Config.1=Root.Config.1

@@ -1,5 +1,5 @@
 
-Map of Debug\fat32_6.sm8 from link file Debug\fat32_6.lkf - Wed Jun 10 01:08:09 2015
+Map of Debug\fat32.sm8 from link file Debug\fat32.lkf - Wed Jun 10 01:29:58 2015
 
 
                                --------
@@ -17,7 +17,7 @@ start 0000814d end 0000814f length     2 segment .bit, from
 start 000000ec end 000000ec length     0 segment .share
 start 00000100 end 00000100 length     0 segment .data
 start 00000100 end 000002e0 length   480 segment .bss
-start 00000000 end 0000049d length  1181 segment .info.
+start 00000000 end 0000049b length  1179 segment .info.
 start 00000000 end 00002f86 length 12166 segment .debug
 start 00008000 end 00008080 length   128 segment .const
 start 00008083 end 00008090 length    13 segment .init
