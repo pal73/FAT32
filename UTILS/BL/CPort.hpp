@@ -683,6 +683,7 @@ public:
 		Args, const int Args_Size) : Sysutils::Exception(Msg, Args, Args_Size) { }
 	#pragma option pop
 	#pragma option push -w-inl
+
 	#pragma option pop
 	#pragma option push -w-inl
 	/* Exception.CreateResFmt */ inline __fastcall EComPort(int Ident, const System::TVarRec * Args, const 
@@ -698,6 +699,7 @@ public:
 		) { }
 	#pragma option pop
 	#pragma option push -w-inl
+
 	#pragma option pop
 	#pragma option push -w-inl
 	/* Exception.CreateResFmtHelp */ inline __fastcall EComPort(System::PResStringRec ResStringRec, const 

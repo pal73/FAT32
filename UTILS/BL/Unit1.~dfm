@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 185
-  Top = 90
+  Left = 229
+  Top = 125
   Width = 1113
   Height = 857
   Caption = 'BL-STM8'
@@ -285,6 +285,15 @@ object Form1: TForm1
     Caption = 'Очистить окно'
     TabOrder = 23
     OnClick = Button1Click
+  end
+  object Button19: TButton
+    Left = 248
+    Top = 768
+    Width = 217
+    Height = 25
+    Caption = 'Стереть микросхему'
+    TabOrder = 24
+    OnClick = Button19Click
   end
   object ComPort1: TComPort
     BaudRate = br9600

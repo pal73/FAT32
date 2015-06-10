@@ -1,7 +1,7 @@
 //#define ATMEL
 //#define ST
-#define LAMPA_MAGNITOFON
-//#define SIMPLE_PROGRAM
+//#define LAMPA_MAGNITOFON
+#define SIMPLE_PROGRAM
 #include "stm8s.h"
 #include "main.h"
 #include "cmd.c"
@@ -53,6 +53,8 @@ _Bool bRELEASE;
 @near char UIB[80];
 
 @eeprom unsigned short EE_PAGE_LEN;
+char current_page_cnt;
+char current_page_cnt_;
 
 //-----------------------------------------------
 void t2_init(void){
@@ -415,7 +417,7 @@ void uart_in_an(void) {
 		{
 		char temp;
 		unsigned i;
-          
+        CS_ON  
 		file_lengt=0;
 		file_lengt+=UIB[5];
 		file_lengt<<=8;
@@ -434,18 +436,35 @@ void uart_in_an(void) {
 ///		current_buffer=1;
 		if(memory_manufacturer=='S') {
 			ST_WREN();
-					delay_ms(100);
+					delay_ms(100); 
 		ST_bulk_erase();
 		}
 		uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
+		current_page_cnt=100;
+		current_page_cnt_=4;
 			
 		}
-	else if(UIB[1]==21)
+	else if(UIB[1]==21) 
 		{
 		char temp;
 		unsigned i;
-          
-		CS_FLASH;
+        
+		
+		
+		if(current_page_cnt_)
+			{
+			current_page_cnt_--;
+			if(current_page_cnt_==0)
+				{
+				current_page_cnt=0;	
+				}
+			}
+		else 
+			{
+			current_page_cnt=0;
+			}
+		
+		
 		
           for(i=0;i<64;i++)
           	{
@@ -484,6 +503,7 @@ void uart_in_an(void) {
 					{ 
 					delay_ms(100);
 					uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
+					current_page_cnt=100;
 					current_byte_in_buffer=0;
 					}
 				else 
@@ -993,7 +1013,17 @@ if(rx_counter&&(rx_buffer[index_offset(rx_wr_index,-1)])==END)
 				} 
 			rx_rd_index=rx_wr_index;
 			rx_counter=0;
+			
+			/*if(UIB[1]==21)
+				{
+					char i;
+				for(i=0;i<64;i++)
+					{
+						UIB[2+i]=rx_offset;
+					}
+				}*/
 			uart_in_an();
+/**/
     			}
  	
     		} 
@@ -1384,6 +1414,18 @@ while (1)
 				#endif					
 				}
 			}
+		if(current_page_cnt)
+			{
+			current_page_cnt--;
+			if(!current_page_cnt)
+				{
+				
+				CS_FLASH
+					
+				uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
+				current_page_cnt=100;
+				}
+			}	
 		}  
 			
 	if(b10Hz)
@@ -1401,8 +1443,6 @@ while (1)
 		
 		//GPIOD->ODR^=(1<<4);
 		//GPIOD->ODR^=(1<<4);
-		//GPIOC->ODR^=(1<<3);
-		//CS_FLASH
 		}
 			
 	if(b1Hz)

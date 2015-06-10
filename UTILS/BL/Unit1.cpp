@@ -23,6 +23,7 @@ unsigned short damp_[128];
 FILE *F;
 AnsiString SName = "Неизвестен";
 unsigned file_lengt;
+char block_cnt;
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -76,7 +77,7 @@ Memo1->Clear();
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
 ComboBox1->ItemIndex=0;
-Memo1->Clear();
+//Memo1->Clear();
 ComboBox4->ItemIndex=0;
 ComboBox2->ItemIndex=0;
 ComboBox3->ItemIndex=0;
@@ -302,12 +303,17 @@ if((UIB[0]==CMND)&&(UIB[1]==21))
 
 
      Memo1->Lines->Add("Запрос страницы " + IntToStr(*((short*)&UIB[2])));
-     out_adr_blok_to_page( &damp[ (*((short*)&UIB[2]))*256 ] );
-     Sleep(20);
+     if(!block_cnt)out_adr_blok_to_page( &damp[ (*((short*)&UIB[2]))*256 ] );
+     else
+        {
+        block_cnt--;
+        Label4->Caption=IntToStr(block_cnt);
+        }
+     Sleep(50);
      out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+64 ]);
-     Sleep(20);
+     Sleep(50);
      out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+128 ]);
-     Sleep(20);
+     Sleep(50);
      out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+192 ]); 
      }
 
@@ -533,6 +539,13 @@ void __fastcall TForm1::Button19Click(TObject *Sender)
 {
 uart_out_out(3,CMND,24,1,0,0,0,0,0);
 Memo1->Lines->Add("Стирание микросхемы");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button20Click(TObject *Sender)
+{
+ block_cnt=20;
+ Label4->Caption=IntToStr(block_cnt);
 }
 //---------------------------------------------------------------------------
 
