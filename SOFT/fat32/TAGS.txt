@@ -424,6 +424,7 @@ CSR	..\include\stm8s.h	285;"	member	struct:AWU_struct
 CSR	..\include\stm8s.h	327;"	member	struct:BEEP_struct
 CSSR	..\include\stm8s.h	368;"	member	struct:CLK_struct
 CSTART	..\include\cmd.c	10;"	macro	file:
+CS_FLASH	main.c	12;"	macro	file:
 CS_OFF	main.c	11;"	macro	file:
 CS_ON	main.c	10;"	macro	file:
 ChgBit	..\include\stm8s.h	2527;"	macro
@@ -450,20 +451,20 @@ DB8RL	..\include\stm8s.h	155;"	member	struct:ADC1_struct
 DB9RH	..\include\stm8s.h	156;"	member	struct:ADC1_struct
 DB9RL	..\include\stm8s.h	157;"	member	struct:ADC1_struct
 DDR	..\include\stm8s.h	112;"	member	struct:GPIO_struct
-DF_buffer_read	main.c	870;"	function	signature:(unsigned buff_addr,unsigned len, char* adr)
+DF_buffer_read	main.c	871;"	function	signature:(unsigned buff_addr,unsigned len, char* adr)
 DF_buffer_read	main.h	17;"	prototype	signature:(unsigned buff_addr,unsigned len, char* adr)
-DF_buffer_to_page	main.c	915;"	function	signature:( unsigned page_addr)
-DF_buffer_to_page_er	main.c	853;"	function	signature:( unsigned page_addr)
+DF_buffer_to_page	main.c	916;"	function	signature:( unsigned page_addr)
+DF_buffer_to_page_er	main.c	854;"	function	signature:( unsigned page_addr)
 DF_buffer_to_page_er	main.h	20;"	prototype	signature:( unsigned page_addr)
-DF_buffer_write	main.c	892;"	function	signature:( unsigned buff_addr,unsigned len, char* adr)
+DF_buffer_write	main.c	893;"	function	signature:( unsigned buff_addr,unsigned len, char* adr)
 DF_buffer_write	main.h	18;"	prototype	signature:( unsigned buff_addr,unsigned len, char* adr)
-DF_memo_to_256	main.c	806;"	function	signature:(void)
+DF_memo_to_256	main.c	807;"	function	signature:(void)
 DF_memo_to_256	main.h	15;"	prototype	signature:(void)
-DF_mf_dev_read	main.c	785;"	function	signature:(void)
+DF_mf_dev_read	main.c	786;"	function	signature:(void)
 DF_mf_dev_read	main.h	14;"	prototype	signature:(void)
-DF_page_to_buffer	main.c	835;"	function	signature:(unsigned page_addr)
+DF_page_to_buffer	main.c	836;"	function	signature:(unsigned page_addr)
 DF_page_to_buffer	main.h	19;"	prototype	signature:(unsigned page_addr)
-DF_status_read	main.c	821;"	function	signature:(void)
+DF_status_read	main.c	822;"	function	signature:(void)
 DF_status_read	main.h	16;"	prototype	signature:(void)
 DGR	..\include\stm8s.h	1949;"	member	struct:__anon1
 DISABLE	..\include\stm8s_type.h	74;"	enumerator	enum:__anon12
@@ -482,7 +483,7 @@ DRL	..\include\stm8s.h	238;"	member	struct:ADC2_struct
 DTR	..\include\stm8s.h	498;"	member	struct:TIM1_struct
 DUKR	..\include\stm8s.h	1390;"	member	struct:FLASH_struct
 ECKR	..\include\stm8s.h	361;"	member	struct:CLK_struct
-EE_PAGE_LEN	main.c	54;"	variable
+EE_PAGE_LEN	main.c	55;"	variable
 EGR	..\include\stm8s.h	1127;"	member	struct:TIM6_struct
 EGR	..\include\stm8s.h	475;"	member	struct:TIM1_struct
 EGR	..\include\stm8s.h	689;"	member	struct:TIM2_struct
@@ -743,6 +744,7 @@ IWDG_RLR_RESET_VALUE	..\include\stm8s.h	1486;"	macro
 IWDG_TypeDef	..\include\stm8s.h	1479;"	typedef	typeref:struct:IWDG_struct
 IWDG_struct	..\include\stm8s.h	1473;"	struct
 KR	..\include\stm8s.h	1475;"	member	struct:IWDG_struct
+LAMPA_MAGNITOFON	main.c	3;"	macro	file:
 LTRH	..\include\stm8s.h	169;"	member	struct:ADC1_struct
 LTRL	..\include\stm8s.h	170;"	member	struct:ADC1_struct
 MCR	..\include\stm8s.h	1943;"	member	struct:__anon1
@@ -860,7 +862,7 @@ RST_SR_WWDGF	..\include\stm8s.h	1549;"	macro
 RST_TypeDef	..\include\stm8s.h	1539;"	typedef	typeref:struct:RST_struct
 RST_struct	..\include\stm8s.h	1535;"	struct
 RXCRCR	..\include\stm8s.h	1568;"	member	struct:SPI_struct
-RX_BUFFER_SIZE	main.c	15;"	macro	file:
+RX_BUFFER_SIZE	main.c	16;"	macro	file:
 Reserved1	..\include\stm8s.h	2072;"	member	struct:__anon1::__anon2::__anon8
 Reserved2	..\include\stm8s.h	2078;"	member	struct:__anon1::__anon2::__anon8
 RxFIFO	..\include\stm8s.h	2101;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon9
@@ -871,7 +873,6 @@ S32_MIN	..\include\stm8s_type.h	95;"	macro
 S8_MAX	..\include\stm8s_type.h	88;"	macro
 S8_MIN	..\include\stm8s_type.h	89;"	macro
 SET	..\include\stm8s_type.h	69;"	enumerator	enum:__anon11
-SIMPLE_PROGRAM	main.c	4;"	macro	file:
 SMCR	..\include\stm8s.h	1124;"	member	struct:TIM6_struct
 SMCR	..\include\stm8s.h	470;"	member	struct:TIM1_struct
 SMCR	..\include\stm8s.h	981;"	member	struct:TIM5_struct
@@ -930,19 +931,19 @@ SR2	..\include\stm8s.h	812;"	member	struct:TIM3_struct
 SR2	..\include\stm8s.h	984;"	member	struct:TIM5_struct
 SR3	..\include\stm8s.h	1203;"	member	struct:I2C_struct
 STM8S208	..\include\stm8s.h	45;"	macro
-ST_CS_OFF	main.c	13;"	macro	file:
-ST_CS_ON	main.c	12;"	macro	file:
-ST_RDID_read	main.c	681;"	function	signature:(void)
+ST_CS_OFF	main.c	14;"	macro	file:
+ST_CS_ON	main.c	13;"	macro	file:
+ST_RDID_read	main.c	682;"	function	signature:(void)
 ST_RDID_read	main.h	28;"	prototype	signature:(void)
-ST_READ	main.c	759;"	function	signature:(unsigned long memo_addr,unsigned short len, char* adr)
+ST_READ	main.c	760;"	function	signature:(unsigned long memo_addr,unsigned short len, char* adr)
 ST_READ	main.h	32;"	prototype	signature:(unsigned long memo_addr,unsigned short len, char* adr)
-ST_WREN	main.c	725;"	function	signature:(void)
+ST_WREN	main.c	726;"	function	signature:(void)
 ST_WREN	main.h	30;"	prototype	signature:(void)
-ST_WRITE	main.c	735;"	function	signature:(unsigned long memo_addr,unsigned short len, char* adr)
+ST_WRITE	main.c	736;"	function	signature:(unsigned long memo_addr,unsigned short len, char* adr)
 ST_WRITE	main.h	31;"	prototype	signature:(unsigned long memo_addr,unsigned short len, char* adr)
-ST_bulk_erase	main.c	716;"	function	signature:(void)
+ST_bulk_erase	main.c	717;"	function	signature:(void)
 ST_bulk_erase	main.h	33;"	prototype	signature:(void)
-ST_status_read	main.c	702;"	function	signature:(void)
+ST_status_read	main.c	703;"	function	signature:(void)
 ST_status_read	main.h	29;"	prototype	signature:(void)
 SUCCESS	..\include\stm8s_type.h	83;"	enumerator	enum:__anon13
 SWCR	..\include\stm8s.h	365;"	member	struct:CLK_struct
@@ -1235,7 +1236,7 @@ TIM4_PSCR_RESET_VALUE	..\include\stm8s.h	939;"	macro
 TIM4_SR1_RESET_VALUE	..\include\stm8s.h	936;"	macro
 TIM4_SR1_UIF	..\include\stm8s.h	958;"	macro
 TIM4_TypeDef	..\include\stm8s.h	928;"	typedef	typeref:struct:TIM4_struct
-TIM4_UPD_Interrupt	main.c	1046;"	function	signature:(void)
+TIM4_UPD_Interrupt	main.c	1047;"	function	signature:(void)
 TIM4_UPD_Interrupt	main.h	7;"	prototype	signature:(void)
 TIM4_UPD_Interrupt	stm8_interrupt_vector.c	20;"	prototype	file:	signature:(void)
 TIM4_struct	..\include\stm8s.h	914;"	struct
@@ -1359,7 +1360,7 @@ TVOL0	..\include\cmd.c	6;"	macro	file:
 TVOL1	..\include\cmd.c	7;"	macro	file:
 TVOL2	..\include\cmd.c	8;"	macro	file:
 TXCRCR	..\include\stm8s.h	1569;"	member	struct:SPI_struct
-TX_BUFFER_SIZE	main.c	14;"	macro	file:
+TX_BUFFER_SIZE	main.c	15;"	macro	file:
 TxMailbox	..\include\stm8s.h	1973;"	member	union:__anon1::__anon2	typeref:struct:__anon1::__anon2::__anon3
 U16_MAX	..\include\stm8s_type.h	90;"	macro
 U32_MAX	..\include\stm8s_type.h	93;"	macro
@@ -1534,13 +1535,13 @@ UART3_SR_TC	..\include\stm8s.h	1885;"	macro
 UART3_SR_TXE	..\include\stm8s.h	1884;"	macro
 UART3_TypeDef	..\include\stm8s.h	1861;"	typedef	typeref:struct:UART3_struct
 UART3_struct	..\include\stm8s.h	1848;"	struct
-UARTRxInterrupt	main.c	1196;"	function	signature:(void)
+UARTRxInterrupt	main.c	1197;"	function	signature:(void)
 UARTRxInterrupt	main.h	12;"	prototype	signature:(void)
 UARTRxInterrupt	stm8_interrupt_vector.c	23;"	prototype	file:	signature:(void)
-UARTTxInterrupt	main.c	1182;"	function	signature:(void)
+UARTTxInterrupt	main.c	1183;"	function	signature:(void)
 UARTTxInterrupt	main.h	11;"	prototype	signature:(void)
 UARTTxInterrupt	stm8_interrupt_vector.c	22;"	prototype	file:	signature:(void)
-UIB	main.c	52;"	variable
+UIB	main.c	53;"	variable
 ValBit	..\include\stm8s.h	2533;"	macro
 WR	..\include\stm8s.h	1500;"	member	struct:WWDG_struct
 WWDG	..\include\stm8s.h	2436;"	macro
@@ -1567,113 +1568,113 @@ __STM8S_H	..\include\stm8s.h	24;"	macro
 __STM8S_TYPE_H	..\include\stm8s_type.h	24;"	macro
 _stext	stm8_interrupt_vector.c	21;"	prototype	file:
 _vectab	stm8_interrupt_vector.c	25;"	variable
-b100Hz	main.c	44;"	variable
-b10Hz	main.c	44;"	variable
-b1Hz	main.c	44;"	variable
-b5Hz	main.c	44;"	variable
-bBUFF_LOAD	main.c	41;"	variable
-bBUFF_READ_H	main.c	42;"	variable
-bBUFF_READ_L	main.c	43;"	variable
-bOUT_FREE	main.c	46;"	variable
-bRELEASE	main.c	49;"	variable
-bRXIN	main.c	47;"	variable
-bSTART	main.c	40;"	variable
+b100Hz	main.c	45;"	variable
+b10Hz	main.c	45;"	variable
+b1Hz	main.c	45;"	variable
+b5Hz	main.c	45;"	variable
+bBUFF_LOAD	main.c	42;"	variable
+bBUFF_READ_H	main.c	43;"	variable
+bBUFF_READ_L	main.c	44;"	variable
+bOUT_FREE	main.c	47;"	variable
+bRELEASE	main.c	50;"	variable
+bRXIN	main.c	48;"	variable
+bSTART	main.c	41;"	variable
 bool	..\include\stm8s_type.h	65;"	typedef	typeref:enum:__anon10
-buff	main.c	51;"	variable
-but_block_cnt	main.c	39;"	variable
-but_drv_cnt	main.c	26;"	variable
-but_on_drv_cnt	main.c	27;"	variable
-control_check	main.c	1023;"	function	signature:(char index)
+buff	main.c	52;"	variable
+but_block_cnt	main.c	40;"	variable
+but_drv_cnt	main.c	27;"	variable
+but_on_drv_cnt	main.c	28;"	variable
+control_check	main.c	1024;"	function	signature:(char index)
 control_check	main.h	26;"	prototype	signature:(char index)
-current_byte_in_buffer	main.c	29;"	variable
-current_page	main.c	29;"	variable
-delay_ms	main.c	115;"	function	signature:(short in)
+current_byte_in_buffer	main.c	30;"	variable
+current_page	main.c	30;"	variable
+delay_ms	main.c	116;"	function	signature:(short in)
 delay_ms	main.h	6;"	prototype	signature:(short in)
 disableInterrupts	..\include\stm8s.h	2492;"	macro
 disableInterrupts	..\include\stm8s.h	2501;"	macro
-dumm	main.c	50;"	variable
+dumm	main.c	51;"	variable
 enableInterrupts	..\include\stm8s.h	2491;"	macro
 enableInterrupts	..\include\stm8s.h	2500;"	macro
-file_lengt	main.c	30;"	variable
-file_lengt_in_pages	main.c	29;"	variable
-gpio_init	main.c	933;"	function	signature:(void)
+file_lengt	main.c	31;"	variable
+file_lengt_in_pages	main.c	30;"	variable
+gpio_init	main.c	934;"	function	signature:(void)
 gpio_init	main.h	23;"	prototype	signature:(void)
 halt	..\include\stm8s.h	2498;"	macro
 halt	..\include\stm8s.h	2507;"	macro
-index_offset	main.c	1014;"	function	signature:(signed short index,signed short offset)
+index_offset	main.c	1015;"	function	signature:(signed short index,signed short offset)
 index_offset	main.h	25;"	prototype	signature:(signed short index,signed short offset)
 interrupt_handler	stm8_interrupt_vector.c	9;"	member	struct:interrupt_vector	file:
 interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
 interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
 interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
-last_page	main.c	29;"	variable
-main	main.c	1219;"	function
-mdr0	main.c	28;"	variable
-mdr1	main.c	28;"	variable
-mdr2	main.c	28;"	variable
-mdr3	main.c	28;"	variable
-memory_manufacturer	main.c	38;"	variable
+last_page	main.c	30;"	variable
+main	main.c	1220;"	function
+mdr0	main.c	29;"	variable
+mdr1	main.c	29;"	variable
+mdr2	main.c	29;"	variable
+mdr3	main.c	29;"	variable
+memory_manufacturer	main.c	39;"	variable
 nop	..\include\stm8s.h	2495;"	macro
 nop	..\include\stm8s.h	2504;"	macro
-play	main.c	45;"	variable
-putchar	main.c	609;"	function	signature:(char c)
+play	main.c	46;"	variable
+putchar	main.c	610;"	function	signature:(char c)
 putchar	main.h	10;"	prototype	signature:(char c)
-pwm_fade_in	main.c	35;"	variable
-rele_cnt	main.c	33;"	variable
-rele_cnt_const	main.c	37;"	variable
-rele_cnt_index	main.c	36;"	variable
-rele_drv	main.c	90;"	function	signature:(void)
+pwm_fade_in	main.c	36;"	variable
+rele_cnt	main.c	34;"	variable
+rele_cnt_const	main.c	38;"	variable
+rele_cnt_index	main.c	37;"	variable
+rele_drv	main.c	91;"	function	signature:(void)
 rele_drv	main.h	5;"	prototype	signature:(void)
 rim	..\include\stm8s.h	2493;"	macro
 rim	..\include\stm8s.h	2502;"	macro
-rx_buffer	main.c	22;"	variable
-rx_buffer_overflow	main.c	48;"	variable
-rx_counter	main.c	23;"	variable
-rx_data	main.c	32;"	variable
-rx_offset	main.c	34;"	variable
-rx_rd_index	main.c	24;"	variable
-rx_status	main.c	31;"	variable
-rx_wr_index	main.c	24;"	variable
+rx_buffer	main.c	23;"	variable
+rx_buffer_overflow	main.c	49;"	variable
+rx_counter	main.c	24;"	variable
+rx_data	main.c	33;"	variable
+rx_offset	main.c	35;"	variable
+rx_rd_index	main.c	25;"	variable
+rx_status	main.c	32;"	variable
+rx_wr_index	main.c	25;"	variable
 s16	..\include\stm8s_type.h	29;"	typedef
 s32	..\include\stm8s_type.h	28;"	typedef
 s8	..\include\stm8s_type.h	30;"	typedef
-sample	main.c	25;"	variable
-sample_cnt	main.c	18;"	variable
+sample	main.c	26;"	variable
+sample_cnt	main.c	19;"	variable
 sc16	..\include\stm8s_type.h	33;"	typedef
 sc32	..\include\stm8s_type.h	32;"	typedef
 sc8	..\include\stm8s_type.h	34;"	typedef
 sim	..\include\stm8s.h	2494;"	macro
 sim	..\include\stm8s.h	2503;"	macro
-spi	main.c	671;"	function	signature:(char in)
+spi	main.c	672;"	function	signature:(char in)
 spi	main.h	21;"	prototype	signature:(char in)
-spi_init	main.c	626;"	function	signature:(void)
+spi_init	main.c	627;"	function	signature:(void)
 spi_init	main.h	22;"	prototype	signature:(void)
-t0_cnt0	main.c	17;"	variable
-t0_cnt1	main.c	17;"	variable
-t0_cnt2	main.c	17;"	variable
-t0_cnt3	main.c	17;"	variable
-t2_init	main.c	57;"	function	signature:(void)
+t0_cnt0	main.c	18;"	variable
+t0_cnt1	main.c	18;"	variable
+t0_cnt2	main.c	18;"	variable
+t0_cnt3	main.c	18;"	variable
+t2_init	main.c	58;"	function	signature:(void)
 t2_init	main.h	3;"	prototype	signature:(void)
-t4_init	main.c	80;"	function	signature:(void)
+t4_init	main.c	81;"	function	signature:(void)
 t4_init	main.h	4;"	prototype	signature:(void)
 trap	..\include\stm8s.h	2496;"	macro
 trap	..\include\stm8s.h	2505;"	macro
-tx_buffer	main.c	19;"	variable
-tx_counter	main.c	20;"	variable
-tx_rd_index	main.c	21;"	variable
-tx_wr_index	main.c	21;"	variable
+tx_buffer	main.c	20;"	variable
+tx_counter	main.c	21;"	variable
+tx_rd_index	main.c	22;"	variable
+tx_wr_index	main.c	22;"	variable
 u16	..\include\stm8s_type.h	45;"	typedef
 u32	..\include\stm8s_type.h	44;"	typedef
 u8	..\include\stm8s_type.h	46;"	typedef
-uart_in	main.c	961;"	function	signature:(void)
+uart_in	main.c	962;"	function	signature:(void)
 uart_in	main.h	24;"	prototype	signature:(void)
-uart_in_an	main.c	227;"	function	signature:(void)
+uart_in_an	main.c	228;"	function	signature:(void)
 uart_in_an	main.h	27;"	prototype	signature:(void)
-uart_init	main.c	129;"	function	signature:(void)
+uart_init	main.c	130;"	function	signature:(void)
 uart_init	main.h	13;"	prototype	signature:(void)
-uart_out	main.c	148;"	function	signature:(char num,char data0,char data1,char data2,char data3,char data4,char data5)
+uart_out	main.c	149;"	function	signature:(char num,char data0,char data1,char data2,char data3,char data4,char data5)
 uart_out	main.h	8;"	prototype	signature:(char num,char data0,char data1,char data2,char data3,char data4,char data5)
-uart_out_adr_block	main.c	178;"	function	signature:(unsigned long adress,char *ptr, char len)
+uart_out_adr_block	main.c	179;"	function	signature:(unsigned long adress,char *ptr, char len)
 uart_out_adr_block	main.h	9;"	prototype	signature:(unsigned long adress,char *ptr, char len)
 uc16	..\include\stm8s_type.h	49;"	typedef
 uc32	..\include\stm8s_type.h	48;"	typedef

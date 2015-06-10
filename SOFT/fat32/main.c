@@ -9,6 +9,7 @@
 
 #define CS_ON	GPIOC->ODR&=~(1<<3);
 #define CS_OFF	GPIOC->ODR|=(1<<3);
+#define CS_FLASH	GPIOC->ODR^=(1<<3);
 #define ST_CS_ON	GPIOB->ODR&=~(1<<5);
 #define ST_CS_OFF	GPIOB->ODR|=(1<<5);
 #define TX_BUFFER_SIZE	80
@@ -444,6 +445,8 @@ void uart_in_an(void) {
 		char temp;
 		unsigned i;
           
+		CS_FLASH;
+		
           for(i=0;i<64;i++)
           	{
           	buff[current_byte_in_buffer+i]=UIB[2+i];
@@ -990,17 +993,7 @@ if(rx_counter&&(rx_buffer[index_offset(rx_wr_index,-1)])==END)
 				} 
 			rx_rd_index=rx_wr_index;
 			rx_counter=0;
-			
-			/*if(UIB[1]==21)
-				{
-					char i;
-				for(i=0;i<64;i++)
-					{
-						UIB[2+i]=rx_offset;
-					}
-				}*/
 			uart_in_an();
-/**/
     			}
  	
     		} 
@@ -1408,6 +1401,8 @@ while (1)
 		
 		//GPIOD->ODR^=(1<<4);
 		//GPIOD->ODR^=(1<<4);
+		//GPIOC->ODR^=(1<<3);
+		//CS_FLASH
 		}
 			
 	if(b1Hz)
