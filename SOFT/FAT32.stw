@@ -42,3 +42,7 @@ Dependencies=
 [Project9]
 Filename=fat32\fat32.stp
 Dependencies=
+[Options]
+ActiveProject=fat32
+ActiveConfig=Debug
+AddSortedElements=0

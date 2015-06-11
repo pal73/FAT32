@@ -1,3 +1,0 @@
-#error clnk Debug\fat32_1.lkf:48 can't open file crtsi0.sm8
-#error clnk Debug\fat32_1.lkf:62 can't open file libis0.sm8
-#error clnk Debug\fat32_1.lkf:63 can't open file libm0.sm8

@@ -1,8 +1,8 @@
 object Form1: TForm1
   Left = 229
   Top = 125
-  Width = 1113
-  Height = 857
+  Width = 1119
+  Height = 880
   Caption = 'BL-STM8'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -36,11 +36,32 @@ object Form1: TForm1
     Caption = 'Буфер'
   end
   object Label4: TLabel
-    Left = 600
-    Top = 776
+    Left = 592
+    Top = 768
     Width = 32
     Height = 13
     Caption = 'Label4'
+  end
+  object Label5: TLabel
+    Left = 856
+    Top = 776
+    Width = 32
+    Height = 13
+    Caption = 'Label5'
+  end
+  object Label6: TLabel
+    Left = 912
+    Top = 776
+    Width = 32
+    Height = 13
+    Caption = 'Label6'
+  end
+  object Label7: TLabel
+    Left = 592
+    Top = 784
+    Width = 32
+    Height = 13
+    Caption = 'Label7'
   end
   object Memo1: TMemo
     Left = 248
@@ -306,10 +327,46 @@ object Form1: TForm1
     Left = 496
     Top = 768
     Width = 75
-    Height = 25
+    Height = 17
     Caption = 'Блок'
     TabOrder = 25
     OnClick = Button20Click
+  end
+  object Button21: TButton
+    Left = 648
+    Top = 768
+    Width = 75
+    Height = 25
+    Caption = 'Сброс'
+    TabOrder = 26
+    OnClick = Button21Click
+  end
+  object Button22: TButton
+    Left = 736
+    Top = 768
+    Width = 75
+    Height = 25
+    Caption = 'Телеметрия'
+    TabOrder = 27
+    OnClick = Button22Click
+  end
+  object Button23: TButton
+    Left = 496
+    Top = 784
+    Width = 75
+    Height = 17
+    Caption = 'Ошибка'
+    TabOrder = 28
+    OnClick = Button23Click
+  end
+  object CheckBox1: TCheckBox
+    Left = 128
+    Top = 32
+    Width = 97
+    Height = 17
+    Caption = 'Отладка'
+    TabOrder = 29
+    OnClick = CheckBox1Click
   end
   object ComPort1: TComPort
     BaudRate = br9600

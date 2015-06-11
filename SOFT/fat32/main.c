@@ -440,7 +440,7 @@ void uart_in_an(void) {
 		ST_bulk_erase();
 		}
 		uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
-		current_page_cnt=100;
+		current_page_cnt=10;
 		current_page_cnt_=4;
 			
 		}
@@ -478,7 +478,7 @@ void uart_in_an(void) {
           	{
           	buff[i]=(char)i;
           	} */  
-          	
+          	CS_FLASH
 			if(memory_manufacturer=='A') {
 				DF_buffer_write(/*//current_buffer*//*1,*/0,256,buff);
 				DF_buffer_to_page_er(/*///current_buffer*//*1,*/current_page);
@@ -502,8 +502,9 @@ void uart_in_an(void) {
 				if(current_page<file_lengt_in_pages)
 					{ 
 					delay_ms(100);
-					uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
-					current_page_cnt=100;
+					uart_out (5,CMND,21,current_page%256,current_page/256,0,0);
+					current_page_cnt=10;
+					current_page_cnt_=4;
 					current_byte_in_buffer=0;
 					}
 				else 
@@ -562,7 +563,11 @@ void uart_in_an(void) {
 			
 		}
 
-
+	else if(UIB[1]==26)		//Запрос телеметрии
+		{
+		char temp;
+		uart_out (4,CMND,26,current_page_cnt,current_page_cnt_,0,0);    
+		}
 
 
 	else if(UIB[1]==30)
@@ -1414,18 +1419,7 @@ while (1)
 				#endif					
 				}
 			}
-		if(current_page_cnt)
-			{
-			current_page_cnt--;
-			if(!current_page_cnt)
-				{
-				
-				CS_FLASH
-					
-				uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
-				current_page_cnt=100;
-				}
-			}	
+
 		}  
 			
 	if(b10Hz)
@@ -1434,7 +1428,20 @@ while (1)
 		
 		rele_drv();
 		pwm_fade_in++;
-		if(pwm_fade_in>128)pwm_fade_in=128;			
+		if(pwm_fade_in>128)pwm_fade_in=128;
+
+		if(current_page_cnt)
+			{
+			current_page_cnt--;
+			if(!current_page_cnt)
+				{
+				uart_out (5,CMND,21,current_page%256,current_page/256,1,0);
+				current_page_cnt=10;
+				current_page_cnt_=4;
+				current_byte_in_buffer=0;
+				}
+			}	
+
 		}
 			
 	if(b5Hz)

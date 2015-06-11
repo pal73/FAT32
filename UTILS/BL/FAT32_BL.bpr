@@ -28,13 +28,14 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="FAT32_BL.cpp"/>
-    <INCLUDEPATH value="$(BCB)\ComPort;$(BCB)\include;$(BCB)\include\vcl;&quot;C:\Program Files\Borland\CBuilder5\CPort\&quot;"/>
-    <LIBPATH value="$(BCB)\ComPort;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="$(BCB)\ComPort;$(BCB)\include;$(BCB)\include\vcl;&quot;C:\Program Files\Borland\CBuilder5\CPort\&quot;;&quot;C:\Program Files\Borland\CBuilder5\TCOMM\&quot;"/>
+    <LIBPATH value="$(BCB)\ComPort;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;&quot;C:\Program Files\Borland\CBuilder5\TCOMM\&quot;"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
     <IDLCFLAGS value="-I$(BCB)\ComPort -I$(BCB)\include -I$(BCB)\include\vcl 
-      -I&quot;C:\Program Files\Borland\CBuilder5\CPort\.&quot; -src_suffix cpp -D_DEBUG -boa"/>
+      -I&quot;C:\Program Files\Borland\CBuilder5\CPort\.&quot; 
+      -I&quot;C:\Program Files\Borland\CBuilder5\TCOMM\.&quot; -src_suffix cpp -D_DEBUG -boa"/>
     <CFLAG1 value="-Od -H=$(BCB)\lib\vcl50.csm -Hc -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -c 
       -tW -tWM"/>
     <PFLAGS value="-$YD -$W -$O- -v -JPHNE -M"/>
@@ -76,13 +77,15 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=2
-Item0=$(BCB)\ComPort;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder5\CPort\
-Item1=$(BCB)\ComPort;$(BCB)\include;$(BCB)\include\vcl
+Count=3
+Item0=$(BCB)\ComPort;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder5\CPort\;C:\Program Files\Borland\CBuilder5\TCOMM
+Item1=$(BCB)\ComPort;$(BCB)\include;$(BCB)\include\vcl;C:\Program Files\Borland\CBuilder5\CPort\
+Item2=$(BCB)\ComPort;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=1
-Item0=$(BCB)\ComPort;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
+Count=2
+Item0=$(BCB)\ComPort;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;C:\Program Files\Borland\CBuilder5\TCOMM
+Item1=$(BCB)\ComPort;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

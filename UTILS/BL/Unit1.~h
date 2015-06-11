@@ -46,6 +46,8 @@ __published:	// IDE-managed Components
 	TLabel *Label2;
 	TLabel *Label3;
         TButton *Button19;
+        TButton *Button20;
+        TLabel *Label4;
 	void __fastcall B1Click(TObject *Sender);
 	void __fastcall Button1Click(TObject *Sender);
 	void __fastcall FormCreate(TObject *Sender);
@@ -64,6 +66,7 @@ __published:	// IDE-managed Components
 	void __fastcall Button9Click(TObject *Sender);
 	void __fastcall Button16Click(TObject *Sender);
         void __fastcall Button19Click(TObject *Sender);
+        void __fastcall Button20Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

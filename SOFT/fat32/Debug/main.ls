@@ -280,7 +280,7 @@
 2818  0158               L23:
 2819  0158 02            	rlwa	x,a
 2820  0159 f6            	ld	a,(x)
-2821  015a cd0886        	call	_putchar
+2821  015a cd08b2        	call	_putchar
 2823                     ; 172 	for (i=0;i<num+3;i++)
 2825  015d 0c0c          	inc	(OFST+0,sp)
 2826  015f               L5361:
@@ -315,7 +315,7 @@
 2946  0184 6b02          	ld	(OFST-1,sp),a
 2947                     ; 189 putchar(temp11);
 2949  0186 a616          	ld	a,#22
-2950  0188 cd0886        	call	_putchar
+2950  0188 cd08b2        	call	_putchar
 2952                     ; 191 temp11=10;
 2954                     ; 192 t^=temp11;
 2956  018b 7b02          	ld	a,(OFST-1,sp)
@@ -323,7 +323,7 @@
 2958  018f 6b02          	ld	(OFST-1,sp),a
 2959                     ; 193 putchar(temp11);
 2961  0191 a60a          	ld	a,#10
-2962  0193 cd0886        	call	_putchar
+2962  0193 cd08b2        	call	_putchar
 2964                     ; 195 temp11=adress%256;//(*((char*)&adress));
 2966  0196 7b09          	ld	a,(OFST+6,sp)
 2967  0198 a4ff          	and	a,#255
@@ -334,7 +334,7 @@
 2973  01a0 6b02          	ld	(OFST-1,sp),a
 2974                     ; 197 putchar(temp11);
 2976  01a2 7b03          	ld	a,(OFST+0,sp)
-2977  01a4 cd0886        	call	_putchar
+2977  01a4 cd08b2        	call	_putchar
 2979                     ; 198 adress>>=8;
 2981  01a7 96            	ldw	x,sp
 2982  01a8 1c0006        	addw	x,#OFST+3
@@ -350,7 +350,7 @@
 2995  01ba 6b02          	ld	(OFST-1,sp),a
 2996                     ; 201 putchar(temp11);
 2998  01bc 7b03          	ld	a,(OFST+0,sp)
-2999  01be cd0886        	call	_putchar
+2999  01be cd08b2        	call	_putchar
 3001                     ; 202 adress>>=8;
 3003  01c1 96            	ldw	x,sp
 3004  01c2 1c0006        	addw	x,#OFST+3
@@ -366,7 +366,7 @@
 3017  01d4 6b02          	ld	(OFST-1,sp),a
 3018                     ; 205 putchar(temp11);
 3020  01d6 7b03          	ld	a,(OFST+0,sp)
-3021  01d8 cd0886        	call	_putchar
+3021  01d8 cd08b2        	call	_putchar
 3023                     ; 206 adress>>=8;
 3025  01db 96            	ldw	x,sp
 3026  01dc 1c0006        	addw	x,#OFST+3
@@ -382,7 +382,7 @@
 3039  01ee 6b02          	ld	(OFST-1,sp),a
 3040                     ; 209 putchar(temp11);
 3042  01f0 7b03          	ld	a,(OFST+0,sp)
-3043  01f2 cd0886        	call	_putchar
+3043  01f2 cd08b2        	call	_putchar
 3045                     ; 212 for(i11=0;i11<len;i11++)
 3047  01f5 0f01          	clr	(OFST-2,sp)
 3049  01f7 201b          	jra	L7071
@@ -404,7 +404,7 @@
 3067  020b 6b02          	ld	(OFST-1,sp),a
 3068                     ; 216 	putchar(temp11);
 3070  020d 7b03          	ld	a,(OFST+0,sp)
-3071  020f cd0886        	call	_putchar
+3071  020f cd08b2        	call	_putchar
 3073                     ; 212 for(i11=0;i11<len;i11++)
 3075  0212 0c01          	inc	(OFST-2,sp)
 3076  0214               L7071:
@@ -421,13 +421,13 @@
 3091  0224 6b02          	ld	(OFST-1,sp),a
 3092                     ; 221 putchar(temp11);
 3094  0226 7b03          	ld	a,(OFST+0,sp)
-3095  0228 cd0886        	call	_putchar
+3095  0228 cd08b2        	call	_putchar
 3097                     ; 223 putchar(t);
 3099  022b 7b02          	ld	a,(OFST-1,sp)
-3100  022d cd0886        	call	_putchar
+3100  022d cd08b2        	call	_putchar
 3102                     ; 225 putchar(0x0a);
 3104  0230 a60a          	ld	a,#10
-3105  0232 cd0886        	call	_putchar
+3105  0232 cd08b2        	call	_putchar
 3107                     ; 227 bOUT_FREE=0;	   
 3109  0235 72110003      	bres	_bOUT_FREE
 3110                     ; 228 }
@@ -442,7 +442,7 @@
 3262  023e c60000        	ld	a,_UIB
 3263  0241 a116          	cp	a,#22
 3264  0243 2703          	jreq	L24
-3265  0245 cc0883        	jp	L1771
+3265  0245 cc08af        	jp	L1771
 3266  0248               L24:
 3267                     ; 234 		if(UIB[1]==1) {
 3269  0248 c60001        	ld	a,_UIB+1
@@ -453,14 +453,14 @@
 3275  0251 a141          	cp	a,#65
 3276  0253 2603          	jrne	L5771
 3277                     ; 239 				temp_L=DF_mf_dev_read();
-3279  0255 cd0a3f        	call	_DF_mf_dev_read
+3279  0255 cd0a6b        	call	_DF_mf_dev_read
 3281  0258               L5771:
 3282                     ; 241 			if(memory_manufacturer=='S') {
 3284  0258 b6bc          	ld	a,_memory_manufacturer
 3285  025a a153          	cp	a,#83
 3286  025c 2603          	jrne	L7771
 3287                     ; 242 				temp_L=ST_RDID_read();
-3289  025e cd0947        	call	_ST_RDID_read
+3289  025e cd0973        	call	_ST_RDID_read
 3291  0261               L7771:
 3292                     ; 244 			uart_out (6,CMND,1,mdr0/**((char*)&temp_L)*/,mdr1/**(((char*)&temp_L)+1)*/,mdr2/**(((char*)&temp_L)+2)*/,mdr3/**(((char*)&temp_L)+3)*/);
 3294  0261 3b0015        	push	_mdr3
@@ -473,7 +473,7 @@
 3301  0274 95            	ld	xh,a
 3302  0275 cd00d2        	call	_uart_out
 3304  0278 5b05          	addw	sp,#5
-3306  027a ac830883      	jpf	L1771
+3306  027a acaf08af      	jpf	L1771
 3307  027e               L3771:
 3308                     ; 252 	else if(UIB[1]==2) {
 3310  027e c60001        	ld	a,_UIB+1
@@ -484,7 +484,7 @@
 3316  0287 a141          	cp	a,#65
 3317  0289 2605          	jrne	L5002
 3318                     ; 256 			temp=DF_status_read();
-3320  028b cd0a93        	call	_DF_status_read
+3320  028b cd0abf        	call	_DF_status_read
 3322  028e 6b04          	ld	(OFST+0,sp),a
 3323  0290               L5002:
 3324                     ; 258 		if(memory_manufacturer=='S') {
@@ -492,7 +492,7 @@
 3327  0292 a153          	cp	a,#83
 3328  0294 2605          	jrne	L7002
 3329                     ; 259 			temp=ST_status_read();
-3331  0296 cd0973        	call	_ST_status_read
+3331  0296 cd099f        	call	_ST_status_read
 3333  0299 6b04          	ld	(OFST+0,sp),a
 3334  029b               L7002:
 3335                     ; 261 		uart_out (3,CMND,2,temp,0,0,0);    
@@ -507,7 +507,7 @@
 3345  02ab 95            	ld	xh,a
 3346  02ac cd00d2        	call	_uart_out
 3348  02af 5b05          	addw	sp,#5
-3350  02b1 ac830883      	jpf	L1771
+3350  02b1 acaf08af      	jpf	L1771
 3351  02b5               L3002:
 3352                     ; 265 	else if(UIB[1]==3)
 3354  02b5 c60001        	ld	a,_UIB+1
@@ -518,7 +518,7 @@
 3360  02be a141          	cp	a,#65
 3361  02c0 2603          	jrne	L5102
 3362                     ; 269 			DF_memo_to_256();
-3364  02c2 cd0a76        	call	_DF_memo_to_256
+3364  02c2 cd0aa2        	call	_DF_memo_to_256
 3366  02c5               L5102:
 3367                     ; 271 		uart_out (2,CMND,3,temp,0,0,0);    
 3369  02c5 4b00          	push	#0
@@ -532,7 +532,7 @@
 3377  02d5 95            	ld	xh,a
 3378  02d6 cd00d2        	call	_uart_out
 3380  02d9 5b05          	addw	sp,#5
-3382  02db ac830883      	jpf	L1771
+3382  02db acaf08af      	jpf	L1771
 3383  02df               L3102:
 3384                     ; 274 	else if(UIB[1]==4)
 3386  02df c60001        	ld	a,_UIB+1
@@ -543,7 +543,7 @@
 3392  02e8 a141          	cp	a,#65
 3393  02ea 2603          	jrne	L3202
 3394                     ; 278 			DF_memo_to_256();
-3396  02ec cd0a76        	call	_DF_memo_to_256
+3396  02ec cd0aa2        	call	_DF_memo_to_256
 3398  02ef               L3202:
 3399                     ; 280 		uart_out (2,CMND,3,temp,0,0,0);    
 3401  02ef 4b00          	push	#0
@@ -557,7 +557,7 @@
 3409  02ff 95            	ld	xh,a
 3410  0300 cd00d2        	call	_uart_out
 3412  0303 5b05          	addw	sp,#5
-3414  0305 ac830883      	jpf	L1771
+3414  0305 acaf08af      	jpf	L1771
 3415  0309               L1202:
 3416                     ; 283 	else if(UIB[1]==10)
 3418  0309 c60001        	ld	a,_UIB+1
@@ -576,7 +576,7 @@
 3435  0324 ae0100        	ldw	x,#256
 3436  0327 89            	pushw	x
 3437  0328 5f            	clrw	x
-3438  0329 cd0af3        	call	_DF_buffer_read
+3438  0329 cd0b1f        	call	_DF_buffer_read
 3440  032c 5b04          	addw	sp,#4
 3441  032e               L1302:
 3442                     ; 293 		uart_out_adr_block (0,buff,64);
@@ -631,7 +631,7 @@
 3505                     ; 300 		delay_ms(100);    
 3507  038c ae0064        	ldw	x,#100
 3508  038f cd0060        	call	_delay_ms
-3511  0392 ac830883      	jpf	L1771
+3511  0392 acaf08af      	jpf	L1771
 3512  0396               L7202:
 3513                     ; 303 	else if(UIB[1]==11)
 3515  0396 c60001        	ld	a,_UIB+1
@@ -653,16 +653,16 @@
 3539  03b4 c60002        	ld	a,_UIB+2
 3540  03b7 a101          	cp	a,#1
 3541  03b9 2703          	jreq	L44
-3542  03bb cc0883        	jp	L1771
+3542  03bb cc08af        	jp	L1771
 3543  03be               L44:
 3546  03be ae0050        	ldw	x,#_buff
 3547  03c1 89            	pushw	x
 3548  03c2 ae0100        	ldw	x,#256
 3549  03c5 89            	pushw	x
 3550  03c6 5f            	clrw	x
-3551  03c7 cd0b39        	call	_DF_buffer_write
+3551  03c7 cd0b65        	call	_DF_buffer_write
 3553  03ca 5b04          	addw	sp,#4
-3554  03cc ac830883      	jpf	L1771
+3554  03cc acaf08af      	jpf	L1771
 3555  03d0               L7302:
 3556                     ; 315 	else if(UIB[1]==12)
 3558  03d0 c60001        	ld	a,_UIB+1
@@ -775,16 +775,16 @@
 3714  049a c60002        	ld	a,_UIB+2
 3715  049d a101          	cp	a,#1
 3716  049f 2703          	jreq	L05
-3717  04a1 cc0883        	jp	L1771
+3717  04a1 cc08af        	jp	L1771
 3718  04a4               L05:
 3721  04a4 ae0050        	ldw	x,#_buff
 3722  04a7 89            	pushw	x
 3723  04a8 ae0100        	ldw	x,#256
 3724  04ab 89            	pushw	x
 3725  04ac 5f            	clrw	x
-3726  04ad cd0b39        	call	_DF_buffer_write
+3726  04ad cd0b65        	call	_DF_buffer_write
 3728  04b0 5b04          	addw	sp,#4
-3729  04b2 ac830883      	jpf	L1771
+3729  04b2 acaf08af      	jpf	L1771
 3730  04b6               L3502:
 3731                     ; 374 	else if(UIB[1]==13)
 3733  04b6 c60001        	ld	a,_UIB+1
@@ -798,13 +798,13 @@
 3743  04c6 c60003        	ld	a,_UIB+3
 3744  04c9 5f            	clrw	x
 3745  04ca 97            	ld	xl,a
-3746  04cb cd0aad        	call	_DF_page_to_buffer
+3746  04cb cd0ad9        	call	_DF_page_to_buffer
 3748  04ce               L3012:
 3749                     ; 382 		if(memory_manufacturer=='S') {
 3751  04ce b6bc          	ld	a,_memory_manufacturer
 3752  04d0 a153          	cp	a,#83
 3753  04d2 2703          	jreq	L25
-3754  04d4 cc0883        	jp	L1771
+3754  04d4 cc08af        	jp	L1771
 3755  04d7               L25:
 3756                     ; 383 			current_page=11;
 3758  04d7 ae000b        	ldw	x,#11
@@ -818,7 +818,7 @@
 3767  04e7 89            	pushw	x
 3768  04e8 ae0000        	ldw	x,#0
 3769  04eb 89            	pushw	x
-3770  04ec cd09f1        	call	_ST_READ
+3770  04ec cd0a1d        	call	_ST_READ
 3772  04ef 5b08          	addw	sp,#8
 3773                     ; 386 			uart_out_adr_block (0,buff,64);
 3775  04f1 4b40          	push	#64
@@ -872,7 +872,7 @@
 3836                     ; 393 			delay_ms(100); 
 3838  054f ae0064        	ldw	x,#100
 3839  0552 cd0060        	call	_delay_ms
-3841  0555 ac830883      	jpf	L1771
+3841  0555 acaf08af      	jpf	L1771
 3842  0559               L1012:
 3843                     ; 396 	else if(UIB[1]==14)
 3845  0559 c60001        	ld	a,_UIB+1
@@ -886,13 +886,13 @@
 3855  0566 c60003        	ld	a,_UIB+3
 3856  0569 5f            	clrw	x
 3857  056a 97            	ld	xl,a
-3858  056b cd0ad0        	call	_DF_buffer_to_page_er
+3858  056b cd0afc        	call	_DF_buffer_to_page_er
 3860  056e               L3112:
 3861                     ; 404 		if(memory_manufacturer=='S') {
 3863  056e b6bc          	ld	a,_memory_manufacturer
 3864  0570 a153          	cp	a,#83
 3865  0572 2703          	jreq	L45
-3866  0574 cc0883        	jp	L1771
+3866  0574 cc08af        	jp	L1771
 3867  0577               L45:
 3868                     ; 405 			for(i=0;i<256;i++) {
 3870  0577 5f            	clrw	x
@@ -913,7 +913,7 @@
 3890  058f ae000b        	ldw	x,#11
 3891  0592 bf11          	ldw	_current_page,x
 3892                     ; 409 			ST_WREN();
-3894  0594 cd0998        	call	_ST_WREN
+3894  0594 cd09c4        	call	_ST_WREN
 3896                     ; 410 			delay_ms(100);
 3898  0597 ae0064        	ldw	x,#100
 3899  059a cd0060        	call	_delay_ms
@@ -930,9 +930,9 @@
 3913  05ae 89            	pushw	x
 3914  05af be00          	ldw	x,c_lreg
 3915  05b1 89            	pushw	x
-3916  05b2 cd09a5        	call	_ST_WRITE
+3916  05b2 cd09d1        	call	_ST_WRITE
 3918  05b5 5b08          	addw	sp,#8
-3919  05b7 ac830883      	jpf	L1771
+3919  05b7 acaf08af      	jpf	L1771
 3920  05bb               L1112:
 3921                     ; 416 	else if(UIB[1]==20)
 3923  05bb c60001        	ld	a,_UIB+1
@@ -997,12 +997,12 @@
 4002  0623 a153          	cp	a,#83
 4003  0625 260c          	jrne	L1312
 4004                     ; 438 			ST_WREN();
-4006  0627 cd0998        	call	_ST_WREN
+4006  0627 cd09c4        	call	_ST_WREN
 4008                     ; 439 					delay_ms(100); 
 4010  062a ae0064        	ldw	x,#100
 4011  062d cd0060        	call	_delay_ms
 4013                     ; 440 		ST_bulk_erase();
-4015  0630 cd098b        	call	_ST_bulk_erase
+4015  0630 cd09b7        	call	_ST_bulk_erase
 4017  0633               L1312:
 4018                     ; 442 		uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
 4020  0633 4b00          	push	#0
@@ -1017,17 +1017,17 @@
 4029  0646 95            	ld	xh,a
 4030  0647 cd00d2        	call	_uart_out
 4032  064a 5b05          	addw	sp,#5
-4033                     ; 443 		current_page_cnt=100;
-4035  064c 35640001      	mov	_current_page_cnt,#100
+4033                     ; 443 		current_page_cnt=10;
+4035  064c 350a0001      	mov	_current_page_cnt,#10
 4036                     ; 444 		current_page_cnt_=4;
 4038  0650 35040000      	mov	_current_page_cnt_,#4
-4040  0654 ac830883      	jpf	L1771
+4040  0654 acaf08af      	jpf	L1771
 4041  0658               L7212:
 4042                     ; 447 	else if(UIB[1]==21) 
 4044  0658 c60001        	ld	a,_UIB+1
 4045  065b a115          	cp	a,#21
 4046  065d 2703          	jreq	L06
-4047  065f cc0768        	jp	L5312
+4047  065f cc0774        	jp	L5312
 4048  0662               L06:
 4049                     ; 454 		if(current_page_cnt_)
 4051  0662 3d00          	tnz	_current_page_cnt_
@@ -1069,1833 +1069,1855 @@
 4098  0697 be0d          	ldw	x,_current_byte_in_buffer
 4099  0699 a30100        	cpw	x,#256
 4100  069c 2403          	jruge	L26
-4101  069e cc0883        	jp	L1771
+4101  069e cc08af        	jp	L1771
 4102  06a1               L26:
-4103                     ; 482 			if(memory_manufacturer=='A') {
-4105  06a1 b6bc          	ld	a,_memory_manufacturer
-4106  06a3 a141          	cp	a,#65
-4107  06a5 264e          	jrne	L5512
-4108                     ; 483 				DF_buffer_write(/*//current_buffer*//*1,*/0,256,buff);
-4110  06a7 ae0050        	ldw	x,#_buff
-4111  06aa 89            	pushw	x
-4112  06ab ae0100        	ldw	x,#256
-4113  06ae 89            	pushw	x
-4114  06af 5f            	clrw	x
-4115  06b0 cd0b39        	call	_DF_buffer_write
-4117  06b3 5b04          	addw	sp,#4
-4118                     ; 484 				DF_buffer_to_page_er(/*///current_buffer*//*1,*/current_page);
-4120  06b5 be11          	ldw	x,_current_page
-4121  06b7 cd0ad0        	call	_DF_buffer_to_page_er
-4123                     ; 485 				current_page++;
-4125  06ba be11          	ldw	x,_current_page
-4126  06bc 1c0001        	addw	x,#1
-4127  06bf bf11          	ldw	_current_page,x
-4128                     ; 486 				if(current_page<file_lengt_in_pages)
-4130  06c1 be11          	ldw	x,_current_page
-4131  06c3 b313          	cpw	x,_file_lengt_in_pages
-4132  06c5 2424          	jruge	L7512
-4133                     ; 488 					delay_ms(100);
-4135  06c7 ae0064        	ldw	x,#100
-4136  06ca cd0060        	call	_delay_ms
-4138                     ; 489 					uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
-4140  06cd 4b00          	push	#0
-4141  06cf 4b00          	push	#0
-4142  06d1 3b0011        	push	_current_page
-4143  06d4 b612          	ld	a,_current_page+1
-4144  06d6 a4ff          	and	a,#255
-4145  06d8 88            	push	a
-4146  06d9 4b15          	push	#21
-4147  06db ae0016        	ldw	x,#22
-4148  06de a604          	ld	a,#4
-4149  06e0 95            	ld	xh,a
-4150  06e1 cd00d2        	call	_uart_out
-4152  06e4 5b05          	addw	sp,#5
-4153                     ; 490 					current_byte_in_buffer=0;
-4155  06e6 5f            	clrw	x
-4156  06e7 bf0d          	ldw	_current_byte_in_buffer,x
-4158  06e9 200a          	jra	L5512
-4159  06eb               L7512:
-4160                     ; 494 					EE_PAGE_LEN=current_page;
-4162  06eb be11          	ldw	x,_current_page
-4163  06ed 89            	pushw	x
-4164  06ee ae0000        	ldw	x,#_EE_PAGE_LEN
-4165  06f1 cd0000        	call	c_eewrw
-4167  06f4 85            	popw	x
-4168  06f5               L5512:
-4169                     ; 497 			if(memory_manufacturer=='S') {
-4171  06f5 b6bc          	ld	a,_memory_manufacturer
-4172  06f7 a153          	cp	a,#83
-4173  06f9 2703          	jreq	L46
-4174  06fb cc0883        	jp	L1771
-4175  06fe               L46:
-4176                     ; 498 				ST_WREN();
-4178  06fe cd0998        	call	_ST_WREN
-4180                     ; 499 				delay_ms(100);
-4182  0701 ae0064        	ldw	x,#100
-4183  0704 cd0060        	call	_delay_ms
-4185                     ; 500 				ST_WRITE((unsigned long)(current_page*256UL),256,buff);
-4187  0707 ae0050        	ldw	x,#_buff
-4188  070a 89            	pushw	x
-4189  070b ae0100        	ldw	x,#256
-4190  070e 89            	pushw	x
-4191  070f be11          	ldw	x,_current_page
-4192  0711 90ae0100      	ldw	y,#256
-4193  0715 cd0000        	call	c_umul
-4195  0718 be02          	ldw	x,c_lreg+2
-4196  071a 89            	pushw	x
-4197  071b be00          	ldw	x,c_lreg
-4198  071d 89            	pushw	x
-4199  071e cd09a5        	call	_ST_WRITE
-4201  0721 5b08          	addw	sp,#8
-4202                     ; 501 				current_page++;
-4204  0723 be11          	ldw	x,_current_page
-4205  0725 1c0001        	addw	x,#1
-4206  0728 bf11          	ldw	_current_page,x
-4207                     ; 502 				if(current_page<file_lengt_in_pages)
-4209  072a be11          	ldw	x,_current_page
-4210  072c b313          	cpw	x,_file_lengt_in_pages
-4211  072e 242a          	jruge	L5612
-4212                     ; 504 					delay_ms(100);
-4214  0730 ae0064        	ldw	x,#100
-4215  0733 cd0060        	call	_delay_ms
-4217                     ; 505 					uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
-4219  0736 4b00          	push	#0
-4220  0738 4b00          	push	#0
-4221  073a 3b0011        	push	_current_page
-4222  073d b612          	ld	a,_current_page+1
-4223  073f a4ff          	and	a,#255
-4224  0741 88            	push	a
-4225  0742 4b15          	push	#21
-4226  0744 ae0016        	ldw	x,#22
-4227  0747 a604          	ld	a,#4
-4228  0749 95            	ld	xh,a
-4229  074a cd00d2        	call	_uart_out
-4231  074d 5b05          	addw	sp,#5
-4232                     ; 506 					current_page_cnt=100;
-4234  074f 35640001      	mov	_current_page_cnt,#100
-4235                     ; 507 					current_byte_in_buffer=0;
-4237  0753 5f            	clrw	x
-4238  0754 bf0d          	ldw	_current_byte_in_buffer,x
-4240  0756 ac830883      	jpf	L1771
-4241  075a               L5612:
-4242                     ; 511 					EE_PAGE_LEN=current_page;
-4244  075a be11          	ldw	x,_current_page
-4245  075c 89            	pushw	x
-4246  075d ae0000        	ldw	x,#_EE_PAGE_LEN
-4247  0760 cd0000        	call	c_eewrw
-4249  0763 85            	popw	x
-4250  0764 ac830883      	jpf	L1771
-4251  0768               L5312:
-4252                     ; 522 	else if(UIB[1]==24) {
-4254  0768 c60001        	ld	a,_UIB+1
-4255  076b a118          	cp	a,#24
-4256  076d 2615          	jrne	L3712
-4257                     ; 525 		rele_cnt=10;
-4259  076f ae000a        	ldw	x,#10
-4260  0772 bf05          	ldw	_rele_cnt,x
-4261                     ; 526 		ST_WREN();
-4263  0774 cd0998        	call	_ST_WREN
-4265                     ; 527 		delay_ms(100);
-4267  0777 ae0064        	ldw	x,#100
-4268  077a cd0060        	call	_delay_ms
-4270                     ; 528 		ST_bulk_erase();
-4272  077d cd098b        	call	_ST_bulk_erase
-4275  0780 ac830883      	jpf	L1771
-4276  0784               L3712:
-4277                     ; 533 	else if(UIB[1]==25)
-4279  0784 c60001        	ld	a,_UIB+1
-4280  0787 a119          	cp	a,#25
-4281  0789 2703          	jreq	L66
-4282  078b cc086b        	jp	L7712
-4283  078e               L66:
-4284                     ; 537 		current_page=0;
-4286  078e 5f            	clrw	x
-4287  078f bf11          	ldw	_current_page,x
-4288                     ; 539 		for(i__=0;i__<EE_PAGE_LEN;i__++)
-4290  0791 5f            	clrw	x
-4291  0792 1f03          	ldw	(OFST-1,sp),x
-4293  0794 ac5f085f      	jpf	L5022
-4294  0798               L1022:
-4295                     ; 541 			if(memory_manufacturer=='S') {	
-4297  0798 b6bc          	ld	a,_memory_manufacturer
-4298  079a a153          	cp	a,#83
-4299  079c 2619          	jrne	L1122
-4300                     ; 542 				DF_page_to_buffer(i__);
-4302  079e 1e03          	ldw	x,(OFST-1,sp)
-4303  07a0 cd0aad        	call	_DF_page_to_buffer
-4305                     ; 543 				delay_ms(100);			
-4307  07a3 ae0064        	ldw	x,#100
-4308  07a6 cd0060        	call	_delay_ms
-4310                     ; 544 				DF_buffer_read(0,256, buff);
-4312  07a9 ae0050        	ldw	x,#_buff
-4313  07ac 89            	pushw	x
-4314  07ad ae0100        	ldw	x,#256
-4315  07b0 89            	pushw	x
-4316  07b1 5f            	clrw	x
-4317  07b2 cd0af3        	call	_DF_buffer_read
-4319  07b5 5b04          	addw	sp,#4
-4320  07b7               L1122:
-4321                     ; 547 			if(memory_manufacturer=='S') {	
-4323  07b7 b6bc          	ld	a,_memory_manufacturer
-4324  07b9 a153          	cp	a,#83
-4325  07bb 261a          	jrne	L3122
-4326                     ; 548 				ST_READ((long)(i__*256),256, buff);
-4328  07bd ae0050        	ldw	x,#_buff
-4329  07c0 89            	pushw	x
-4330  07c1 ae0100        	ldw	x,#256
-4331  07c4 89            	pushw	x
-4332  07c5 1e07          	ldw	x,(OFST+3,sp)
-4333  07c7 4f            	clr	a
-4334  07c8 02            	rlwa	x,a
-4335  07c9 cd0000        	call	c_itolx
-4337  07cc be02          	ldw	x,c_lreg+2
-4338  07ce 89            	pushw	x
-4339  07cf be00          	ldw	x,c_lreg
-4340  07d1 89            	pushw	x
-4341  07d2 cd09f1        	call	_ST_READ
-4343  07d5 5b08          	addw	sp,#8
-4344  07d7               L3122:
-4345                     ; 551 			uart_out_adr_block ((256*i__)+0,buff,64);
-4347  07d7 4b40          	push	#64
-4348  07d9 ae0050        	ldw	x,#_buff
-4349  07dc 89            	pushw	x
-4350  07dd 1e06          	ldw	x,(OFST+2,sp)
-4351  07df 4f            	clr	a
-4352  07e0 02            	rlwa	x,a
-4353  07e1 cd0000        	call	c_itolx
-4355  07e4 be02          	ldw	x,c_lreg+2
-4356  07e6 89            	pushw	x
-4357  07e7 be00          	ldw	x,c_lreg
-4358  07e9 89            	pushw	x
-4359  07ea cd017c        	call	_uart_out_adr_block
-4361  07ed 5b07          	addw	sp,#7
-4362                     ; 552 			delay_ms(100);    
-4364  07ef ae0064        	ldw	x,#100
-4365  07f2 cd0060        	call	_delay_ms
-4367                     ; 553 			uart_out_adr_block ((256*i__)+64,&buff[64],64);
-4369  07f5 4b40          	push	#64
-4370  07f7 ae0090        	ldw	x,#_buff+64
-4371  07fa 89            	pushw	x
-4372  07fb 1e06          	ldw	x,(OFST+2,sp)
-4373  07fd 4f            	clr	a
-4374  07fe 02            	rlwa	x,a
-4375  07ff 1c0040        	addw	x,#64
-4376  0802 cd0000        	call	c_itolx
-4378  0805 be02          	ldw	x,c_lreg+2
-4379  0807 89            	pushw	x
-4380  0808 be00          	ldw	x,c_lreg
-4381  080a 89            	pushw	x
-4382  080b cd017c        	call	_uart_out_adr_block
-4384  080e 5b07          	addw	sp,#7
-4385                     ; 554 			delay_ms(100);    
-4387  0810 ae0064        	ldw	x,#100
-4388  0813 cd0060        	call	_delay_ms
-4390                     ; 555 			uart_out_adr_block ((256*i__)+128,&buff[128],64);
-4392  0816 4b40          	push	#64
-4393  0818 ae00d0        	ldw	x,#_buff+128
-4394  081b 89            	pushw	x
-4395  081c 1e06          	ldw	x,(OFST+2,sp)
-4396  081e 4f            	clr	a
-4397  081f 02            	rlwa	x,a
-4398  0820 1c0080        	addw	x,#128
-4399  0823 cd0000        	call	c_itolx
-4401  0826 be02          	ldw	x,c_lreg+2
-4402  0828 89            	pushw	x
-4403  0829 be00          	ldw	x,c_lreg
-4404  082b 89            	pushw	x
-4405  082c cd017c        	call	_uart_out_adr_block
-4407  082f 5b07          	addw	sp,#7
-4408                     ; 556 			delay_ms(100);    
-4410  0831 ae0064        	ldw	x,#100
-4411  0834 cd0060        	call	_delay_ms
-4413                     ; 557 			uart_out_adr_block ((256*i__)+192,&buff[192],64);
-4415  0837 4b40          	push	#64
-4416  0839 ae0110        	ldw	x,#_buff+192
-4417  083c 89            	pushw	x
-4418  083d 1e06          	ldw	x,(OFST+2,sp)
-4419  083f 4f            	clr	a
-4420  0840 02            	rlwa	x,a
-4421  0841 1c00c0        	addw	x,#192
-4422  0844 cd0000        	call	c_itolx
-4424  0847 be02          	ldw	x,c_lreg+2
-4425  0849 89            	pushw	x
-4426  084a be00          	ldw	x,c_lreg
-4427  084c 89            	pushw	x
-4428  084d cd017c        	call	_uart_out_adr_block
-4430  0850 5b07          	addw	sp,#7
-4431                     ; 558 			delay_ms(100);   
-4433  0852 ae0064        	ldw	x,#100
-4434  0855 cd0060        	call	_delay_ms
-4436                     ; 539 		for(i__=0;i__<EE_PAGE_LEN;i__++)
-4438  0858 1e03          	ldw	x,(OFST-1,sp)
-4439  085a 1c0001        	addw	x,#1
-4440  085d 1f03          	ldw	(OFST-1,sp),x
-4441  085f               L5022:
-4444  085f 1e03          	ldw	x,(OFST-1,sp)
-4445  0861 c30000        	cpw	x,_EE_PAGE_LEN
-4446  0864 2403          	jruge	L07
-4447  0866 cc0798        	jp	L1022
-4448  0869               L07:
-4450  0869 2018          	jra	L1771
-4451  086b               L7712:
-4452                     ; 568 	else if(UIB[1]==30)
-4454  086b c60001        	ld	a,_UIB+1
-4455  086e a11e          	cp	a,#30
-4456  0870 2606          	jrne	L7122
-4457                     ; 590           bSTART=1;
-4459  0872 7210000c      	bset	_bSTART
-4461  0876 200b          	jra	L1771
-4462  0878               L7122:
-4463                     ; 602 	else if(UIB[1]==40)
-4465  0878 c60001        	ld	a,_UIB+1
-4466  087b a128          	cp	a,#40
-4467  087d 2604          	jrne	L1771
-4468                     ; 624 		bSTART=1;	
-4470  087f 7210000c      	bset	_bSTART
-4471  0883               L1771:
-4472                     ; 629 }
-4475  0883 5b04          	addw	sp,#4
-4476  0885 81            	ret
-4513                     ; 632 void putchar(char c)
-4513                     ; 633 {
-4514                     	switch	.text
-4515  0886               _putchar:
-4517  0886 88            	push	a
-4518       00000000      OFST:	set	0
-4521  0887               L5422:
-4522                     ; 634 while (tx_counter == TX_BUFFER_SIZE);
-4524  0887 b622          	ld	a,_tx_counter
-4525  0889 a150          	cp	a,#80
-4526  088b 27fa          	jreq	L5422
-4527                     ; 636 if (tx_counter || ((UART1->SR & UART1_SR_TXE)==0))
-4529  088d 3d22          	tnz	_tx_counter
-4530  088f 2607          	jrne	L3522
-4532  0891 c65230        	ld	a,21040
-4533  0894 a580          	bcp	a,#128
-4534  0896 261d          	jrne	L1522
-4535  0898               L3522:
-4536                     ; 638    tx_buffer[tx_wr_index]=c;
-4538  0898 5f            	clrw	x
-4539  0899 b621          	ld	a,_tx_wr_index
-4540  089b 2a01          	jrpl	L47
-4541  089d 53            	cplw	x
-4542  089e               L47:
-4543  089e 97            	ld	xl,a
-4544  089f 7b01          	ld	a,(OFST+1,sp)
-4545  08a1 e704          	ld	(_tx_buffer,x),a
-4546                     ; 639    if (++tx_wr_index == TX_BUFFER_SIZE) tx_wr_index=0;
-4548  08a3 3c21          	inc	_tx_wr_index
-4549  08a5 b621          	ld	a,_tx_wr_index
-4550  08a7 a150          	cp	a,#80
-4551  08a9 2602          	jrne	L5522
-4554  08ab 3f21          	clr	_tx_wr_index
-4555  08ad               L5522:
-4556                     ; 640    ++tx_counter;
-4558  08ad 3c22          	inc	_tx_counter
-4560  08af               L7522:
-4561                     ; 644 UART1->CR2|= UART1_CR2_TIEN;
-4563  08af 721e5235      	bset	21045,#7
-4564                     ; 646 }
-4567  08b3 84            	pop	a
-4568  08b4 81            	ret
-4569  08b5               L1522:
-4570                     ; 642 else UART1->DR=c;
-4572  08b5 7b01          	ld	a,(OFST+1,sp)
-4573  08b7 c75231        	ld	21041,a
-4574  08ba 20f3          	jra	L7522
-4597                     ; 649 void spi_init(void){
-4598                     	switch	.text
-4599  08bc               _spi_init:
-4603                     ; 651 	GPIOA->DDR|=(1<<3);
-4605  08bc 72165002      	bset	20482,#3
-4606                     ; 652 	GPIOA->CR1|=(1<<3);
-4608  08c0 72165003      	bset	20483,#3
-4609                     ; 653 	GPIOA->CR2&=~(1<<3);
-4611  08c4 72175004      	bres	20484,#3
-4612                     ; 654 	GPIOA->ODR|=(1<<3);	
-4614  08c8 72165000      	bset	20480,#3
-4615                     ; 657 	GPIOB->DDR|=(1<<5);
-4617  08cc 721a5007      	bset	20487,#5
-4618                     ; 658 	GPIOB->CR1|=(1<<5);
-4620  08d0 721a5008      	bset	20488,#5
-4621                     ; 659 	GPIOB->CR2&=~(1<<5);
-4623  08d4 721b5009      	bres	20489,#5
-4624                     ; 660 	GPIOB->ODR|=(1<<5);	
-4626  08d8 721a5005      	bset	20485,#5
-4627                     ; 662 	GPIOC->DDR|=(1<<3);
-4629  08dc 7216500c      	bset	20492,#3
-4630                     ; 663 	GPIOC->CR1|=(1<<3);
-4632  08e0 7216500d      	bset	20493,#3
-4633                     ; 664 	GPIOC->CR2&=~(1<<3);
-4635  08e4 7217500e      	bres	20494,#3
-4636                     ; 665 	GPIOC->ODR|=(1<<3);	
-4638  08e8 7216500a      	bset	20490,#3
-4639                     ; 667 	GPIOC->DDR|=(1<<5);
-4641  08ec 721a500c      	bset	20492,#5
-4642                     ; 668 	GPIOC->CR1|=(1<<5);
-4644  08f0 721a500d      	bset	20493,#5
-4645                     ; 669 	GPIOC->CR2|=(1<<5);
-4647  08f4 721a500e      	bset	20494,#5
-4648                     ; 670 	GPIOC->ODR|=(1<<5);	
-4650  08f8 721a500a      	bset	20490,#5
-4651                     ; 672 	GPIOC->DDR|=(1<<6);
-4653  08fc 721c500c      	bset	20492,#6
-4654                     ; 673 	GPIOC->CR1|=(1<<6);
-4656  0900 721c500d      	bset	20493,#6
-4657                     ; 674 	GPIOC->CR2|=(1<<6);
-4659  0904 721c500e      	bset	20494,#6
-4660                     ; 675 	GPIOC->ODR|=(1<<6);	
-4662  0908 721c500a      	bset	20490,#6
-4663                     ; 677 	GPIOC->DDR&=~(1<<7);
-4665  090c 721f500c      	bres	20492,#7
-4666                     ; 678 	GPIOC->CR1&=~(1<<7);
-4668  0910 721f500d      	bres	20493,#7
-4669                     ; 679 	GPIOC->CR2&=~(1<<7);
-4671  0914 721f500e      	bres	20494,#7
-4672                     ; 680 	GPIOC->ODR|=(1<<7);	
-4674  0918 721e500a      	bset	20490,#7
-4675                     ; 682 	SPI->CR1= /*SPI_CR1_LSBFIRST |*/
-4675                     ; 683 			SPI_CR1_SPE | 
-4675                     ; 684 			( (4<< 3) & SPI_CR1_BR ) |
-4675                     ; 685 			SPI_CR1_MSTR |
-4675                     ; 686 			SPI_CR1_CPOL |
-4675                     ; 687 			SPI_CR1_CPHA; 
-4677  091c 35675200      	mov	20992,#103
-4678                     ; 689 	SPI->CR2= SPI_CR2_SSM | SPI_CR2_SSI;
-4680  0920 35035201      	mov	20993,#3
-4681                     ; 690 	SPI->ICR= 0;	
-4683  0924 725f5202      	clr	20994
-4684                     ; 691 }
-4687  0928 81            	ret
-4730                     ; 694 char spi(char in){
-4731                     	switch	.text
-4732  0929               _spi:
-4734  0929 88            	push	a
-4735  092a 88            	push	a
-4736       00000001      OFST:	set	1
-4739  092b               L5132:
-4740                     ; 696 	while(!((SPI->SR)&SPI_SR_TXE));
-4742  092b c65203        	ld	a,20995
-4743  092e a502          	bcp	a,#2
-4744  0930 27f9          	jreq	L5132
-4745                     ; 697 	SPI->DR=in;
-4747  0932 7b02          	ld	a,(OFST+1,sp)
-4748  0934 c75204        	ld	20996,a
-4750  0937               L5232:
-4751                     ; 698 	while(!((SPI->SR)&SPI_SR_RXNE));
-4753  0937 c65203        	ld	a,20995
-4754  093a a501          	bcp	a,#1
-4755  093c 27f9          	jreq	L5232
-4756                     ; 699 	c=SPI->DR;	
-4758  093e c65204        	ld	a,20996
-4759  0941 6b01          	ld	(OFST+0,sp),a
-4760                     ; 700 	return c;
-4762  0943 7b01          	ld	a,(OFST+0,sp)
-4765  0945 85            	popw	x
-4766  0946 81            	ret
-4831                     ; 704 long ST_RDID_read(void)
-4831                     ; 705 {
-4832                     	switch	.text
-4833  0947               _ST_RDID_read:
-4835  0947 5204          	subw	sp,#4
-4836       00000004      OFST:	set	4
-4839                     ; 708 d0=0;
-4841  0949 0f04          	clr	(OFST+0,sp)
-4842                     ; 709 d1=0;
-4844                     ; 710 d2=0;
-4846                     ; 711 d3=0;
-4848                     ; 713 ST_CS_ON
-4850  094b 721b5005      	bres	20485,#5
-4851                     ; 714 spi(0x9f);
-4853  094f a69f          	ld	a,#159
-4854  0951 add6          	call	_spi
-4856                     ; 715 mdr0=spi(0xff);
-4858  0953 a6ff          	ld	a,#255
-4859  0955 add2          	call	_spi
-4861  0957 b718          	ld	_mdr0,a
-4862                     ; 716 mdr1=spi(0xff);
-4864  0959 a6ff          	ld	a,#255
-4865  095b adcc          	call	_spi
-4867  095d b717          	ld	_mdr1,a
-4868                     ; 717 mdr2=spi(0xff);
-4870  095f a6ff          	ld	a,#255
-4871  0961 adc6          	call	_spi
-4873  0963 b716          	ld	_mdr2,a
-4874                     ; 720 ST_CS_OFF
-4876  0965 721a5005      	bset	20485,#5
-4877                     ; 721 return  *((long*)&d0);
-4879  0969 96            	ldw	x,sp
-4880  096a 1c0004        	addw	x,#OFST+0
-4881  096d cd0000        	call	c_ltor
-4885  0970 5b04          	addw	sp,#4
-4886  0972 81            	ret
-4921                     ; 725 char ST_status_read(void)
-4921                     ; 726 {
-4922                     	switch	.text
-4923  0973               _ST_status_read:
-4925  0973 88            	push	a
-4926       00000001      OFST:	set	1
-4929                     ; 730 ST_CS_ON
-4931  0974 721b5005      	bres	20485,#5
-4932                     ; 731 spi(0x05);
-4934  0978 a605          	ld	a,#5
-4935  097a adad          	call	_spi
-4937                     ; 732 d0=spi(0xff);
-4939  097c a6ff          	ld	a,#255
-4940  097e ada9          	call	_spi
-4942  0980 6b01          	ld	(OFST+0,sp),a
-4943                     ; 734 ST_CS_OFF
-4945  0982 721a5005      	bset	20485,#5
-4946                     ; 735 return d0;
-4948  0986 7b01          	ld	a,(OFST+0,sp)
-4951  0988 5b01          	addw	sp,#1
-4952  098a 81            	ret
-4976                     ; 739 void ST_bulk_erase(void)
-4976                     ; 740 {
-4977                     	switch	.text
-4978  098b               _ST_bulk_erase:
-4982                     ; 741 ST_CS_ON
-4984  098b 721b5005      	bres	20485,#5
-4985                     ; 742 spi(0xC7);
-4987  098f a6c7          	ld	a,#199
-4988  0991 ad96          	call	_spi
-4990                     ; 745 ST_CS_OFF
-4992  0993 721a5005      	bset	20485,#5
-4993                     ; 746 }
-4996  0997 81            	ret
-5020                     ; 748 void ST_WREN(void)
-5020                     ; 749 {
-5021                     	switch	.text
-5022  0998               _ST_WREN:
-5026                     ; 751 ST_CS_ON
-5028  0998 721b5005      	bres	20485,#5
-5029                     ; 752 spi(0x06);
-5031  099c a606          	ld	a,#6
-5032  099e ad89          	call	_spi
-5034                     ; 754 ST_CS_OFF
-5036  09a0 721a5005      	bset	20485,#5
-5037                     ; 755 }  
-5040  09a4 81            	ret
-5130                     ; 758 void ST_WRITE(unsigned long memo_addr,unsigned short len, char* adr)
-5130                     ; 759 {
-5131                     	switch	.text
-5132  09a5               _ST_WRITE:
-5134  09a5 5205          	subw	sp,#5
-5135       00000005      OFST:	set	5
-5138                     ; 763 adr2=(char)(memo_addr>>16);
-5140  09a7 7b09          	ld	a,(OFST+4,sp)
-5141  09a9 6b03          	ld	(OFST-2,sp),a
-5142                     ; 764 adr1=(char)((memo_addr>>8)&0x00ff);
-5144  09ab 7b0a          	ld	a,(OFST+5,sp)
-5145  09ad a4ff          	and	a,#255
-5146  09af 6b02          	ld	(OFST-3,sp),a
-5147                     ; 765 adr0=(char)((memo_addr)&0x00ff);
-5149  09b1 7b0b          	ld	a,(OFST+6,sp)
-5150  09b3 a4ff          	and	a,#255
-5151  09b5 6b01          	ld	(OFST-4,sp),a
-5152                     ; 766 ST_CS_ON
-5154  09b7 721b5005      	bres	20485,#5
-5155                     ; 768 spi(0x02);
-5157  09bb a602          	ld	a,#2
-5158  09bd cd0929        	call	_spi
-5160                     ; 769 spi(adr2);
-5162  09c0 7b03          	ld	a,(OFST-2,sp)
-5163  09c2 cd0929        	call	_spi
-5165                     ; 770 spi(adr1);
-5167  09c5 7b02          	ld	a,(OFST-3,sp)
-5168  09c7 cd0929        	call	_spi
-5170                     ; 771 spi(adr0);
-5172  09ca 7b01          	ld	a,(OFST-4,sp)
-5173  09cc cd0929        	call	_spi
-5175                     ; 773 for(i=0;i<len;i++)
-5177  09cf 5f            	clrw	x
-5178  09d0 1f04          	ldw	(OFST-1,sp),x
-5180  09d2 2010          	jra	L3742
-5181  09d4               L7642:
-5182                     ; 775 	spi(adr[i]);
-5184  09d4 1e0e          	ldw	x,(OFST+9,sp)
-5185  09d6 72fb04        	addw	x,(OFST-1,sp)
-5186  09d9 f6            	ld	a,(x)
-5187  09da cd0929        	call	_spi
-5189                     ; 773 for(i=0;i<len;i++)
-5191  09dd 1e04          	ldw	x,(OFST-1,sp)
-5192  09df 1c0001        	addw	x,#1
-5193  09e2 1f04          	ldw	(OFST-1,sp),x
-5194  09e4               L3742:
-5197  09e4 1e04          	ldw	x,(OFST-1,sp)
-5198  09e6 130c          	cpw	x,(OFST+7,sp)
-5199  09e8 25ea          	jrult	L7642
-5200                     ; 778 ST_CS_OFF
-5202  09ea 721a5005      	bset	20485,#5
-5203                     ; 779 }
-5206  09ee 5b05          	addw	sp,#5
-5207  09f0 81            	ret
-5297                     ; 782 void ST_READ(unsigned long memo_addr,unsigned short len, char* adr)
-5297                     ; 783 {
-5298                     	switch	.text
-5299  09f1               _ST_READ:
-5301  09f1 5205          	subw	sp,#5
-5302       00000005      OFST:	set	5
-5305                     ; 789 adr2=(char)(memo_addr>>16);
-5307  09f3 7b09          	ld	a,(OFST+4,sp)
-5308  09f5 6b03          	ld	(OFST-2,sp),a
-5309                     ; 790 adr1=(char)((memo_addr>>8)&0x00ff);
-5311  09f7 7b0a          	ld	a,(OFST+5,sp)
-5312  09f9 a4ff          	and	a,#255
-5313  09fb 6b02          	ld	(OFST-3,sp),a
-5314                     ; 791 adr0=(char)((memo_addr)&0x00ff);
-5316  09fd 7b0b          	ld	a,(OFST+6,sp)
-5317  09ff a4ff          	and	a,#255
-5318  0a01 6b01          	ld	(OFST-4,sp),a
-5319                     ; 792 ST_CS_ON
-5321  0a03 721b5005      	bres	20485,#5
-5322                     ; 793 spi(0x03);
-5324  0a07 a603          	ld	a,#3
-5325  0a09 cd0929        	call	_spi
-5327                     ; 794 spi(adr2);
-5329  0a0c 7b03          	ld	a,(OFST-2,sp)
-5330  0a0e cd0929        	call	_spi
-5332                     ; 795 spi(adr1);
-5334  0a11 7b02          	ld	a,(OFST-3,sp)
-5335  0a13 cd0929        	call	_spi
-5337                     ; 796 spi(adr0);
-5339  0a16 7b01          	ld	a,(OFST-4,sp)
-5340  0a18 cd0929        	call	_spi
-5342                     ; 798 for(i=0;i<len;i++)
-5344  0a1b 5f            	clrw	x
-5345  0a1c 1f04          	ldw	(OFST-1,sp),x
-5347  0a1e 2012          	jra	L1552
-5348  0a20               L5452:
-5349                     ; 800 	adr[i]=spi(0xff);
-5351  0a20 a6ff          	ld	a,#255
-5352  0a22 cd0929        	call	_spi
-5354  0a25 1e0e          	ldw	x,(OFST+9,sp)
-5355  0a27 72fb04        	addw	x,(OFST-1,sp)
-5356  0a2a f7            	ld	(x),a
-5357                     ; 798 for(i=0;i<len;i++)
-5359  0a2b 1e04          	ldw	x,(OFST-1,sp)
-5360  0a2d 1c0001        	addw	x,#1
-5361  0a30 1f04          	ldw	(OFST-1,sp),x
-5362  0a32               L1552:
-5365  0a32 1e04          	ldw	x,(OFST-1,sp)
-5366  0a34 130c          	cpw	x,(OFST+7,sp)
-5367  0a36 25e8          	jrult	L5452
-5368                     ; 803 ST_CS_OFF
-5370  0a38 721a5005      	bset	20485,#5
-5371                     ; 804 }
-5374  0a3c 5b05          	addw	sp,#5
-5375  0a3e 81            	ret
-5441                     ; 808 long DF_mf_dev_read(void)
-5441                     ; 809 {
-5442                     	switch	.text
-5443  0a3f               _DF_mf_dev_read:
-5445  0a3f 5204          	subw	sp,#4
-5446       00000004      OFST:	set	4
-5449                     ; 812 d0=0;
-5451  0a41 0f04          	clr	(OFST+0,sp)
-5452                     ; 813 d1=0;
-5454                     ; 814 d2=0;
-5456                     ; 815 d3=0;
-5458                     ; 817 CS_ON
-5460  0a43 7217500a      	bres	20490,#3
-5461                     ; 818 spi(0x9f);
-5463  0a47 a69f          	ld	a,#159
-5464  0a49 cd0929        	call	_spi
-5466                     ; 819 mdr0=spi(0xff);
-5468  0a4c a6ff          	ld	a,#255
-5469  0a4e cd0929        	call	_spi
-5471  0a51 b718          	ld	_mdr0,a
-5472                     ; 820 mdr1=spi(0xff);
-5474  0a53 a6ff          	ld	a,#255
-5475  0a55 cd0929        	call	_spi
-5477  0a58 b717          	ld	_mdr1,a
-5478                     ; 821 mdr2=spi(0xff);
-5480  0a5a a6ff          	ld	a,#255
-5481  0a5c cd0929        	call	_spi
-5483  0a5f b716          	ld	_mdr2,a
-5484                     ; 822 mdr3=spi(0xff);  
-5486  0a61 a6ff          	ld	a,#255
-5487  0a63 cd0929        	call	_spi
-5489  0a66 b715          	ld	_mdr3,a
-5490                     ; 824 CS_OFF
-5492  0a68 7216500a      	bset	20490,#3
-5493                     ; 825 return  *((long*)&d0);
-5495  0a6c 96            	ldw	x,sp
-5496  0a6d 1c0004        	addw	x,#OFST+0
-5497  0a70 cd0000        	call	c_ltor
-5501  0a73 5b04          	addw	sp,#4
-5502  0a75 81            	ret
-5526                     ; 829 void DF_memo_to_256(void)
-5526                     ; 830 {
-5527                     	switch	.text
-5528  0a76               _DF_memo_to_256:
-5532                     ; 832 CS_ON
-5534  0a76 7217500a      	bres	20490,#3
-5535                     ; 833 spi(0x3d);
-5537  0a7a a63d          	ld	a,#61
-5538  0a7c cd0929        	call	_spi
-5540                     ; 834 spi(0x2a); 
-5542  0a7f a62a          	ld	a,#42
-5543  0a81 cd0929        	call	_spi
-5545                     ; 835 spi(0x80);
-5547  0a84 a680          	ld	a,#128
-5548  0a86 cd0929        	call	_spi
-5550                     ; 836 spi(0xa6);
-5552  0a89 a6a6          	ld	a,#166
-5553  0a8b cd0929        	call	_spi
-5555                     ; 838 CS_OFF
-5557  0a8e 7216500a      	bset	20490,#3
-5558                     ; 839 }  
-5561  0a92 81            	ret
-5596                     ; 844 char DF_status_read(void)
-5596                     ; 845 {
-5597                     	switch	.text
-5598  0a93               _DF_status_read:
-5600  0a93 88            	push	a
-5601       00000001      OFST:	set	1
-5604                     ; 849 CS_ON
-5606  0a94 7217500a      	bres	20490,#3
-5607                     ; 850 spi(0xd7);
-5609  0a98 a6d7          	ld	a,#215
-5610  0a9a cd0929        	call	_spi
-5612                     ; 851 d0=spi(0xff);
-5614  0a9d a6ff          	ld	a,#255
-5615  0a9f cd0929        	call	_spi
-5617  0aa2 6b01          	ld	(OFST+0,sp),a
-5618                     ; 853 CS_OFF
-5620  0aa4 7216500a      	bset	20490,#3
-5621                     ; 854 return d0;
-5623  0aa8 7b01          	ld	a,(OFST+0,sp)
-5626  0aaa 5b01          	addw	sp,#1
-5627  0aac 81            	ret
-5671                     ; 858 void DF_page_to_buffer(unsigned page_addr)
-5671                     ; 859 {
-5672                     	switch	.text
-5673  0aad               _DF_page_to_buffer:
-5675  0aad 89            	pushw	x
-5676  0aae 88            	push	a
-5677       00000001      OFST:	set	1
-5680                     ; 862 d0=0x53; 
-5682                     ; 866 CS_ON
-5684  0aaf 7217500a      	bres	20490,#3
-5685                     ; 867 spi(d0);
-5687  0ab3 a653          	ld	a,#83
-5688  0ab5 cd0929        	call	_spi
-5690                     ; 868 spi(page_addr/256/**(((char*)&page_addr)+1)*/);
-5692  0ab8 7b02          	ld	a,(OFST+1,sp)
-5693  0aba cd0929        	call	_spi
-5695                     ; 869 spi(page_addr%256/**((char*)&page_addr)*/);
-5697  0abd 7b03          	ld	a,(OFST+2,sp)
-5698  0abf a4ff          	and	a,#255
-5699  0ac1 cd0929        	call	_spi
-5701                     ; 870 spi(0xff);
-5703  0ac4 a6ff          	ld	a,#255
-5704  0ac6 cd0929        	call	_spi
-5706                     ; 872 CS_OFF
-5708  0ac9 7216500a      	bset	20490,#3
-5709                     ; 873 }
-5712  0acd 5b03          	addw	sp,#3
-5713  0acf 81            	ret
-5758                     ; 876 void DF_buffer_to_page_er(/*char buff,*/unsigned page_addr)
-5758                     ; 877 {
-5759                     	switch	.text
-5760  0ad0               _DF_buffer_to_page_er:
-5762  0ad0 89            	pushw	x
-5763  0ad1 88            	push	a
-5764       00000001      OFST:	set	1
-5767                     ; 880 d0=0x83; 
-5769                     ; 883 CS_ON
-5771  0ad2 7217500a      	bres	20490,#3
-5772                     ; 884 spi(d0);
-5774  0ad6 a683          	ld	a,#131
-5775  0ad8 cd0929        	call	_spi
-5777                     ; 885 spi(page_addr/256/**(((char*)&page_addr)+1)*/);
-5779  0adb 7b02          	ld	a,(OFST+1,sp)
-5780  0add cd0929        	call	_spi
-5782                     ; 886 spi(page_addr%256/**((char*)&page_addr)*/);
-5784  0ae0 7b03          	ld	a,(OFST+2,sp)
-5785  0ae2 a4ff          	and	a,#255
-5786  0ae4 cd0929        	call	_spi
-5788                     ; 887 spi(0xff);
-5790  0ae7 a6ff          	ld	a,#255
-5791  0ae9 cd0929        	call	_spi
-5793                     ; 889 CS_OFF
-5795  0aec 7216500a      	bset	20490,#3
-5796                     ; 890 }
-5799  0af0 5b03          	addw	sp,#3
-5800  0af2 81            	ret
-5872                     ; 893 void DF_buffer_read(unsigned buff_addr,unsigned len, char* adr)
-5872                     ; 894 {
-5873                     	switch	.text
-5874  0af3               _DF_buffer_read:
-5876  0af3 89            	pushw	x
-5877  0af4 5203          	subw	sp,#3
-5878       00000003      OFST:	set	3
-5881                     ; 898 d0=0x54; 
-5883                     ; 900 CS_ON
-5885  0af6 7217500a      	bres	20490,#3
-5886                     ; 901 spi(d0);
-5888  0afa a654          	ld	a,#84
-5889  0afc cd0929        	call	_spi
-5891                     ; 902 spi(0xff);
-5893  0aff a6ff          	ld	a,#255
-5894  0b01 cd0929        	call	_spi
-5896                     ; 903 spi(buff_addr/256/**(((char*)&buff_addr)+1)*/);
-5898  0b04 7b04          	ld	a,(OFST+1,sp)
-5899  0b06 cd0929        	call	_spi
-5901                     ; 904 spi(buff_addr%256/**((char*)&buff_addr)*/);
-5903  0b09 7b05          	ld	a,(OFST+2,sp)
-5904  0b0b a4ff          	and	a,#255
-5905  0b0d cd0929        	call	_spi
-5907                     ; 905 spi(0xff);
-5909  0b10 a6ff          	ld	a,#255
-5910  0b12 cd0929        	call	_spi
-5912                     ; 906 for(i=0;i<len;i++)
-5914  0b15 5f            	clrw	x
-5915  0b16 1f02          	ldw	(OFST-1,sp),x
-5917  0b18 2012          	jra	L3472
-5918  0b1a               L7372:
-5919                     ; 908 	adr[i]=spi(0xff);
-5921  0b1a a6ff          	ld	a,#255
-5922  0b1c cd0929        	call	_spi
-5924  0b1f 1e0a          	ldw	x,(OFST+7,sp)
-5925  0b21 72fb02        	addw	x,(OFST-1,sp)
-5926  0b24 f7            	ld	(x),a
-5927                     ; 906 for(i=0;i<len;i++)
-5929  0b25 1e02          	ldw	x,(OFST-1,sp)
-5930  0b27 1c0001        	addw	x,#1
-5931  0b2a 1f02          	ldw	(OFST-1,sp),x
-5932  0b2c               L3472:
-5935  0b2c 1e02          	ldw	x,(OFST-1,sp)
-5936  0b2e 1308          	cpw	x,(OFST+5,sp)
-5937  0b30 25e8          	jrult	L7372
-5938                     ; 911 CS_OFF
-5940  0b32 7216500a      	bset	20490,#3
-5941                     ; 912 }
-5944  0b36 5b05          	addw	sp,#5
-5945  0b38 81            	ret
-6017                     ; 915 void DF_buffer_write(/*char buff,*/unsigned buff_addr,unsigned len, char* adr)
-6017                     ; 916 {
-6018                     	switch	.text
-6019  0b39               _DF_buffer_write:
-6021  0b39 89            	pushw	x
-6022  0b3a 5203          	subw	sp,#3
-6023       00000003      OFST:	set	3
-6026                     ; 920 d0=0x84; 
-6028                     ; 922 CS_ON
-6030  0b3c 7217500a      	bres	20490,#3
-6031                     ; 923 spi(d0);
-6033  0b40 a684          	ld	a,#132
-6034  0b42 cd0929        	call	_spi
-6036                     ; 924 spi(0xff);
-6038  0b45 a6ff          	ld	a,#255
-6039  0b47 cd0929        	call	_spi
-6041                     ; 925 spi(buff_addr/256/**(((char*)&buff_addr)+1)*/);
-6043  0b4a 7b04          	ld	a,(OFST+1,sp)
-6044  0b4c cd0929        	call	_spi
-6046                     ; 926 spi(buff_addr%256/**((char*)&buff_addr)*/);
-6048  0b4f 7b05          	ld	a,(OFST+2,sp)
-6049  0b51 a4ff          	and	a,#255
-6050  0b53 cd0929        	call	_spi
-6052                     ; 928 for(i=0;i<len;i++)
-6054  0b56 5f            	clrw	x
-6055  0b57 1f02          	ldw	(OFST-1,sp),x
-6057  0b59 2010          	jra	L1103
-6058  0b5b               L5003:
-6059                     ; 930 	spi(adr[i]);
-6061  0b5b 1e0a          	ldw	x,(OFST+7,sp)
-6062  0b5d 72fb02        	addw	x,(OFST-1,sp)
-6063  0b60 f6            	ld	a,(x)
-6064  0b61 cd0929        	call	_spi
-6066                     ; 928 for(i=0;i<len;i++)
-6068  0b64 1e02          	ldw	x,(OFST-1,sp)
-6069  0b66 1c0001        	addw	x,#1
-6070  0b69 1f02          	ldw	(OFST-1,sp),x
-6071  0b6b               L1103:
-6074  0b6b 1e02          	ldw	x,(OFST-1,sp)
-6075  0b6d 1308          	cpw	x,(OFST+5,sp)
-6076  0b6f 25ea          	jrult	L5003
-6077                     ; 933 CS_OFF
-6079  0b71 7216500a      	bset	20490,#3
-6080                     ; 934 }
-6083  0b75 5b05          	addw	sp,#5
-6084  0b77 81            	ret
-6107                     ; 956 void gpio_init(void){
-6108                     	switch	.text
-6109  0b78               _gpio_init:
-6113                     ; 966 	GPIOD->DDR|=(1<<2);
-6115  0b78 72145011      	bset	20497,#2
-6116                     ; 967 	GPIOD->CR1|=(1<<2);
-6118  0b7c 72145012      	bset	20498,#2
-6119                     ; 968 	GPIOD->CR2|=(1<<2);
-6121  0b80 72145013      	bset	20499,#2
-6122                     ; 969 	GPIOD->ODR&=~(1<<2);
-6124  0b84 7215500f      	bres	20495,#2
-6125                     ; 971 	GPIOD->DDR|=(1<<4);
-6127  0b88 72185011      	bset	20497,#4
-6128                     ; 972 	GPIOD->CR1|=(1<<4);
-6130  0b8c 72185012      	bset	20498,#4
-6131                     ; 973 	GPIOD->CR2&=~(1<<4);
-6133  0b90 72195013      	bres	20499,#4
-6134                     ; 975 	GPIOC->DDR&=~(1<<4);
-6136  0b94 7219500c      	bres	20492,#4
-6137                     ; 976 	GPIOC->CR1&=~(1<<4);
-6139  0b98 7219500d      	bres	20493,#4
-6140                     ; 977 	GPIOC->CR2&=~(1<<4);
-6142  0b9c 7219500e      	bres	20494,#4
-6143                     ; 981 }
-6146  0ba0 81            	ret
-6198                     ; 984 void uart_in(void)
-6198                     ; 985 {
-6199                     	switch	.text
-6200  0ba1               _uart_in:
-6202  0ba1 89            	pushw	x
-6203       00000002      OFST:	set	2
-6206                     ; 989 if(rx_buffer_overflow)
-6208                     	btst	_rx_buffer_overflow
-6209  0ba7 240d          	jruge	L7403
-6210                     ; 991 	rx_wr_index=0;
-6212  0ba9 5f            	clrw	x
-6213  0baa bf1c          	ldw	_rx_wr_index,x
-6214                     ; 992 	rx_rd_index=0;
-6216  0bac 5f            	clrw	x
-6217  0bad bf1a          	ldw	_rx_rd_index,x
-6218                     ; 993 	rx_counter=0;
-6220  0baf 5f            	clrw	x
-6221  0bb0 bf1e          	ldw	_rx_counter,x
-6222                     ; 994 	rx_buffer_overflow=0;
-6224  0bb2 72110001      	bres	_rx_buffer_overflow
-6225  0bb6               L7403:
-6226                     ; 997 if(rx_counter&&(rx_buffer[index_offset(rx_wr_index,-1)])==END)
-6228  0bb6 be1e          	ldw	x,_rx_counter
-6229  0bb8 2775          	jreq	L1503
-6231  0bba aeffff        	ldw	x,#65535
-6232  0bbd 89            	pushw	x
-6233  0bbe be1c          	ldw	x,_rx_wr_index
-6234  0bc0 ad6f          	call	_index_offset
-6236  0bc2 5b02          	addw	sp,#2
-6237  0bc4 e654          	ld	a,(_rx_buffer,x)
-6238  0bc6 a10a          	cp	a,#10
-6239  0bc8 2665          	jrne	L1503
-6240                     ; 1002 	temp=rx_buffer[index_offset(rx_wr_index,-3)];
-6242  0bca aefffd        	ldw	x,#65533
-6243  0bcd 89            	pushw	x
-6244  0bce be1c          	ldw	x,_rx_wr_index
-6245  0bd0 ad5f          	call	_index_offset
-6247  0bd2 5b02          	addw	sp,#2
-6248  0bd4 e654          	ld	a,(_rx_buffer,x)
-6249  0bd6 6b01          	ld	(OFST-1,sp),a
-6250                     ; 1003     	if(temp<100) 
-6252  0bd8 7b01          	ld	a,(OFST-1,sp)
-6253  0bda a164          	cp	a,#100
-6254  0bdc 2451          	jruge	L1503
-6255                     ; 1006     		if(control_check(index_offset(rx_wr_index,-1)))
-6257  0bde aeffff        	ldw	x,#65535
-6258  0be1 89            	pushw	x
-6259  0be2 be1c          	ldw	x,_rx_wr_index
-6260  0be4 ad4b          	call	_index_offset
-6262  0be6 5b02          	addw	sp,#2
-6263  0be8 9f            	ld	a,xl
-6264  0be9 ad6e          	call	_control_check
-6266  0beb 4d            	tnz	a
-6267  0bec 2741          	jreq	L1503
-6268                     ; 1009     			rx_rd_index=index_offset(rx_wr_index,-3-temp);
-6270  0bee a6ff          	ld	a,#255
-6271  0bf0 97            	ld	xl,a
-6272  0bf1 a6fd          	ld	a,#253
-6273  0bf3 1001          	sub	a,(OFST-1,sp)
-6274  0bf5 2401          	jrnc	L041
-6275  0bf7 5a            	decw	x
-6276  0bf8               L041:
-6277  0bf8 02            	rlwa	x,a
-6278  0bf9 89            	pushw	x
-6279  0bfa 01            	rrwa	x,a
-6280  0bfb be1c          	ldw	x,_rx_wr_index
-6281  0bfd ad32          	call	_index_offset
-6283  0bff 5b02          	addw	sp,#2
-6284  0c01 bf1a          	ldw	_rx_rd_index,x
-6285                     ; 1010     			for(i=0;i<temp;i++)
-6287  0c03 0f02          	clr	(OFST+0,sp)
-6289  0c05 2018          	jra	L3603
-6290  0c07               L7503:
-6291                     ; 1012 				UIB[i]=rx_buffer[index_offset(rx_rd_index,i)];
-6293  0c07 7b02          	ld	a,(OFST+0,sp)
-6294  0c09 5f            	clrw	x
-6295  0c0a 97            	ld	xl,a
-6296  0c0b 89            	pushw	x
-6297  0c0c 7b04          	ld	a,(OFST+2,sp)
-6298  0c0e 5f            	clrw	x
-6299  0c0f 97            	ld	xl,a
-6300  0c10 89            	pushw	x
-6301  0c11 be1a          	ldw	x,_rx_rd_index
-6302  0c13 ad1c          	call	_index_offset
-6304  0c15 5b02          	addw	sp,#2
-6305  0c17 e654          	ld	a,(_rx_buffer,x)
-6306  0c19 85            	popw	x
-6307  0c1a d70000        	ld	(_UIB,x),a
-6308                     ; 1010     			for(i=0;i<temp;i++)
-6310  0c1d 0c02          	inc	(OFST+0,sp)
-6311  0c1f               L3603:
-6314  0c1f 7b02          	ld	a,(OFST+0,sp)
-6315  0c21 1101          	cp	a,(OFST-1,sp)
-6316  0c23 25e2          	jrult	L7503
-6317                     ; 1014 			rx_rd_index=rx_wr_index;
-6319  0c25 be1c          	ldw	x,_rx_wr_index
-6320  0c27 bf1a          	ldw	_rx_rd_index,x
-6321                     ; 1015 			rx_counter=0;
-6323  0c29 5f            	clrw	x
-6324  0c2a bf1e          	ldw	_rx_counter,x
-6325                     ; 1025 			uart_in_an();
-6327  0c2c cd023c        	call	_uart_in_an
-6329  0c2f               L1503:
-6330                     ; 1034 }
-6333  0c2f 85            	popw	x
-6334  0c30 81            	ret
-6377                     ; 1037 signed short index_offset (signed short index,signed short offset)
-6377                     ; 1038 {
-6378                     	switch	.text
-6379  0c31               _index_offset:
-6381  0c31 89            	pushw	x
-6382       00000000      OFST:	set	0
-6385                     ; 1039 index=index+offset;
-6387  0c32 1e01          	ldw	x,(OFST+1,sp)
-6388  0c34 72fb05        	addw	x,(OFST+5,sp)
-6389  0c37 1f01          	ldw	(OFST+1,sp),x
-6390                     ; 1040 if(index>=RX_BUFFER_SIZE) index-=RX_BUFFER_SIZE; 
-6392  0c39 9c            	rvf
-6393  0c3a 1e01          	ldw	x,(OFST+1,sp)
-6394  0c3c a30064        	cpw	x,#100
-6395  0c3f 2f07          	jrslt	L1113
-6398  0c41 1e01          	ldw	x,(OFST+1,sp)
-6399  0c43 1d0064        	subw	x,#100
-6400  0c46 1f01          	ldw	(OFST+1,sp),x
-6401  0c48               L1113:
-6402                     ; 1041 if(index<0) index+=RX_BUFFER_SIZE;
-6404  0c48 9c            	rvf
-6405  0c49 1e01          	ldw	x,(OFST+1,sp)
-6406  0c4b 2e07          	jrsge	L3113
-6409  0c4d 1e01          	ldw	x,(OFST+1,sp)
-6410  0c4f 1c0064        	addw	x,#100
-6411  0c52 1f01          	ldw	(OFST+1,sp),x
-6412  0c54               L3113:
-6413                     ; 1042 return index;
-6415  0c54 1e01          	ldw	x,(OFST+1,sp)
-6418  0c56 5b02          	addw	sp,#2
-6419  0c58 81            	ret
-6482                     ; 1046 char control_check(char index)
-6482                     ; 1047 {
-6483                     	switch	.text
-6484  0c59               _control_check:
-6486  0c59 88            	push	a
-6487  0c5a 5203          	subw	sp,#3
-6488       00000003      OFST:	set	3
-6491                     ; 1048 char i=0,ii=0,iii;
-6495                     ; 1050 if(rx_buffer[index]!=END) return 0;
-6497  0c5c 5f            	clrw	x
-6498  0c5d 97            	ld	xl,a
-6499  0c5e e654          	ld	a,(_rx_buffer,x)
-6500  0c60 a10a          	cp	a,#10
-6501  0c62 2703          	jreq	L7413
-6504  0c64 4f            	clr	a
-6506  0c65 2051          	jra	L251
-6507  0c67               L7413:
-6508                     ; 1052 ii=rx_buffer[index_offset(index,-2)];
-6510  0c67 aefffe        	ldw	x,#65534
-6511  0c6a 89            	pushw	x
-6512  0c6b 7b06          	ld	a,(OFST+3,sp)
-6513  0c6d 5f            	clrw	x
-6514  0c6e 97            	ld	xl,a
-6515  0c6f adc0          	call	_index_offset
-6517  0c71 5b02          	addw	sp,#2
-6518  0c73 e654          	ld	a,(_rx_buffer,x)
-6519  0c75 6b02          	ld	(OFST-1,sp),a
-6520                     ; 1053 iii=0;
-6522  0c77 0f01          	clr	(OFST-2,sp)
-6523                     ; 1054 for(i=0;i<=ii;i++)
-6525  0c79 0f03          	clr	(OFST+0,sp)
-6527  0c7b 2022          	jra	L5513
-6528  0c7d               L1513:
-6529                     ; 1056 	iii^=rx_buffer[index_offset(index,-2-ii+i)];
-6531  0c7d a6ff          	ld	a,#255
-6532  0c7f 97            	ld	xl,a
-6533  0c80 a6fe          	ld	a,#254
-6534  0c82 1002          	sub	a,(OFST-1,sp)
-6535  0c84 2401          	jrnc	L641
-6536  0c86 5a            	decw	x
-6537  0c87               L641:
-6538  0c87 1b03          	add	a,(OFST+0,sp)
-6539  0c89 2401          	jrnc	L051
-6540  0c8b 5c            	incw	x
-6541  0c8c               L051:
-6542  0c8c 02            	rlwa	x,a
-6543  0c8d 89            	pushw	x
-6544  0c8e 01            	rrwa	x,a
-6545  0c8f 7b06          	ld	a,(OFST+3,sp)
-6546  0c91 5f            	clrw	x
-6547  0c92 97            	ld	xl,a
-6548  0c93 ad9c          	call	_index_offset
-6550  0c95 5b02          	addw	sp,#2
-6551  0c97 7b01          	ld	a,(OFST-2,sp)
-6552  0c99 e854          	xor	a,	(_rx_buffer,x)
-6553  0c9b 6b01          	ld	(OFST-2,sp),a
-6554                     ; 1054 for(i=0;i<=ii;i++)
-6556  0c9d 0c03          	inc	(OFST+0,sp)
-6557  0c9f               L5513:
-6560  0c9f 7b03          	ld	a,(OFST+0,sp)
-6561  0ca1 1102          	cp	a,(OFST-1,sp)
-6562  0ca3 23d8          	jrule	L1513
-6563                     ; 1058 if (iii!=rx_buffer[index_offset(index,-1)]) return 0;	
-6565  0ca5 aeffff        	ldw	x,#65535
-6566  0ca8 89            	pushw	x
-6567  0ca9 7b06          	ld	a,(OFST+3,sp)
-6568  0cab 5f            	clrw	x
-6569  0cac 97            	ld	xl,a
-6570  0cad ad82          	call	_index_offset
-6572  0caf 5b02          	addw	sp,#2
-6573  0cb1 e654          	ld	a,(_rx_buffer,x)
-6574  0cb3 1101          	cp	a,(OFST-2,sp)
-6575  0cb5 2704          	jreq	L1613
-6578  0cb7 4f            	clr	a
-6580  0cb8               L251:
-6582  0cb8 5b04          	addw	sp,#4
-6583  0cba 81            	ret
-6584  0cbb               L1613:
-6585                     ; 1060 return 1;
-6587  0cbb a601          	ld	a,#1
-6589  0cbd 20f9          	jra	L251
-6631                     ; 1069 @far @interrupt void TIM4_UPD_Interrupt (void) {
-6633                     	switch	.text
-6634  0cbf               f_TIM4_UPD_Interrupt:
-6638                     ; 1071 	if(play) {
-6640                     	btst	_play
-6641  0cc4 2445          	jruge	L3713
-6642                     ; 1072 		TIM2->CCR3H= 0x00;	
-6644  0cc6 725f5315      	clr	21269
-6645                     ; 1073 		TIM2->CCR3L= sample;
-6647  0cca 5500195316    	mov	21270,_sample
-6648                     ; 1074 		sample_cnt++;
-6650  0ccf be23          	ldw	x,_sample_cnt
-6651  0cd1 1c0001        	addw	x,#1
-6652  0cd4 bf23          	ldw	_sample_cnt,x
-6653                     ; 1075 		if(sample_cnt>=256) {
-6655  0cd6 9c            	rvf
-6656  0cd7 be23          	ldw	x,_sample_cnt
-6657  0cd9 a30100        	cpw	x,#256
-6658  0cdc 2f03          	jrslt	L5713
-6659                     ; 1076 			sample_cnt=0;
-6661  0cde 5f            	clrw	x
-6662  0cdf bf23          	ldw	_sample_cnt,x
-6663  0ce1               L5713:
-6664                     ; 1080 		sample=buff[sample_cnt];
-6666  0ce1 be23          	ldw	x,_sample_cnt
-6667  0ce3 d60050        	ld	a,(_buff,x)
-6668  0ce6 b719          	ld	_sample,a
-6669                     ; 1082 		if(sample_cnt==132)	{
-6671  0ce8 be23          	ldw	x,_sample_cnt
-6672  0cea a30084        	cpw	x,#132
-6673  0ced 2604          	jrne	L7713
-6674                     ; 1083 			bBUFF_LOAD=1;
-6676  0cef 7210000b      	bset	_bBUFF_LOAD
-6677  0cf3               L7713:
-6678                     ; 1087 		if(sample_cnt==5) {
-6680  0cf3 be23          	ldw	x,_sample_cnt
-6681  0cf5 a30005        	cpw	x,#5
-6682  0cf8 2604          	jrne	L1023
-6683                     ; 1088 			bBUFF_READ_H=1;
-6685  0cfa 7210000a      	bset	_bBUFF_READ_H
-6686  0cfe               L1023:
-6687                     ; 1091 		if(sample_cnt==150) {
-6689  0cfe be23          	ldw	x,_sample_cnt
-6690  0d00 a30096        	cpw	x,#150
-6691  0d03 2615          	jrne	L5023
-6692                     ; 1092 			bBUFF_READ_L=1;
-6694  0d05 72100009      	bset	_bBUFF_READ_L
-6695  0d09 200f          	jra	L5023
-6696  0d0b               L3713:
-6697                     ; 1099 	else if(!bSTART) {
-6699                     	btst	_bSTART
-6700  0d10 2508          	jrult	L5023
-6701                     ; 1100 		TIM2->CCR3H= 0x00;	
-6703  0d12 725f5315      	clr	21269
-6704                     ; 1101 		TIM2->CCR3L= 0x7f;//pwm_fade_in;
-6706  0d16 357f5316      	mov	21270,#127
-6707  0d1a               L5023:
-6708                     ; 1156 		if(but_block_cnt)but_on_drv_cnt=0;
-6710  0d1a be02          	ldw	x,_but_block_cnt
-6711  0d1c 2702          	jreq	L1123
-6714  0d1e 3fb9          	clr	_but_on_drv_cnt
-6715  0d20               L1123:
-6716                     ; 1157 		if((((GPIOC->IDR)&(1<<4))) && (but_on_drv_cnt<100)) {
-6718  0d20 c6500b        	ld	a,20491
-6719  0d23 a510          	bcp	a,#16
-6720  0d25 271f          	jreq	L3123
-6722  0d27 b6b9          	ld	a,_but_on_drv_cnt
-6723  0d29 a164          	cp	a,#100
-6724  0d2b 2419          	jruge	L3123
-6725                     ; 1158 			but_on_drv_cnt++;
-6727  0d2d 3cb9          	inc	_but_on_drv_cnt
-6728                     ; 1159 			if((but_on_drv_cnt>2)&&(bRELEASE))
-6730  0d2f b6b9          	ld	a,_but_on_drv_cnt
-6731  0d31 a103          	cp	a,#3
-6732  0d33 2517          	jrult	L7123
-6734                     	btst	_bRELEASE
-6735  0d3a 2410          	jruge	L7123
-6736                     ; 1161 				bRELEASE=0;
-6738  0d3c 72110000      	bres	_bRELEASE
-6739                     ; 1162 				bSTART=1;
-6741  0d40 7210000c      	bset	_bSTART
-6742  0d44 2006          	jra	L7123
-6743  0d46               L3123:
-6744                     ; 1166 			but_on_drv_cnt=0;
-6746  0d46 3fb9          	clr	_but_on_drv_cnt
-6747                     ; 1167 			bRELEASE=1;
-6749  0d48 72100000      	bset	_bRELEASE
-6750  0d4c               L7123:
-6751                     ; 1172 	if(++t0_cnt0>=125){
-6753  0d4c 3c00          	inc	_t0_cnt0
-6754  0d4e b600          	ld	a,_t0_cnt0
-6755  0d50 a17d          	cp	a,#125
-6756  0d52 2530          	jrult	L1223
-6757                     ; 1173     		t0_cnt0=0;
-6759  0d54 3f00          	clr	_t0_cnt0
-6760                     ; 1174     		b100Hz=1;
-6762  0d56 72100008      	bset	_b100Hz
-6763                     ; 1184 		if(++t0_cnt1>=10){
-6765  0d5a 3c01          	inc	_t0_cnt1
-6766  0d5c b601          	ld	a,_t0_cnt1
-6767  0d5e a10a          	cp	a,#10
-6768  0d60 2506          	jrult	L3223
-6769                     ; 1185 			t0_cnt1=0;
-6771  0d62 3f01          	clr	_t0_cnt1
-6772                     ; 1186 			b10Hz=1;
-6774  0d64 72100007      	bset	_b10Hz
-6775  0d68               L3223:
-6776                     ; 1189 		if(++t0_cnt2>=20){
-6778  0d68 3c02          	inc	_t0_cnt2
-6779  0d6a b602          	ld	a,_t0_cnt2
-6780  0d6c a114          	cp	a,#20
-6781  0d6e 2506          	jrult	L5223
-6782                     ; 1190 			t0_cnt2=0;
-6784  0d70 3f02          	clr	_t0_cnt2
-6785                     ; 1191 			b5Hz=1;
-6787  0d72 72100006      	bset	_b5Hz
-6788  0d76               L5223:
-6789                     ; 1194 		if(++t0_cnt3>=100){
-6791  0d76 3c03          	inc	_t0_cnt3
-6792  0d78 b603          	ld	a,_t0_cnt3
-6793  0d7a a164          	cp	a,#100
-6794  0d7c 2506          	jrult	L1223
-6795                     ; 1195 			t0_cnt3=0;
-6797  0d7e 3f03          	clr	_t0_cnt3
-6798                     ; 1196 			b1Hz=1;
-6800  0d80 72100005      	bset	_b1Hz
-6801  0d84               L1223:
-6802                     ; 1200 	TIM4->SR1&=~TIM4_SR1_UIF;			// disable break interrupt
-6804  0d84 72115344      	bres	21316,#0
-6805                     ; 1201 	return;
-6808  0d88 80            	iret
-6834                     ; 1205 @far @interrupt void UARTTxInterrupt (void) {
-6835                     	switch	.text
-6836  0d89               f_UARTTxInterrupt:
-6840                     ; 1207 	if (tx_counter){
-6842  0d89 3d22          	tnz	_tx_counter
-6843  0d8b 271a          	jreq	L1423
-6844                     ; 1208 		--tx_counter;
-6846  0d8d 3a22          	dec	_tx_counter
-6847                     ; 1209 		UART1->DR=tx_buffer[tx_rd_index];
-6849  0d8f 5f            	clrw	x
-6850  0d90 b620          	ld	a,_tx_rd_index
-6851  0d92 2a01          	jrpl	L061
-6852  0d94 53            	cplw	x
-6853  0d95               L061:
-6854  0d95 97            	ld	xl,a
-6855  0d96 e604          	ld	a,(_tx_buffer,x)
-6856  0d98 c75231        	ld	21041,a
-6857                     ; 1210 		if (++tx_rd_index == TX_BUFFER_SIZE) tx_rd_index=0;
-6859  0d9b 3c20          	inc	_tx_rd_index
-6860  0d9d b620          	ld	a,_tx_rd_index
-6861  0d9f a150          	cp	a,#80
-6862  0da1 260c          	jrne	L5423
-6865  0da3 3f20          	clr	_tx_rd_index
-6866  0da5 2008          	jra	L5423
-6867  0da7               L1423:
-6868                     ; 1213 		bOUT_FREE=1;
-6870  0da7 72100003      	bset	_bOUT_FREE
-6871                     ; 1214 		UART1->CR2&= ~UART1_CR2_TIEN;
-6873  0dab 721f5235      	bres	21045,#7
-6874  0daf               L5423:
-6875                     ; 1216 }
-6878  0daf 80            	iret
-6907                     ; 1219 @far @interrupt void UARTRxInterrupt (void) {
-6908                     	switch	.text
-6909  0db0               f_UARTRxInterrupt:
-6913                     ; 1224 	rx_status=UART1->SR;
-6915  0db0 5552300008    	mov	_rx_status,21040
-6916                     ; 1225 	rx_data=UART1->DR;
-6918  0db5 5552310007    	mov	_rx_data,21041
-6919                     ; 1227 	if (rx_status & (UART1_SR_RXNE)){
-6921  0dba b608          	ld	a,_rx_status
-6922  0dbc a520          	bcp	a,#32
-6923  0dbe 272c          	jreq	L7523
-6924                     ; 1228 		rx_buffer[rx_wr_index]=rx_data;
-6926  0dc0 be1c          	ldw	x,_rx_wr_index
-6927  0dc2 b607          	ld	a,_rx_data
-6928  0dc4 e754          	ld	(_rx_buffer,x),a
-6929                     ; 1229 		bRXIN=1;
-6931  0dc6 72100002      	bset	_bRXIN
-6932                     ; 1230 		if (++rx_wr_index == RX_BUFFER_SIZE) rx_wr_index=0;
-6934  0dca be1c          	ldw	x,_rx_wr_index
-6935  0dcc 1c0001        	addw	x,#1
-6936  0dcf bf1c          	ldw	_rx_wr_index,x
-6937  0dd1 a30064        	cpw	x,#100
-6938  0dd4 2603          	jrne	L1623
-6941  0dd6 5f            	clrw	x
-6942  0dd7 bf1c          	ldw	_rx_wr_index,x
-6943  0dd9               L1623:
-6944                     ; 1231 		if (++rx_counter == RX_BUFFER_SIZE){
-6946  0dd9 be1e          	ldw	x,_rx_counter
-6947  0ddb 1c0001        	addw	x,#1
-6948  0dde bf1e          	ldw	_rx_counter,x
-6949  0de0 a30064        	cpw	x,#100
-6950  0de3 2607          	jrne	L7523
-6951                     ; 1232 			rx_counter=0;
-6953  0de5 5f            	clrw	x
-6954  0de6 bf1e          	ldw	_rx_counter,x
-6955                     ; 1233 			rx_buffer_overflow=1;
-6957  0de8 72100001      	bset	_rx_buffer_overflow
-6958  0dec               L7523:
-6959                     ; 1236 }
-6962  0dec 80            	iret
-7024                     ; 1242 main()
-7024                     ; 1243 {
-7026                     	switch	.text
-7027  0ded               _main:
-7031                     ; 1244 CLK->CKDIVR=0;
-7033  0ded 725f50c6      	clr	20678
-7034                     ; 1246 rele_cnt_index=0;
-7036  0df1 3fbb          	clr	_rele_cnt_index
-7037                     ; 1248 GPIOD->DDR&=~(1<<6);
-7039  0df3 721d5011      	bres	20497,#6
-7040                     ; 1249 GPIOD->CR1|=(1<<6);
-7042  0df7 721c5012      	bset	20498,#6
-7043                     ; 1250 GPIOD->CR2|=(1<<6);
-7045  0dfb 721c5013      	bset	20499,#6
-7046                     ; 1252 GPIOD->DDR|=(1<<5);
-7048  0dff 721a5011      	bset	20497,#5
-7049                     ; 1253 GPIOD->CR1|=(1<<5);
-7051  0e03 721a5012      	bset	20498,#5
-7052                     ; 1254 GPIOD->CR2|=(1<<5);	
-7054  0e07 721a5013      	bset	20499,#5
-7055                     ; 1255 GPIOD->ODR|=(1<<5);
-7057  0e0b 721a500f      	bset	20495,#5
-7058                     ; 1257 delay_ms(10);
-7060  0e0f ae000a        	ldw	x,#10
-7061  0e12 cd0060        	call	_delay_ms
-7063                     ; 1259 if(!(GPIOD->IDR&=(1<<6))) 
-7065  0e15 c65010        	ld	a,20496
-7066  0e18 a440          	and	a,#64
-7067  0e1a c75010        	ld	20496,a
-7068  0e1d 2606          	jrne	L5723
-7069                     ; 1261 	rele_cnt_index=1;
-7071  0e1f 350100bb      	mov	_rele_cnt_index,#1
-7073  0e23 2018          	jra	L7723
-7074  0e25               L5723:
-7075                     ; 1265 	GPIOD->ODR&=~(1<<5);
-7077  0e25 721b500f      	bres	20495,#5
-7078                     ; 1266 	delay_ms(10);
-7080  0e29 ae000a        	ldw	x,#10
-7081  0e2c cd0060        	call	_delay_ms
-7083                     ; 1267 	if(!(GPIOD->IDR&=(1<<6))) 
-7085  0e2f c65010        	ld	a,20496
-7086  0e32 a440          	and	a,#64
-7087  0e34 c75010        	ld	20496,a
-7088  0e37 2604          	jrne	L7723
-7089                     ; 1269 		rele_cnt_index=2;
-7091  0e39 350200bb      	mov	_rele_cnt_index,#2
-7092  0e3d               L7723:
-7093                     ; 1273 gpio_init();
-7095  0e3d cd0b78        	call	_gpio_init
-7097                     ; 1280 spi_init();
-7099  0e40 cd08bc        	call	_spi_init
-7101                     ; 1282 t4_init();
-7103  0e43 cd0039        	call	_t4_init
-7105                     ; 1284 FLASH_DUKR=0xae;
-7107  0e46 35ae5064      	mov	_FLASH_DUKR,#174
-7108                     ; 1285 FLASH_DUKR=0x56;
-7110  0e4a 35565064      	mov	_FLASH_DUKR,#86
-7111                     ; 1290 dumm[1]++;
-7113  0e4e 725c017d      	inc	_dumm+1
-7114                     ; 1292 uart_init();
-7116  0e52 cd00a2        	call	_uart_init
-7118                     ; 1294 ST_RDID_read();
-7120  0e55 cd0947        	call	_ST_RDID_read
-7122                     ; 1295 if(mdr0==0x20) memory_manufacturer='S';	
-7124  0e58 b618          	ld	a,_mdr0
-7125  0e5a a120          	cp	a,#32
-7126  0e5c 2606          	jrne	L3033
-7129  0e5e 355300bc      	mov	_memory_manufacturer,#83
-7131  0e62 200d          	jra	L5033
-7132  0e64               L3033:
-7133                     ; 1298 	DF_mf_dev_read();
-7135  0e64 cd0a3f        	call	_DF_mf_dev_read
-7137                     ; 1299 	if(mdr0==0x1F) memory_manufacturer='A';
-7139  0e67 b618          	ld	a,_mdr0
-7140  0e69 a11f          	cp	a,#31
-7141  0e6b 2604          	jrne	L5033
-7144  0e6d 354100bc      	mov	_memory_manufacturer,#65
-7145  0e71               L5033:
-7146                     ; 1302 t2_init();
-7148  0e71 cd0000        	call	_t2_init
-7150                     ; 1304 ST_WREN();
-7152  0e74 cd0998        	call	_ST_WREN
-7154                     ; 1306 enableInterrupts();	
-7157  0e77 9a            rim
-7159  0e78               L1133:
-7160                     ; 1311 	if(bBUFF_LOAD)
-7162                     	btst	_bBUFF_LOAD
-7163  0e7d 2425          	jruge	L5133
-7164                     ; 1313 		bBUFF_LOAD=0;
-7166  0e7f 7211000b      	bres	_bBUFF_LOAD
-7167                     ; 1315 		if(current_page<last_page)
-7169  0e83 be11          	ldw	x,_current_page
-7170  0e85 b30f          	cpw	x,_last_page
-7171  0e87 2409          	jruge	L7133
-7172                     ; 1317 			current_page++;
-7174  0e89 be11          	ldw	x,_current_page
-7175  0e8b 1c0001        	addw	x,#1
-7176  0e8e bf11          	ldw	_current_page,x
-7178  0e90 2007          	jra	L1233
-7179  0e92               L7133:
-7180                     ; 1321 			current_page=0;
-7182  0e92 5f            	clrw	x
-7183  0e93 bf11          	ldw	_current_page,x
-7184                     ; 1322 			play=0;
-7186  0e95 72110004      	bres	_play
-7187  0e99               L1233:
-7188                     ; 1324 		if(memory_manufacturer=='A')
-7190  0e99 b6bc          	ld	a,_memory_manufacturer
-7191  0e9b a141          	cp	a,#65
-7192  0e9d 2605          	jrne	L5133
-7193                     ; 1326 			DF_page_to_buffer(/*///current_buffer_H*//*1,*/current_page);
-7195  0e9f be11          	ldw	x,_current_page
-7196  0ea1 cd0aad        	call	_DF_page_to_buffer
-7198  0ea4               L5133:
-7199                     ; 1330 	if(bBUFF_READ_L)
-7201                     	btst	_bBUFF_READ_L
-7202  0ea9 243a          	jruge	L5233
-7203                     ; 1332 		bBUFF_READ_L=0;
-7205  0eab 72110009      	bres	_bBUFF_READ_L
-7206                     ; 1333 		if(memory_manufacturer=='A')
-7208  0eaf b6bc          	ld	a,_memory_manufacturer
-7209  0eb1 a141          	cp	a,#65
-7210  0eb3 260e          	jrne	L7233
-7211                     ; 1335 			DF_buffer_read(/*///current_buffer_L*//*1,*/0,128,buff);
-7213  0eb5 ae0050        	ldw	x,#_buff
-7214  0eb8 89            	pushw	x
-7215  0eb9 ae0080        	ldw	x,#128
-7216  0ebc 89            	pushw	x
-7217  0ebd 5f            	clrw	x
-7218  0ebe cd0af3        	call	_DF_buffer_read
-7220  0ec1 5b04          	addw	sp,#4
-7221  0ec3               L7233:
-7222                     ; 1337 		if(memory_manufacturer=='S')
-7224  0ec3 b6bc          	ld	a,_memory_manufacturer
-7225  0ec5 a153          	cp	a,#83
-7226  0ec7 261c          	jrne	L5233
-7227                     ; 1339 			ST_READ((unsigned long)((unsigned long)(current_page*256UL)),128,buff);
-7229  0ec9 ae0050        	ldw	x,#_buff
-7230  0ecc 89            	pushw	x
-7231  0ecd ae0080        	ldw	x,#128
-7232  0ed0 89            	pushw	x
-7233  0ed1 be11          	ldw	x,_current_page
-7234  0ed3 90ae0100      	ldw	y,#256
-7235  0ed7 cd0000        	call	c_umul
-7237  0eda be02          	ldw	x,c_lreg+2
-7238  0edc 89            	pushw	x
-7239  0edd be00          	ldw	x,c_lreg
-7240  0edf 89            	pushw	x
-7241  0ee0 cd09f1        	call	_ST_READ
-7243  0ee3 5b08          	addw	sp,#8
-7244  0ee5               L5233:
-7245                     ; 1343 	if(bBUFF_READ_H) 
-7247                     	btst	_bBUFF_READ_H
-7248  0eea 2441          	jruge	L3333
-7249                     ; 1345 		bBUFF_READ_H=0;
-7251  0eec 7211000a      	bres	_bBUFF_READ_H
-7252                     ; 1346 		if(memory_manufacturer=='A') 
-7254  0ef0 b6bc          	ld	a,_memory_manufacturer
-7255  0ef2 a141          	cp	a,#65
-7256  0ef4 2610          	jrne	L5333
-7257                     ; 1348 			DF_buffer_read(/*///current_buffer_L*//*1,*/128,128,&buff[128]);
-7259  0ef6 ae00d0        	ldw	x,#_buff+128
-7260  0ef9 89            	pushw	x
-7261  0efa ae0080        	ldw	x,#128
-7262  0efd 89            	pushw	x
-7263  0efe ae0080        	ldw	x,#128
-7264  0f01 cd0af3        	call	_DF_buffer_read
-7266  0f04 5b04          	addw	sp,#4
-7267  0f06               L5333:
-7268                     ; 1350 		if(memory_manufacturer=='S') 
-7270  0f06 b6bc          	ld	a,_memory_manufacturer
-7271  0f08 a153          	cp	a,#83
-7272  0f0a 2621          	jrne	L3333
-7273                     ; 1352 			ST_READ((unsigned long)((unsigned long)(current_page*256UL)+128UL),128,&buff[128]);
-7275  0f0c ae00d0        	ldw	x,#_buff+128
-7276  0f0f 89            	pushw	x
-7277  0f10 ae0080        	ldw	x,#128
-7278  0f13 89            	pushw	x
-7279  0f14 be11          	ldw	x,_current_page
-7280  0f16 90ae0100      	ldw	y,#256
-7281  0f1a cd0000        	call	c_umul
-7283  0f1d a680          	ld	a,#128
-7284  0f1f cd0000        	call	c_ladc
-7286  0f22 be02          	ldw	x,c_lreg+2
-7287  0f24 89            	pushw	x
-7288  0f25 be00          	ldw	x,c_lreg
-7289  0f27 89            	pushw	x
-7290  0f28 cd09f1        	call	_ST_READ
-7292  0f2b 5b08          	addw	sp,#8
-7293  0f2d               L3333:
-7294                     ; 1356 	if(bRXIN)
-7296                     	btst	_bRXIN
-7297  0f32 2407          	jruge	L1433
-7298                     ; 1358 		bRXIN=0;
-7300  0f34 72110002      	bres	_bRXIN
-7301                     ; 1360 		uart_in();
-7303  0f38 cd0ba1        	call	_uart_in
-7305  0f3b               L1433:
-7306                     ; 1364 	if(b100Hz)
-7308                     	btst	_b100Hz
-7309  0f40 2503          	jrult	L661
-7310  0f42 cc1006        	jp	L3433
-7311  0f45               L661:
-7312                     ; 1366 		b100Hz=0;
-7314  0f45 72110008      	bres	_b100Hz
-7315                     ; 1368 		if(but_block_cnt)but_block_cnt--;
-7317  0f49 be02          	ldw	x,_but_block_cnt
-7318  0f4b 2707          	jreq	L5433
-7321  0f4d be02          	ldw	x,_but_block_cnt
-7322  0f4f 1d0001        	subw	x,#1
-7323  0f52 bf02          	ldw	_but_block_cnt,x
-7324  0f54               L5433:
-7325                     ; 1370 		if(bSTART==1) 
-7327                     	btst	_bSTART
-7328  0f59 247c          	jruge	L7433
-7329                     ; 1372 			if(play) 
-7331                     	btst	_play
-7332  0f60 2406          	jruge	L1533
-7333                     ; 1382 				bSTART=0;
-7335  0f62 7211000c      	bres	_bSTART
-7337  0f66 206f          	jra	L7433
-7338  0f68               L1533:
-7339                     ; 1389 				current_page=1;
-7341  0f68 ae0001        	ldw	x,#1
-7342  0f6b bf11          	ldw	_current_page,x
-7343                     ; 1394 				last_page=EE_PAGE_LEN-1;
-7345  0f6d ce0000        	ldw	x,_EE_PAGE_LEN
-7346  0f70 5a            	decw	x
-7347  0f71 bf0f          	ldw	_last_page,x
-7348                     ; 1396 				if(memory_manufacturer=='A')
-7350  0f73 b6bc          	ld	a,_memory_manufacturer
-7351  0f75 a141          	cp	a,#65
-7352  0f77 2630          	jrne	L5533
-7353                     ; 1398 					DF_page_to_buffer(/*///current_buffer_H*//*1,*/current_page);
-7355  0f79 ae0001        	ldw	x,#1
-7356  0f7c cd0aad        	call	_DF_page_to_buffer
-7358                     ; 1399 					delay_ms(10);
-7360  0f7f ae000a        	ldw	x,#10
-7361  0f82 cd0060        	call	_delay_ms
-7363                     ; 1400 					DF_buffer_read(/*///current_buffer_L*//*1,*/0,128,buff);
-7365  0f85 ae0050        	ldw	x,#_buff
-7366  0f88 89            	pushw	x
-7367  0f89 ae0080        	ldw	x,#128
-7368  0f8c 89            	pushw	x
-7369  0f8d 5f            	clrw	x
-7370  0f8e cd0af3        	call	_DF_buffer_read
-7372  0f91 5b04          	addw	sp,#4
-7373                     ; 1401 					delay_ms(10);
-7375  0f93 ae000a        	ldw	x,#10
-7376  0f96 cd0060        	call	_delay_ms
-7378                     ; 1402 					DF_buffer_read(/*///current_buffer_L*//*1,*/128,128,&buff[128]);         
-7380  0f99 ae00d0        	ldw	x,#_buff+128
-7381  0f9c 89            	pushw	x
-7382  0f9d ae0080        	ldw	x,#128
-7383  0fa0 89            	pushw	x
-7384  0fa1 ae0080        	ldw	x,#128
-7385  0fa4 cd0af3        	call	_DF_buffer_read
-7387  0fa7 5b04          	addw	sp,#4
-7388  0fa9               L5533:
-7389                     ; 1404 				if(memory_manufacturer=='S') 
-7391  0fa9 b6bc          	ld	a,_memory_manufacturer
-7392  0fab a153          	cp	a,#83
-7393  0fad 2615          	jrne	L7533
-7394                     ; 1406 					ST_READ(0,256,buff);
-7396  0faf ae0050        	ldw	x,#_buff
-7397  0fb2 89            	pushw	x
-7398  0fb3 ae0100        	ldw	x,#256
-7399  0fb6 89            	pushw	x
-7400  0fb7 ae0000        	ldw	x,#0
-7401  0fba 89            	pushw	x
-7402  0fbb ae0000        	ldw	x,#0
-7403  0fbe 89            	pushw	x
-7404  0fbf cd09f1        	call	_ST_READ
-7406  0fc2 5b08          	addw	sp,#8
-7407  0fc4               L7533:
-7408                     ; 1408 				play=1;
-7410  0fc4 72100004      	bset	_play
-7411                     ; 1409 				bSTART=0;
-7413  0fc8 7211000c      	bres	_bSTART
-7414                     ; 1411 				rele_cnt=rele_cnt_const[rele_cnt_index];
-7416  0fcc b6bb          	ld	a,_rele_cnt_index
-7417  0fce 5f            	clrw	x
-7418  0fcf 97            	ld	xl,a
-7419  0fd0 d60000        	ld	a,(_rele_cnt_const,x)
-7420  0fd3 5f            	clrw	x
-7421  0fd4 97            	ld	xl,a
-7422  0fd5 bf05          	ldw	_rele_cnt,x
-7423  0fd7               L7433:
-7424                     ; 1417 		if(current_page_cnt)
-7426  0fd7 3d01          	tnz	_current_page_cnt
-7427  0fd9 272b          	jreq	L3433
-7428                     ; 1419 			current_page_cnt--;
-7430  0fdb 3a01          	dec	_current_page_cnt
-7431                     ; 1420 			if(!current_page_cnt)
-7433  0fdd 3d01          	tnz	_current_page_cnt
-7434  0fdf 2625          	jrne	L3433
-7435                     ; 1423 				CS_FLASH
-7437  0fe1 c6500a        	ld	a,20490
-7438  0fe4 a808          	xor	a,	#8
-7439  0fe6 c7500a        	ld	20490,a
-7440                     ; 1425 				uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
-7442  0fe9 4b00          	push	#0
-7443  0feb 4b00          	push	#0
-7444  0fed 3b0011        	push	_current_page
-7445  0ff0 b612          	ld	a,_current_page+1
-7446  0ff2 a4ff          	and	a,#255
-7447  0ff4 88            	push	a
-7448  0ff5 4b15          	push	#21
-7449  0ff7 ae0016        	ldw	x,#22
-7450  0ffa a604          	ld	a,#4
-7451  0ffc 95            	ld	xh,a
-7452  0ffd cd00d2        	call	_uart_out
-7454  1000 5b05          	addw	sp,#5
-7455                     ; 1426 				current_page_cnt=100;
-7457  1002 35640001      	mov	_current_page_cnt,#100
-7458  1006               L3433:
-7459                     ; 1431 	if(b10Hz)
-7461                     	btst	_b10Hz
-7462  100b 2413          	jruge	L5633
-7463                     ; 1433 		b10Hz=0;
-7465  100d 72110007      	bres	_b10Hz
-7466                     ; 1435 		rele_drv();
-7468  1011 cd004a        	call	_rele_drv
-7470                     ; 1436 		pwm_fade_in++;
-7472  1014 3cba          	inc	_pwm_fade_in
-7473                     ; 1437 		if(pwm_fade_in>128)pwm_fade_in=128;			
-7475  1016 b6ba          	ld	a,_pwm_fade_in
-7476  1018 a181          	cp	a,#129
-7477  101a 2504          	jrult	L5633
-7480  101c 358000ba      	mov	_pwm_fade_in,#128
-7481  1020               L5633:
-7482                     ; 1440 	if(b5Hz)
-7484                     	btst	_b5Hz
-7485  1025 2404          	jruge	L1733
-7486                     ; 1442 		b5Hz=0;
-7488  1027 72110006      	bres	_b5Hz
-7489  102b               L1733:
-7490                     ; 1448 	if(b1Hz)
-7492                     	btst	_b1Hz
-7493  1030 2503          	jrult	L071
-7494  1032 cc0e78        	jp	L1133
-7495  1035               L071:
-7496                     ; 1451 		b1Hz=0;
-7498  1035 72110005      	bres	_b1Hz
-7499  1039 ac780e78      	jpf	L1133
-8013                     	xdef	_main
-8014                     	switch	.ubsct
-8015  0000               _current_page_cnt_:
-8016  0000 00            	ds.b	1
-8017                     	xdef	_current_page_cnt_
-8018  0001               _current_page_cnt:
-8019  0001 00            	ds.b	1
-8020                     	xdef	_current_page_cnt
-8021                     .eeprom:	section	.data
-8022  0000               _EE_PAGE_LEN:
-8023  0000 0000          	ds.b	2
-8024                     	xdef	_EE_PAGE_LEN
-8025                     	switch	.bss
-8026  0000               _UIB:
-8027  0000 000000000000  	ds.b	80
-8028                     	xdef	_UIB
-8029  0050               _buff:
-8030  0050 000000000000  	ds.b	300
-8031                     	xdef	_buff
-8032  017c               _dumm:
-8033  017c 000000000000  	ds.b	100
-8034                     	xdef	_dumm
-8035                     .bit:	section	.data,bit
-8036  0000               _bRELEASE:
-8037  0000 00            	ds.b	1
-8038                     	xdef	_bRELEASE
-8039  0001               _rx_buffer_overflow:
-8040  0001 00            	ds.b	1
-8041                     	xdef	_rx_buffer_overflow
-8042  0002               _bRXIN:
-8043  0002 00            	ds.b	1
-8044                     	xdef	_bRXIN
-8045  0003               _bOUT_FREE:
-8046  0003 00            	ds.b	1
-8047                     	xdef	_bOUT_FREE
-8048  0004               _play:
-8049  0004 00            	ds.b	1
-8050                     	xdef	_play
-8051  0005               _b1Hz:
-8052  0005 00            	ds.b	1
-8053                     	xdef	_b1Hz
-8054  0006               _b5Hz:
-8055  0006 00            	ds.b	1
-8056                     	xdef	_b5Hz
-8057  0007               _b10Hz:
-8058  0007 00            	ds.b	1
-8059                     	xdef	_b10Hz
-8060  0008               _b100Hz:
-8061  0008 00            	ds.b	1
-8062                     	xdef	_b100Hz
-8063  0009               _bBUFF_READ_L:
-8064  0009 00            	ds.b	1
-8065                     	xdef	_bBUFF_READ_L
-8066  000a               _bBUFF_READ_H:
-8067  000a 00            	ds.b	1
-8068                     	xdef	_bBUFF_READ_H
-8069  000b               _bBUFF_LOAD:
-8070  000b 00            	ds.b	1
-8071                     	xdef	_bBUFF_LOAD
-8072  000c               _bSTART:
-8073  000c 00            	ds.b	1
-8074                     	xdef	_bSTART
-8075                     	switch	.ubsct
-8076  0002               _but_block_cnt:
-8077  0002 0000          	ds.b	2
-8078                     	xdef	_but_block_cnt
-8079                     	xdef	_memory_manufacturer
-8080                     	xdef	_rele_cnt_const
-8081                     	xdef	_rele_cnt_index
-8082                     	xdef	_pwm_fade_in
-8083  0004               _rx_offset:
-8084  0004 00            	ds.b	1
-8085                     	xdef	_rx_offset
-8086  0005               _rele_cnt:
-8087  0005 0000          	ds.b	2
-8088                     	xdef	_rele_cnt
-8089  0007               _rx_data:
-8090  0007 00            	ds.b	1
-8091                     	xdef	_rx_data
-8092  0008               _rx_status:
-8093  0008 00            	ds.b	1
-8094                     	xdef	_rx_status
-8095  0009               _file_lengt:
-8096  0009 00000000      	ds.b	4
-8097                     	xdef	_file_lengt
-8098  000d               _current_byte_in_buffer:
-8099  000d 0000          	ds.b	2
-8100                     	xdef	_current_byte_in_buffer
-8101  000f               _last_page:
-8102  000f 0000          	ds.b	2
-8103                     	xdef	_last_page
-8104  0011               _current_page:
-8105  0011 0000          	ds.b	2
-8106                     	xdef	_current_page
-8107  0013               _file_lengt_in_pages:
-8108  0013 0000          	ds.b	2
-8109                     	xdef	_file_lengt_in_pages
-8110  0015               _mdr3:
-8111  0015 00            	ds.b	1
-8112                     	xdef	_mdr3
-8113  0016               _mdr2:
-8114  0016 00            	ds.b	1
-8115                     	xdef	_mdr2
-8116  0017               _mdr1:
-8117  0017 00            	ds.b	1
-8118                     	xdef	_mdr1
-8119  0018               _mdr0:
-8120  0018 00            	ds.b	1
-8121                     	xdef	_mdr0
-8122                     	xdef	_but_on_drv_cnt
-8123                     	xdef	_but_drv_cnt
-8124  0019               _sample:
-8125  0019 00            	ds.b	1
-8126                     	xdef	_sample
-8127  001a               _rx_rd_index:
-8128  001a 0000          	ds.b	2
-8129                     	xdef	_rx_rd_index
-8130  001c               _rx_wr_index:
-8131  001c 0000          	ds.b	2
-8132                     	xdef	_rx_wr_index
-8133  001e               _rx_counter:
-8134  001e 0000          	ds.b	2
-8135                     	xdef	_rx_counter
-8136                     	xdef	_rx_buffer
-8137  0020               _tx_rd_index:
-8138  0020 00            	ds.b	1
-8139                     	xdef	_tx_rd_index
-8140  0021               _tx_wr_index:
-8141  0021 00            	ds.b	1
-8142                     	xdef	_tx_wr_index
-8143  0022               _tx_counter:
-8144  0022 00            	ds.b	1
-8145                     	xdef	_tx_counter
-8146                     	xdef	_tx_buffer
-8147  0023               _sample_cnt:
-8148  0023 0000          	ds.b	2
-8149                     	xdef	_sample_cnt
-8150                     	xdef	_t0_cnt3
-8151                     	xdef	_t0_cnt2
-8152                     	xdef	_t0_cnt1
-8153                     	xdef	_t0_cnt0
-8154                     	xdef	_ST_bulk_erase
-8155                     	xdef	_ST_READ
-8156                     	xdef	_ST_WRITE
-8157                     	xdef	_ST_WREN
-8158                     	xdef	_ST_status_read
-8159                     	xdef	_ST_RDID_read
-8160                     	xdef	_uart_in_an
-8161                     	xdef	_control_check
-8162                     	xdef	_index_offset
-8163                     	xdef	_uart_in
-8164                     	xdef	_gpio_init
-8165                     	xdef	_spi_init
-8166                     	xdef	_spi
-8167                     	xdef	_DF_buffer_to_page_er
-8168                     	xdef	_DF_page_to_buffer
-8169                     	xdef	_DF_buffer_write
-8170                     	xdef	_DF_buffer_read
-8171                     	xdef	_DF_status_read
-8172                     	xdef	_DF_memo_to_256
-8173                     	xdef	_DF_mf_dev_read
-8174                     	xdef	_uart_init
-8175                     	xdef	f_UARTRxInterrupt
-8176                     	xdef	f_UARTTxInterrupt
-8177                     	xdef	_putchar
-8178                     	xdef	_uart_out_adr_block
-8179                     	xdef	_uart_out
-8180                     	xdef	f_TIM4_UPD_Interrupt
-8181                     	xdef	_delay_ms
-8182                     	xdef	_rele_drv
-8183                     	xdef	_t4_init
-8184                     	xdef	_t2_init
-8185                     	xref.b	c_lreg
-8186                     	xref.b	c_x
-8187                     	xref.b	c_y
-8207                     	xref	c_ladc
-8208                     	xref	c_itolx
-8209                     	xref	c_umul
-8210                     	xref	c_eewrw
-8211                     	xref	c_lglsh
-8212                     	xref	c_uitolx
-8213                     	xref	c_lgursh
-8214                     	xref	c_lcmp
-8215                     	xref	c_ltor
-8216                     	xref	c_lgadc
-8217                     	xref	c_rtol
-8218                     	xref	c_vmul
-8219                     	end
+4103                     ; 481           	CS_FLASH
+4105  06a1 c6500a        	ld	a,20490
+4106  06a4 a808          	xor	a,	#8
+4107  06a6 c7500a        	ld	20490,a
+4108                     ; 482 			if(memory_manufacturer=='A') {
+4110  06a9 b6bc          	ld	a,_memory_manufacturer
+4111  06ab a141          	cp	a,#65
+4112  06ad 264e          	jrne	L5512
+4113                     ; 483 				DF_buffer_write(/*//current_buffer*//*1,*/0,256,buff);
+4115  06af ae0050        	ldw	x,#_buff
+4116  06b2 89            	pushw	x
+4117  06b3 ae0100        	ldw	x,#256
+4118  06b6 89            	pushw	x
+4119  06b7 5f            	clrw	x
+4120  06b8 cd0b65        	call	_DF_buffer_write
+4122  06bb 5b04          	addw	sp,#4
+4123                     ; 484 				DF_buffer_to_page_er(/*///current_buffer*//*1,*/current_page);
+4125  06bd be11          	ldw	x,_current_page
+4126  06bf cd0afc        	call	_DF_buffer_to_page_er
+4128                     ; 485 				current_page++;
+4130  06c2 be11          	ldw	x,_current_page
+4131  06c4 1c0001        	addw	x,#1
+4132  06c7 bf11          	ldw	_current_page,x
+4133                     ; 486 				if(current_page<file_lengt_in_pages)
+4135  06c9 be11          	ldw	x,_current_page
+4136  06cb b313          	cpw	x,_file_lengt_in_pages
+4137  06cd 2424          	jruge	L7512
+4138                     ; 488 					delay_ms(100);
+4140  06cf ae0064        	ldw	x,#100
+4141  06d2 cd0060        	call	_delay_ms
+4143                     ; 489 					uart_out (4,CMND,21,current_page%256,current_page/256,0,0);
+4145  06d5 4b00          	push	#0
+4146  06d7 4b00          	push	#0
+4147  06d9 3b0011        	push	_current_page
+4148  06dc b612          	ld	a,_current_page+1
+4149  06de a4ff          	and	a,#255
+4150  06e0 88            	push	a
+4151  06e1 4b15          	push	#21
+4152  06e3 ae0016        	ldw	x,#22
+4153  06e6 a604          	ld	a,#4
+4154  06e8 95            	ld	xh,a
+4155  06e9 cd00d2        	call	_uart_out
+4157  06ec 5b05          	addw	sp,#5
+4158                     ; 490 					current_byte_in_buffer=0;
+4160  06ee 5f            	clrw	x
+4161  06ef bf0d          	ldw	_current_byte_in_buffer,x
+4163  06f1 200a          	jra	L5512
+4164  06f3               L7512:
+4165                     ; 494 					EE_PAGE_LEN=current_page;
+4167  06f3 be11          	ldw	x,_current_page
+4168  06f5 89            	pushw	x
+4169  06f6 ae0000        	ldw	x,#_EE_PAGE_LEN
+4170  06f9 cd0000        	call	c_eewrw
+4172  06fc 85            	popw	x
+4173  06fd               L5512:
+4174                     ; 497 			if(memory_manufacturer=='S') {
+4176  06fd b6bc          	ld	a,_memory_manufacturer
+4177  06ff a153          	cp	a,#83
+4178  0701 2703          	jreq	L46
+4179  0703 cc08af        	jp	L1771
+4180  0706               L46:
+4181                     ; 498 				ST_WREN();
+4183  0706 cd09c4        	call	_ST_WREN
+4185                     ; 499 				delay_ms(100);
+4187  0709 ae0064        	ldw	x,#100
+4188  070c cd0060        	call	_delay_ms
+4190                     ; 500 				ST_WRITE((unsigned long)(current_page*256UL),256,buff);
+4192  070f ae0050        	ldw	x,#_buff
+4193  0712 89            	pushw	x
+4194  0713 ae0100        	ldw	x,#256
+4195  0716 89            	pushw	x
+4196  0717 be11          	ldw	x,_current_page
+4197  0719 90ae0100      	ldw	y,#256
+4198  071d cd0000        	call	c_umul
+4200  0720 be02          	ldw	x,c_lreg+2
+4201  0722 89            	pushw	x
+4202  0723 be00          	ldw	x,c_lreg
+4203  0725 89            	pushw	x
+4204  0726 cd09d1        	call	_ST_WRITE
+4206  0729 5b08          	addw	sp,#8
+4207                     ; 501 				current_page++;
+4209  072b be11          	ldw	x,_current_page
+4210  072d 1c0001        	addw	x,#1
+4211  0730 bf11          	ldw	_current_page,x
+4212                     ; 502 				if(current_page<file_lengt_in_pages)
+4214  0732 be11          	ldw	x,_current_page
+4215  0734 b313          	cpw	x,_file_lengt_in_pages
+4216  0736 242e          	jruge	L5612
+4217                     ; 504 					delay_ms(100);
+4219  0738 ae0064        	ldw	x,#100
+4220  073b cd0060        	call	_delay_ms
+4222                     ; 505 					uart_out (5,CMND,21,current_page%256,current_page/256,0,0);
+4224  073e 4b00          	push	#0
+4225  0740 4b00          	push	#0
+4226  0742 3b0011        	push	_current_page
+4227  0745 b612          	ld	a,_current_page+1
+4228  0747 a4ff          	and	a,#255
+4229  0749 88            	push	a
+4230  074a 4b15          	push	#21
+4231  074c ae0016        	ldw	x,#22
+4232  074f a605          	ld	a,#5
+4233  0751 95            	ld	xh,a
+4234  0752 cd00d2        	call	_uart_out
+4236  0755 5b05          	addw	sp,#5
+4237                     ; 506 					current_page_cnt=10;
+4239  0757 350a0001      	mov	_current_page_cnt,#10
+4240                     ; 507 					current_page_cnt_=4;
+4242  075b 35040000      	mov	_current_page_cnt_,#4
+4243                     ; 508 					current_byte_in_buffer=0;
+4245  075f 5f            	clrw	x
+4246  0760 bf0d          	ldw	_current_byte_in_buffer,x
+4248  0762 acaf08af      	jpf	L1771
+4249  0766               L5612:
+4250                     ; 512 					EE_PAGE_LEN=current_page;
+4252  0766 be11          	ldw	x,_current_page
+4253  0768 89            	pushw	x
+4254  0769 ae0000        	ldw	x,#_EE_PAGE_LEN
+4255  076c cd0000        	call	c_eewrw
+4257  076f 85            	popw	x
+4258  0770 acaf08af      	jpf	L1771
+4259  0774               L5312:
+4260                     ; 523 	else if(UIB[1]==24) {
+4262  0774 c60001        	ld	a,_UIB+1
+4263  0777 a118          	cp	a,#24
+4264  0779 2615          	jrne	L3712
+4265                     ; 526 		rele_cnt=10;
+4267  077b ae000a        	ldw	x,#10
+4268  077e bf05          	ldw	_rele_cnt,x
+4269                     ; 527 		ST_WREN();
+4271  0780 cd09c4        	call	_ST_WREN
+4273                     ; 528 		delay_ms(100);
+4275  0783 ae0064        	ldw	x,#100
+4276  0786 cd0060        	call	_delay_ms
+4278                     ; 529 		ST_bulk_erase();
+4280  0789 cd09b7        	call	_ST_bulk_erase
+4283  078c acaf08af      	jpf	L1771
+4284  0790               L3712:
+4285                     ; 534 	else if(UIB[1]==25)
+4287  0790 c60001        	ld	a,_UIB+1
+4288  0793 a119          	cp	a,#25
+4289  0795 2703          	jreq	L66
+4290  0797 cc0877        	jp	L7712
+4291  079a               L66:
+4292                     ; 538 		current_page=0;
+4294  079a 5f            	clrw	x
+4295  079b bf11          	ldw	_current_page,x
+4296                     ; 540 		for(i__=0;i__<EE_PAGE_LEN;i__++)
+4298  079d 5f            	clrw	x
+4299  079e 1f03          	ldw	(OFST-1,sp),x
+4301  07a0 ac6b086b      	jpf	L5022
+4302  07a4               L1022:
+4303                     ; 542 			if(memory_manufacturer=='S') {	
+4305  07a4 b6bc          	ld	a,_memory_manufacturer
+4306  07a6 a153          	cp	a,#83
+4307  07a8 2619          	jrne	L1122
+4308                     ; 543 				DF_page_to_buffer(i__);
+4310  07aa 1e03          	ldw	x,(OFST-1,sp)
+4311  07ac cd0ad9        	call	_DF_page_to_buffer
+4313                     ; 544 				delay_ms(100);			
+4315  07af ae0064        	ldw	x,#100
+4316  07b2 cd0060        	call	_delay_ms
+4318                     ; 545 				DF_buffer_read(0,256, buff);
+4320  07b5 ae0050        	ldw	x,#_buff
+4321  07b8 89            	pushw	x
+4322  07b9 ae0100        	ldw	x,#256
+4323  07bc 89            	pushw	x
+4324  07bd 5f            	clrw	x
+4325  07be cd0b1f        	call	_DF_buffer_read
+4327  07c1 5b04          	addw	sp,#4
+4328  07c3               L1122:
+4329                     ; 548 			if(memory_manufacturer=='S') {	
+4331  07c3 b6bc          	ld	a,_memory_manufacturer
+4332  07c5 a153          	cp	a,#83
+4333  07c7 261a          	jrne	L3122
+4334                     ; 549 				ST_READ((long)(i__*256),256, buff);
+4336  07c9 ae0050        	ldw	x,#_buff
+4337  07cc 89            	pushw	x
+4338  07cd ae0100        	ldw	x,#256
+4339  07d0 89            	pushw	x
+4340  07d1 1e07          	ldw	x,(OFST+3,sp)
+4341  07d3 4f            	clr	a
+4342  07d4 02            	rlwa	x,a
+4343  07d5 cd0000        	call	c_itolx
+4345  07d8 be02          	ldw	x,c_lreg+2
+4346  07da 89            	pushw	x
+4347  07db be00          	ldw	x,c_lreg
+4348  07dd 89            	pushw	x
+4349  07de cd0a1d        	call	_ST_READ
+4351  07e1 5b08          	addw	sp,#8
+4352  07e3               L3122:
+4353                     ; 552 			uart_out_adr_block ((256*i__)+0,buff,64);
+4355  07e3 4b40          	push	#64
+4356  07e5 ae0050        	ldw	x,#_buff
+4357  07e8 89            	pushw	x
+4358  07e9 1e06          	ldw	x,(OFST+2,sp)
+4359  07eb 4f            	clr	a
+4360  07ec 02            	rlwa	x,a
+4361  07ed cd0000        	call	c_itolx
+4363  07f0 be02          	ldw	x,c_lreg+2
+4364  07f2 89            	pushw	x
+4365  07f3 be00          	ldw	x,c_lreg
+4366  07f5 89            	pushw	x
+4367  07f6 cd017c        	call	_uart_out_adr_block
+4369  07f9 5b07          	addw	sp,#7
+4370                     ; 553 			delay_ms(100);    
+4372  07fb ae0064        	ldw	x,#100
+4373  07fe cd0060        	call	_delay_ms
+4375                     ; 554 			uart_out_adr_block ((256*i__)+64,&buff[64],64);
+4377  0801 4b40          	push	#64
+4378  0803 ae0090        	ldw	x,#_buff+64
+4379  0806 89            	pushw	x
+4380  0807 1e06          	ldw	x,(OFST+2,sp)
+4381  0809 4f            	clr	a
+4382  080a 02            	rlwa	x,a
+4383  080b 1c0040        	addw	x,#64
+4384  080e cd0000        	call	c_itolx
+4386  0811 be02          	ldw	x,c_lreg+2
+4387  0813 89            	pushw	x
+4388  0814 be00          	ldw	x,c_lreg
+4389  0816 89            	pushw	x
+4390  0817 cd017c        	call	_uart_out_adr_block
+4392  081a 5b07          	addw	sp,#7
+4393                     ; 555 			delay_ms(100);    
+4395  081c ae0064        	ldw	x,#100
+4396  081f cd0060        	call	_delay_ms
+4398                     ; 556 			uart_out_adr_block ((256*i__)+128,&buff[128],64);
+4400  0822 4b40          	push	#64
+4401  0824 ae00d0        	ldw	x,#_buff+128
+4402  0827 89            	pushw	x
+4403  0828 1e06          	ldw	x,(OFST+2,sp)
+4404  082a 4f            	clr	a
+4405  082b 02            	rlwa	x,a
+4406  082c 1c0080        	addw	x,#128
+4407  082f cd0000        	call	c_itolx
+4409  0832 be02          	ldw	x,c_lreg+2
+4410  0834 89            	pushw	x
+4411  0835 be00          	ldw	x,c_lreg
+4412  0837 89            	pushw	x
+4413  0838 cd017c        	call	_uart_out_adr_block
+4415  083b 5b07          	addw	sp,#7
+4416                     ; 557 			delay_ms(100);    
+4418  083d ae0064        	ldw	x,#100
+4419  0840 cd0060        	call	_delay_ms
+4421                     ; 558 			uart_out_adr_block ((256*i__)+192,&buff[192],64);
+4423  0843 4b40          	push	#64
+4424  0845 ae0110        	ldw	x,#_buff+192
+4425  0848 89            	pushw	x
+4426  0849 1e06          	ldw	x,(OFST+2,sp)
+4427  084b 4f            	clr	a
+4428  084c 02            	rlwa	x,a
+4429  084d 1c00c0        	addw	x,#192
+4430  0850 cd0000        	call	c_itolx
+4432  0853 be02          	ldw	x,c_lreg+2
+4433  0855 89            	pushw	x
+4434  0856 be00          	ldw	x,c_lreg
+4435  0858 89            	pushw	x
+4436  0859 cd017c        	call	_uart_out_adr_block
+4438  085c 5b07          	addw	sp,#7
+4439                     ; 559 			delay_ms(100);   
+4441  085e ae0064        	ldw	x,#100
+4442  0861 cd0060        	call	_delay_ms
+4444                     ; 540 		for(i__=0;i__<EE_PAGE_LEN;i__++)
+4446  0864 1e03          	ldw	x,(OFST-1,sp)
+4447  0866 1c0001        	addw	x,#1
+4448  0869 1f03          	ldw	(OFST-1,sp),x
+4449  086b               L5022:
+4452  086b 1e03          	ldw	x,(OFST-1,sp)
+4453  086d c30000        	cpw	x,_EE_PAGE_LEN
+4454  0870 2403          	jruge	L07
+4455  0872 cc07a4        	jp	L1022
+4456  0875               L07:
+4458  0875 2038          	jra	L1771
+4459  0877               L7712:
+4460                     ; 566 	else if(UIB[1]==26)		//Запрос телеметрии
+4462  0877 c60001        	ld	a,_UIB+1
+4463  087a a11a          	cp	a,#26
+4464  087c 2619          	jrne	L7122
+4465                     ; 569 		uart_out (4,CMND,26,current_page_cnt,current_page_cnt_,0,0);    
+4467  087e 4b00          	push	#0
+4468  0880 4b00          	push	#0
+4469  0882 3b0000        	push	_current_page_cnt_
+4470  0885 3b0001        	push	_current_page_cnt
+4471  0888 4b1a          	push	#26
+4472  088a ae0016        	ldw	x,#22
+4473  088d a604          	ld	a,#4
+4474  088f 95            	ld	xh,a
+4475  0890 cd00d2        	call	_uart_out
+4477  0893 5b05          	addw	sp,#5
+4479  0895 2018          	jra	L1771
+4480  0897               L7122:
+4481                     ; 573 	else if(UIB[1]==30)
+4483  0897 c60001        	ld	a,_UIB+1
+4484  089a a11e          	cp	a,#30
+4485  089c 2606          	jrne	L3222
+4486                     ; 595           bSTART=1;
+4488  089e 7210000c      	bset	_bSTART
+4490  08a2 200b          	jra	L1771
+4491  08a4               L3222:
+4492                     ; 607 	else if(UIB[1]==40)
+4494  08a4 c60001        	ld	a,_UIB+1
+4495  08a7 a128          	cp	a,#40
+4496  08a9 2604          	jrne	L1771
+4497                     ; 629 		bSTART=1;	
+4499  08ab 7210000c      	bset	_bSTART
+4500  08af               L1771:
+4501                     ; 634 }
+4504  08af 5b04          	addw	sp,#4
+4505  08b1 81            	ret
+4542                     ; 637 void putchar(char c)
+4542                     ; 638 {
+4543                     	switch	.text
+4544  08b2               _putchar:
+4546  08b2 88            	push	a
+4547       00000000      OFST:	set	0
+4550  08b3               L1522:
+4551                     ; 639 while (tx_counter == TX_BUFFER_SIZE);
+4553  08b3 b622          	ld	a,_tx_counter
+4554  08b5 a150          	cp	a,#80
+4555  08b7 27fa          	jreq	L1522
+4556                     ; 641 if (tx_counter || ((UART1->SR & UART1_SR_TXE)==0))
+4558  08b9 3d22          	tnz	_tx_counter
+4559  08bb 2607          	jrne	L7522
+4561  08bd c65230        	ld	a,21040
+4562  08c0 a580          	bcp	a,#128
+4563  08c2 261d          	jrne	L5522
+4564  08c4               L7522:
+4565                     ; 643    tx_buffer[tx_wr_index]=c;
+4567  08c4 5f            	clrw	x
+4568  08c5 b621          	ld	a,_tx_wr_index
+4569  08c7 2a01          	jrpl	L47
+4570  08c9 53            	cplw	x
+4571  08ca               L47:
+4572  08ca 97            	ld	xl,a
+4573  08cb 7b01          	ld	a,(OFST+1,sp)
+4574  08cd e704          	ld	(_tx_buffer,x),a
+4575                     ; 644    if (++tx_wr_index == TX_BUFFER_SIZE) tx_wr_index=0;
+4577  08cf 3c21          	inc	_tx_wr_index
+4578  08d1 b621          	ld	a,_tx_wr_index
+4579  08d3 a150          	cp	a,#80
+4580  08d5 2602          	jrne	L1622
+4583  08d7 3f21          	clr	_tx_wr_index
+4584  08d9               L1622:
+4585                     ; 645    ++tx_counter;
+4587  08d9 3c22          	inc	_tx_counter
+4589  08db               L3622:
+4590                     ; 649 UART1->CR2|= UART1_CR2_TIEN;
+4592  08db 721e5235      	bset	21045,#7
+4593                     ; 651 }
+4596  08df 84            	pop	a
+4597  08e0 81            	ret
+4598  08e1               L5522:
+4599                     ; 647 else UART1->DR=c;
+4601  08e1 7b01          	ld	a,(OFST+1,sp)
+4602  08e3 c75231        	ld	21041,a
+4603  08e6 20f3          	jra	L3622
+4626                     ; 654 void spi_init(void){
+4627                     	switch	.text
+4628  08e8               _spi_init:
+4632                     ; 656 	GPIOA->DDR|=(1<<3);
+4634  08e8 72165002      	bset	20482,#3
+4635                     ; 657 	GPIOA->CR1|=(1<<3);
+4637  08ec 72165003      	bset	20483,#3
+4638                     ; 658 	GPIOA->CR2&=~(1<<3);
+4640  08f0 72175004      	bres	20484,#3
+4641                     ; 659 	GPIOA->ODR|=(1<<3);	
+4643  08f4 72165000      	bset	20480,#3
+4644                     ; 662 	GPIOB->DDR|=(1<<5);
+4646  08f8 721a5007      	bset	20487,#5
+4647                     ; 663 	GPIOB->CR1|=(1<<5);
+4649  08fc 721a5008      	bset	20488,#5
+4650                     ; 664 	GPIOB->CR2&=~(1<<5);
+4652  0900 721b5009      	bres	20489,#5
+4653                     ; 665 	GPIOB->ODR|=(1<<5);	
+4655  0904 721a5005      	bset	20485,#5
+4656                     ; 667 	GPIOC->DDR|=(1<<3);
+4658  0908 7216500c      	bset	20492,#3
+4659                     ; 668 	GPIOC->CR1|=(1<<3);
+4661  090c 7216500d      	bset	20493,#3
+4662                     ; 669 	GPIOC->CR2&=~(1<<3);
+4664  0910 7217500e      	bres	20494,#3
+4665                     ; 670 	GPIOC->ODR|=(1<<3);	
+4667  0914 7216500a      	bset	20490,#3
+4668                     ; 672 	GPIOC->DDR|=(1<<5);
+4670  0918 721a500c      	bset	20492,#5
+4671                     ; 673 	GPIOC->CR1|=(1<<5);
+4673  091c 721a500d      	bset	20493,#5
+4674                     ; 674 	GPIOC->CR2|=(1<<5);
+4676  0920 721a500e      	bset	20494,#5
+4677                     ; 675 	GPIOC->ODR|=(1<<5);	
+4679  0924 721a500a      	bset	20490,#5
+4680                     ; 677 	GPIOC->DDR|=(1<<6);
+4682  0928 721c500c      	bset	20492,#6
+4683                     ; 678 	GPIOC->CR1|=(1<<6);
+4685  092c 721c500d      	bset	20493,#6
+4686                     ; 679 	GPIOC->CR2|=(1<<6);
+4688  0930 721c500e      	bset	20494,#6
+4689                     ; 680 	GPIOC->ODR|=(1<<6);	
+4691  0934 721c500a      	bset	20490,#6
+4692                     ; 682 	GPIOC->DDR&=~(1<<7);
+4694  0938 721f500c      	bres	20492,#7
+4695                     ; 683 	GPIOC->CR1&=~(1<<7);
+4697  093c 721f500d      	bres	20493,#7
+4698                     ; 684 	GPIOC->CR2&=~(1<<7);
+4700  0940 721f500e      	bres	20494,#7
+4701                     ; 685 	GPIOC->ODR|=(1<<7);	
+4703  0944 721e500a      	bset	20490,#7
+4704                     ; 687 	SPI->CR1= /*SPI_CR1_LSBFIRST |*/
+4704                     ; 688 			SPI_CR1_SPE | 
+4704                     ; 689 			( (4<< 3) & SPI_CR1_BR ) |
+4704                     ; 690 			SPI_CR1_MSTR |
+4704                     ; 691 			SPI_CR1_CPOL |
+4704                     ; 692 			SPI_CR1_CPHA; 
+4706  0948 35675200      	mov	20992,#103
+4707                     ; 694 	SPI->CR2= SPI_CR2_SSM | SPI_CR2_SSI;
+4709  094c 35035201      	mov	20993,#3
+4710                     ; 695 	SPI->ICR= 0;	
+4712  0950 725f5202      	clr	20994
+4713                     ; 696 }
+4716  0954 81            	ret
+4759                     ; 699 char spi(char in){
+4760                     	switch	.text
+4761  0955               _spi:
+4763  0955 88            	push	a
+4764  0956 88            	push	a
+4765       00000001      OFST:	set	1
+4768  0957               L1232:
+4769                     ; 701 	while(!((SPI->SR)&SPI_SR_TXE));
+4771  0957 c65203        	ld	a,20995
+4772  095a a502          	bcp	a,#2
+4773  095c 27f9          	jreq	L1232
+4774                     ; 702 	SPI->DR=in;
+4776  095e 7b02          	ld	a,(OFST+1,sp)
+4777  0960 c75204        	ld	20996,a
+4779  0963               L1332:
+4780                     ; 703 	while(!((SPI->SR)&SPI_SR_RXNE));
+4782  0963 c65203        	ld	a,20995
+4783  0966 a501          	bcp	a,#1
+4784  0968 27f9          	jreq	L1332
+4785                     ; 704 	c=SPI->DR;	
+4787  096a c65204        	ld	a,20996
+4788  096d 6b01          	ld	(OFST+0,sp),a
+4789                     ; 705 	return c;
+4791  096f 7b01          	ld	a,(OFST+0,sp)
+4794  0971 85            	popw	x
+4795  0972 81            	ret
+4860                     ; 709 long ST_RDID_read(void)
+4860                     ; 710 {
+4861                     	switch	.text
+4862  0973               _ST_RDID_read:
+4864  0973 5204          	subw	sp,#4
+4865       00000004      OFST:	set	4
+4868                     ; 713 d0=0;
+4870  0975 0f04          	clr	(OFST+0,sp)
+4871                     ; 714 d1=0;
+4873                     ; 715 d2=0;
+4875                     ; 716 d3=0;
+4877                     ; 718 ST_CS_ON
+4879  0977 721b5005      	bres	20485,#5
+4880                     ; 719 spi(0x9f);
+4882  097b a69f          	ld	a,#159
+4883  097d add6          	call	_spi
+4885                     ; 720 mdr0=spi(0xff);
+4887  097f a6ff          	ld	a,#255
+4888  0981 add2          	call	_spi
+4890  0983 b718          	ld	_mdr0,a
+4891                     ; 721 mdr1=spi(0xff);
+4893  0985 a6ff          	ld	a,#255
+4894  0987 adcc          	call	_spi
+4896  0989 b717          	ld	_mdr1,a
+4897                     ; 722 mdr2=spi(0xff);
+4899  098b a6ff          	ld	a,#255
+4900  098d adc6          	call	_spi
+4902  098f b716          	ld	_mdr2,a
+4903                     ; 725 ST_CS_OFF
+4905  0991 721a5005      	bset	20485,#5
+4906                     ; 726 return  *((long*)&d0);
+4908  0995 96            	ldw	x,sp
+4909  0996 1c0004        	addw	x,#OFST+0
+4910  0999 cd0000        	call	c_ltor
+4914  099c 5b04          	addw	sp,#4
+4915  099e 81            	ret
+4950                     ; 730 char ST_status_read(void)
+4950                     ; 731 {
+4951                     	switch	.text
+4952  099f               _ST_status_read:
+4954  099f 88            	push	a
+4955       00000001      OFST:	set	1
+4958                     ; 735 ST_CS_ON
+4960  09a0 721b5005      	bres	20485,#5
+4961                     ; 736 spi(0x05);
+4963  09a4 a605          	ld	a,#5
+4964  09a6 adad          	call	_spi
+4966                     ; 737 d0=spi(0xff);
+4968  09a8 a6ff          	ld	a,#255
+4969  09aa ada9          	call	_spi
+4971  09ac 6b01          	ld	(OFST+0,sp),a
+4972                     ; 739 ST_CS_OFF
+4974  09ae 721a5005      	bset	20485,#5
+4975                     ; 740 return d0;
+4977  09b2 7b01          	ld	a,(OFST+0,sp)
+4980  09b4 5b01          	addw	sp,#1
+4981  09b6 81            	ret
+5005                     ; 744 void ST_bulk_erase(void)
+5005                     ; 745 {
+5006                     	switch	.text
+5007  09b7               _ST_bulk_erase:
+5011                     ; 746 ST_CS_ON
+5013  09b7 721b5005      	bres	20485,#5
+5014                     ; 747 spi(0xC7);
+5016  09bb a6c7          	ld	a,#199
+5017  09bd ad96          	call	_spi
+5019                     ; 750 ST_CS_OFF
+5021  09bf 721a5005      	bset	20485,#5
+5022                     ; 751 }
+5025  09c3 81            	ret
+5049                     ; 753 void ST_WREN(void)
+5049                     ; 754 {
+5050                     	switch	.text
+5051  09c4               _ST_WREN:
+5055                     ; 756 ST_CS_ON
+5057  09c4 721b5005      	bres	20485,#5
+5058                     ; 757 spi(0x06);
+5060  09c8 a606          	ld	a,#6
+5061  09ca ad89          	call	_spi
+5063                     ; 759 ST_CS_OFF
+5065  09cc 721a5005      	bset	20485,#5
+5066                     ; 760 }  
+5069  09d0 81            	ret
+5159                     ; 763 void ST_WRITE(unsigned long memo_addr,unsigned short len, char* adr)
+5159                     ; 764 {
+5160                     	switch	.text
+5161  09d1               _ST_WRITE:
+5163  09d1 5205          	subw	sp,#5
+5164       00000005      OFST:	set	5
+5167                     ; 768 adr2=(char)(memo_addr>>16);
+5169  09d3 7b09          	ld	a,(OFST+4,sp)
+5170  09d5 6b03          	ld	(OFST-2,sp),a
+5171                     ; 769 adr1=(char)((memo_addr>>8)&0x00ff);
+5173  09d7 7b0a          	ld	a,(OFST+5,sp)
+5174  09d9 a4ff          	and	a,#255
+5175  09db 6b02          	ld	(OFST-3,sp),a
+5176                     ; 770 adr0=(char)((memo_addr)&0x00ff);
+5178  09dd 7b0b          	ld	a,(OFST+6,sp)
+5179  09df a4ff          	and	a,#255
+5180  09e1 6b01          	ld	(OFST-4,sp),a
+5181                     ; 771 ST_CS_ON
+5183  09e3 721b5005      	bres	20485,#5
+5184                     ; 773 spi(0x02);
+5186  09e7 a602          	ld	a,#2
+5187  09e9 cd0955        	call	_spi
+5189                     ; 774 spi(adr2);
+5191  09ec 7b03          	ld	a,(OFST-2,sp)
+5192  09ee cd0955        	call	_spi
+5194                     ; 775 spi(adr1);
+5196  09f1 7b02          	ld	a,(OFST-3,sp)
+5197  09f3 cd0955        	call	_spi
+5199                     ; 776 spi(adr0);
+5201  09f6 7b01          	ld	a,(OFST-4,sp)
+5202  09f8 cd0955        	call	_spi
+5204                     ; 778 for(i=0;i<len;i++)
+5206  09fb 5f            	clrw	x
+5207  09fc 1f04          	ldw	(OFST-1,sp),x
+5209  09fe 2010          	jra	L7742
+5210  0a00               L3742:
+5211                     ; 780 	spi(adr[i]);
+5213  0a00 1e0e          	ldw	x,(OFST+9,sp)
+5214  0a02 72fb04        	addw	x,(OFST-1,sp)
+5215  0a05 f6            	ld	a,(x)
+5216  0a06 cd0955        	call	_spi
+5218                     ; 778 for(i=0;i<len;i++)
+5220  0a09 1e04          	ldw	x,(OFST-1,sp)
+5221  0a0b 1c0001        	addw	x,#1
+5222  0a0e 1f04          	ldw	(OFST-1,sp),x
+5223  0a10               L7742:
+5226  0a10 1e04          	ldw	x,(OFST-1,sp)
+5227  0a12 130c          	cpw	x,(OFST+7,sp)
+5228  0a14 25ea          	jrult	L3742
+5229                     ; 783 ST_CS_OFF
+5231  0a16 721a5005      	bset	20485,#5
+5232                     ; 784 }
+5235  0a1a 5b05          	addw	sp,#5
+5236  0a1c 81            	ret
+5326                     ; 787 void ST_READ(unsigned long memo_addr,unsigned short len, char* adr)
+5326                     ; 788 {
+5327                     	switch	.text
+5328  0a1d               _ST_READ:
+5330  0a1d 5205          	subw	sp,#5
+5331       00000005      OFST:	set	5
+5334                     ; 794 adr2=(char)(memo_addr>>16);
+5336  0a1f 7b09          	ld	a,(OFST+4,sp)
+5337  0a21 6b03          	ld	(OFST-2,sp),a
+5338                     ; 795 adr1=(char)((memo_addr>>8)&0x00ff);
+5340  0a23 7b0a          	ld	a,(OFST+5,sp)
+5341  0a25 a4ff          	and	a,#255
+5342  0a27 6b02          	ld	(OFST-3,sp),a
+5343                     ; 796 adr0=(char)((memo_addr)&0x00ff);
+5345  0a29 7b0b          	ld	a,(OFST+6,sp)
+5346  0a2b a4ff          	and	a,#255
+5347  0a2d 6b01          	ld	(OFST-4,sp),a
+5348                     ; 797 ST_CS_ON
+5350  0a2f 721b5005      	bres	20485,#5
+5351                     ; 798 spi(0x03);
+5353  0a33 a603          	ld	a,#3
+5354  0a35 cd0955        	call	_spi
+5356                     ; 799 spi(adr2);
+5358  0a38 7b03          	ld	a,(OFST-2,sp)
+5359  0a3a cd0955        	call	_spi
+5361                     ; 800 spi(adr1);
+5363  0a3d 7b02          	ld	a,(OFST-3,sp)
+5364  0a3f cd0955        	call	_spi
+5366                     ; 801 spi(adr0);
+5368  0a42 7b01          	ld	a,(OFST-4,sp)
+5369  0a44 cd0955        	call	_spi
+5371                     ; 803 for(i=0;i<len;i++)
+5373  0a47 5f            	clrw	x
+5374  0a48 1f04          	ldw	(OFST-1,sp),x
+5376  0a4a 2012          	jra	L5552
+5377  0a4c               L1552:
+5378                     ; 805 	adr[i]=spi(0xff);
+5380  0a4c a6ff          	ld	a,#255
+5381  0a4e cd0955        	call	_spi
+5383  0a51 1e0e          	ldw	x,(OFST+9,sp)
+5384  0a53 72fb04        	addw	x,(OFST-1,sp)
+5385  0a56 f7            	ld	(x),a
+5386                     ; 803 for(i=0;i<len;i++)
+5388  0a57 1e04          	ldw	x,(OFST-1,sp)
+5389  0a59 1c0001        	addw	x,#1
+5390  0a5c 1f04          	ldw	(OFST-1,sp),x
+5391  0a5e               L5552:
+5394  0a5e 1e04          	ldw	x,(OFST-1,sp)
+5395  0a60 130c          	cpw	x,(OFST+7,sp)
+5396  0a62 25e8          	jrult	L1552
+5397                     ; 808 ST_CS_OFF
+5399  0a64 721a5005      	bset	20485,#5
+5400                     ; 809 }
+5403  0a68 5b05          	addw	sp,#5
+5404  0a6a 81            	ret
+5470                     ; 813 long DF_mf_dev_read(void)
+5470                     ; 814 {
+5471                     	switch	.text
+5472  0a6b               _DF_mf_dev_read:
+5474  0a6b 5204          	subw	sp,#4
+5475       00000004      OFST:	set	4
+5478                     ; 817 d0=0;
+5480  0a6d 0f04          	clr	(OFST+0,sp)
+5481                     ; 818 d1=0;
+5483                     ; 819 d2=0;
+5485                     ; 820 d3=0;
+5487                     ; 822 CS_ON
+5489  0a6f 7217500a      	bres	20490,#3
+5490                     ; 823 spi(0x9f);
+5492  0a73 a69f          	ld	a,#159
+5493  0a75 cd0955        	call	_spi
+5495                     ; 824 mdr0=spi(0xff);
+5497  0a78 a6ff          	ld	a,#255
+5498  0a7a cd0955        	call	_spi
+5500  0a7d b718          	ld	_mdr0,a
+5501                     ; 825 mdr1=spi(0xff);
+5503  0a7f a6ff          	ld	a,#255
+5504  0a81 cd0955        	call	_spi
+5506  0a84 b717          	ld	_mdr1,a
+5507                     ; 826 mdr2=spi(0xff);
+5509  0a86 a6ff          	ld	a,#255
+5510  0a88 cd0955        	call	_spi
+5512  0a8b b716          	ld	_mdr2,a
+5513                     ; 827 mdr3=spi(0xff);  
+5515  0a8d a6ff          	ld	a,#255
+5516  0a8f cd0955        	call	_spi
+5518  0a92 b715          	ld	_mdr3,a
+5519                     ; 829 CS_OFF
+5521  0a94 7216500a      	bset	20490,#3
+5522                     ; 830 return  *((long*)&d0);
+5524  0a98 96            	ldw	x,sp
+5525  0a99 1c0004        	addw	x,#OFST+0
+5526  0a9c cd0000        	call	c_ltor
+5530  0a9f 5b04          	addw	sp,#4
+5531  0aa1 81            	ret
+5555                     ; 834 void DF_memo_to_256(void)
+5555                     ; 835 {
+5556                     	switch	.text
+5557  0aa2               _DF_memo_to_256:
+5561                     ; 837 CS_ON
+5563  0aa2 7217500a      	bres	20490,#3
+5564                     ; 838 spi(0x3d);
+5566  0aa6 a63d          	ld	a,#61
+5567  0aa8 cd0955        	call	_spi
+5569                     ; 839 spi(0x2a); 
+5571  0aab a62a          	ld	a,#42
+5572  0aad cd0955        	call	_spi
+5574                     ; 840 spi(0x80);
+5576  0ab0 a680          	ld	a,#128
+5577  0ab2 cd0955        	call	_spi
+5579                     ; 841 spi(0xa6);
+5581  0ab5 a6a6          	ld	a,#166
+5582  0ab7 cd0955        	call	_spi
+5584                     ; 843 CS_OFF
+5586  0aba 7216500a      	bset	20490,#3
+5587                     ; 844 }  
+5590  0abe 81            	ret
+5625                     ; 849 char DF_status_read(void)
+5625                     ; 850 {
+5626                     	switch	.text
+5627  0abf               _DF_status_read:
+5629  0abf 88            	push	a
+5630       00000001      OFST:	set	1
+5633                     ; 854 CS_ON
+5635  0ac0 7217500a      	bres	20490,#3
+5636                     ; 855 spi(0xd7);
+5638  0ac4 a6d7          	ld	a,#215
+5639  0ac6 cd0955        	call	_spi
+5641                     ; 856 d0=spi(0xff);
+5643  0ac9 a6ff          	ld	a,#255
+5644  0acb cd0955        	call	_spi
+5646  0ace 6b01          	ld	(OFST+0,sp),a
+5647                     ; 858 CS_OFF
+5649  0ad0 7216500a      	bset	20490,#3
+5650                     ; 859 return d0;
+5652  0ad4 7b01          	ld	a,(OFST+0,sp)
+5655  0ad6 5b01          	addw	sp,#1
+5656  0ad8 81            	ret
+5700                     ; 863 void DF_page_to_buffer(unsigned page_addr)
+5700                     ; 864 {
+5701                     	switch	.text
+5702  0ad9               _DF_page_to_buffer:
+5704  0ad9 89            	pushw	x
+5705  0ada 88            	push	a
+5706       00000001      OFST:	set	1
+5709                     ; 867 d0=0x53; 
+5711                     ; 871 CS_ON
+5713  0adb 7217500a      	bres	20490,#3
+5714                     ; 872 spi(d0);
+5716  0adf a653          	ld	a,#83
+5717  0ae1 cd0955        	call	_spi
+5719                     ; 873 spi(page_addr/256/**(((char*)&page_addr)+1)*/);
+5721  0ae4 7b02          	ld	a,(OFST+1,sp)
+5722  0ae6 cd0955        	call	_spi
+5724                     ; 874 spi(page_addr%256/**((char*)&page_addr)*/);
+5726  0ae9 7b03          	ld	a,(OFST+2,sp)
+5727  0aeb a4ff          	and	a,#255
+5728  0aed cd0955        	call	_spi
+5730                     ; 875 spi(0xff);
+5732  0af0 a6ff          	ld	a,#255
+5733  0af2 cd0955        	call	_spi
+5735                     ; 877 CS_OFF
+5737  0af5 7216500a      	bset	20490,#3
+5738                     ; 878 }
+5741  0af9 5b03          	addw	sp,#3
+5742  0afb 81            	ret
+5787                     ; 881 void DF_buffer_to_page_er(/*char buff,*/unsigned page_addr)
+5787                     ; 882 {
+5788                     	switch	.text
+5789  0afc               _DF_buffer_to_page_er:
+5791  0afc 89            	pushw	x
+5792  0afd 88            	push	a
+5793       00000001      OFST:	set	1
+5796                     ; 885 d0=0x83; 
+5798                     ; 888 CS_ON
+5800  0afe 7217500a      	bres	20490,#3
+5801                     ; 889 spi(d0);
+5803  0b02 a683          	ld	a,#131
+5804  0b04 cd0955        	call	_spi
+5806                     ; 890 spi(page_addr/256/**(((char*)&page_addr)+1)*/);
+5808  0b07 7b02          	ld	a,(OFST+1,sp)
+5809  0b09 cd0955        	call	_spi
+5811                     ; 891 spi(page_addr%256/**((char*)&page_addr)*/);
+5813  0b0c 7b03          	ld	a,(OFST+2,sp)
+5814  0b0e a4ff          	and	a,#255
+5815  0b10 cd0955        	call	_spi
+5817                     ; 892 spi(0xff);
+5819  0b13 a6ff          	ld	a,#255
+5820  0b15 cd0955        	call	_spi
+5822                     ; 894 CS_OFF
+5824  0b18 7216500a      	bset	20490,#3
+5825                     ; 895 }
+5828  0b1c 5b03          	addw	sp,#3
+5829  0b1e 81            	ret
+5901                     ; 898 void DF_buffer_read(unsigned buff_addr,unsigned len, char* adr)
+5901                     ; 899 {
+5902                     	switch	.text
+5903  0b1f               _DF_buffer_read:
+5905  0b1f 89            	pushw	x
+5906  0b20 5203          	subw	sp,#3
+5907       00000003      OFST:	set	3
+5910                     ; 903 d0=0x54; 
+5912                     ; 905 CS_ON
+5914  0b22 7217500a      	bres	20490,#3
+5915                     ; 906 spi(d0);
+5917  0b26 a654          	ld	a,#84
+5918  0b28 cd0955        	call	_spi
+5920                     ; 907 spi(0xff);
+5922  0b2b a6ff          	ld	a,#255
+5923  0b2d cd0955        	call	_spi
+5925                     ; 908 spi(buff_addr/256/**(((char*)&buff_addr)+1)*/);
+5927  0b30 7b04          	ld	a,(OFST+1,sp)
+5928  0b32 cd0955        	call	_spi
+5930                     ; 909 spi(buff_addr%256/**((char*)&buff_addr)*/);
+5932  0b35 7b05          	ld	a,(OFST+2,sp)
+5933  0b37 a4ff          	and	a,#255
+5934  0b39 cd0955        	call	_spi
+5936                     ; 910 spi(0xff);
+5938  0b3c a6ff          	ld	a,#255
+5939  0b3e cd0955        	call	_spi
+5941                     ; 911 for(i=0;i<len;i++)
+5943  0b41 5f            	clrw	x
+5944  0b42 1f02          	ldw	(OFST-1,sp),x
+5946  0b44 2012          	jra	L7472
+5947  0b46               L3472:
+5948                     ; 913 	adr[i]=spi(0xff);
+5950  0b46 a6ff          	ld	a,#255
+5951  0b48 cd0955        	call	_spi
+5953  0b4b 1e0a          	ldw	x,(OFST+7,sp)
+5954  0b4d 72fb02        	addw	x,(OFST-1,sp)
+5955  0b50 f7            	ld	(x),a
+5956                     ; 911 for(i=0;i<len;i++)
+5958  0b51 1e02          	ldw	x,(OFST-1,sp)
+5959  0b53 1c0001        	addw	x,#1
+5960  0b56 1f02          	ldw	(OFST-1,sp),x
+5961  0b58               L7472:
+5964  0b58 1e02          	ldw	x,(OFST-1,sp)
+5965  0b5a 1308          	cpw	x,(OFST+5,sp)
+5966  0b5c 25e8          	jrult	L3472
+5967                     ; 916 CS_OFF
+5969  0b5e 7216500a      	bset	20490,#3
+5970                     ; 917 }
+5973  0b62 5b05          	addw	sp,#5
+5974  0b64 81            	ret
+6046                     ; 920 void DF_buffer_write(/*char buff,*/unsigned buff_addr,unsigned len, char* adr)
+6046                     ; 921 {
+6047                     	switch	.text
+6048  0b65               _DF_buffer_write:
+6050  0b65 89            	pushw	x
+6051  0b66 5203          	subw	sp,#3
+6052       00000003      OFST:	set	3
+6055                     ; 925 d0=0x84; 
+6057                     ; 927 CS_ON
+6059  0b68 7217500a      	bres	20490,#3
+6060                     ; 928 spi(d0);
+6062  0b6c a684          	ld	a,#132
+6063  0b6e cd0955        	call	_spi
+6065                     ; 929 spi(0xff);
+6067  0b71 a6ff          	ld	a,#255
+6068  0b73 cd0955        	call	_spi
+6070                     ; 930 spi(buff_addr/256/**(((char*)&buff_addr)+1)*/);
+6072  0b76 7b04          	ld	a,(OFST+1,sp)
+6073  0b78 cd0955        	call	_spi
+6075                     ; 931 spi(buff_addr%256/**((char*)&buff_addr)*/);
+6077  0b7b 7b05          	ld	a,(OFST+2,sp)
+6078  0b7d a4ff          	and	a,#255
+6079  0b7f cd0955        	call	_spi
+6081                     ; 933 for(i=0;i<len;i++)
+6083  0b82 5f            	clrw	x
+6084  0b83 1f02          	ldw	(OFST-1,sp),x
+6086  0b85 2010          	jra	L5103
+6087  0b87               L1103:
+6088                     ; 935 	spi(adr[i]);
+6090  0b87 1e0a          	ldw	x,(OFST+7,sp)
+6091  0b89 72fb02        	addw	x,(OFST-1,sp)
+6092  0b8c f6            	ld	a,(x)
+6093  0b8d cd0955        	call	_spi
+6095                     ; 933 for(i=0;i<len;i++)
+6097  0b90 1e02          	ldw	x,(OFST-1,sp)
+6098  0b92 1c0001        	addw	x,#1
+6099  0b95 1f02          	ldw	(OFST-1,sp),x
+6100  0b97               L5103:
+6103  0b97 1e02          	ldw	x,(OFST-1,sp)
+6104  0b99 1308          	cpw	x,(OFST+5,sp)
+6105  0b9b 25ea          	jrult	L1103
+6106                     ; 938 CS_OFF
+6108  0b9d 7216500a      	bset	20490,#3
+6109                     ; 939 }
+6112  0ba1 5b05          	addw	sp,#5
+6113  0ba3 81            	ret
+6136                     ; 961 void gpio_init(void){
+6137                     	switch	.text
+6138  0ba4               _gpio_init:
+6142                     ; 971 	GPIOD->DDR|=(1<<2);
+6144  0ba4 72145011      	bset	20497,#2
+6145                     ; 972 	GPIOD->CR1|=(1<<2);
+6147  0ba8 72145012      	bset	20498,#2
+6148                     ; 973 	GPIOD->CR2|=(1<<2);
+6150  0bac 72145013      	bset	20499,#2
+6151                     ; 974 	GPIOD->ODR&=~(1<<2);
+6153  0bb0 7215500f      	bres	20495,#2
+6154                     ; 976 	GPIOD->DDR|=(1<<4);
+6156  0bb4 72185011      	bset	20497,#4
+6157                     ; 977 	GPIOD->CR1|=(1<<4);
+6159  0bb8 72185012      	bset	20498,#4
+6160                     ; 978 	GPIOD->CR2&=~(1<<4);
+6162  0bbc 72195013      	bres	20499,#4
+6163                     ; 980 	GPIOC->DDR&=~(1<<4);
+6165  0bc0 7219500c      	bres	20492,#4
+6166                     ; 981 	GPIOC->CR1&=~(1<<4);
+6168  0bc4 7219500d      	bres	20493,#4
+6169                     ; 982 	GPIOC->CR2&=~(1<<4);
+6171  0bc8 7219500e      	bres	20494,#4
+6172                     ; 986 }
+6175  0bcc 81            	ret
+6227                     ; 989 void uart_in(void)
+6227                     ; 990 {
+6228                     	switch	.text
+6229  0bcd               _uart_in:
+6231  0bcd 89            	pushw	x
+6232       00000002      OFST:	set	2
+6235                     ; 994 if(rx_buffer_overflow)
+6237                     	btst	_rx_buffer_overflow
+6238  0bd3 240d          	jruge	L3503
+6239                     ; 996 	rx_wr_index=0;
+6241  0bd5 5f            	clrw	x
+6242  0bd6 bf1c          	ldw	_rx_wr_index,x
+6243                     ; 997 	rx_rd_index=0;
+6245  0bd8 5f            	clrw	x
+6246  0bd9 bf1a          	ldw	_rx_rd_index,x
+6247                     ; 998 	rx_counter=0;
+6249  0bdb 5f            	clrw	x
+6250  0bdc bf1e          	ldw	_rx_counter,x
+6251                     ; 999 	rx_buffer_overflow=0;
+6253  0bde 72110001      	bres	_rx_buffer_overflow
+6254  0be2               L3503:
+6255                     ; 1002 if(rx_counter&&(rx_buffer[index_offset(rx_wr_index,-1)])==END)
+6257  0be2 be1e          	ldw	x,_rx_counter
+6258  0be4 2775          	jreq	L5503
+6260  0be6 aeffff        	ldw	x,#65535
+6261  0be9 89            	pushw	x
+6262  0bea be1c          	ldw	x,_rx_wr_index
+6263  0bec ad6f          	call	_index_offset
+6265  0bee 5b02          	addw	sp,#2
+6266  0bf0 e654          	ld	a,(_rx_buffer,x)
+6267  0bf2 a10a          	cp	a,#10
+6268  0bf4 2665          	jrne	L5503
+6269                     ; 1007 	temp=rx_buffer[index_offset(rx_wr_index,-3)];
+6271  0bf6 aefffd        	ldw	x,#65533
+6272  0bf9 89            	pushw	x
+6273  0bfa be1c          	ldw	x,_rx_wr_index
+6274  0bfc ad5f          	call	_index_offset
+6276  0bfe 5b02          	addw	sp,#2
+6277  0c00 e654          	ld	a,(_rx_buffer,x)
+6278  0c02 6b01          	ld	(OFST-1,sp),a
+6279                     ; 1008     	if(temp<100) 
+6281  0c04 7b01          	ld	a,(OFST-1,sp)
+6282  0c06 a164          	cp	a,#100
+6283  0c08 2451          	jruge	L5503
+6284                     ; 1011     		if(control_check(index_offset(rx_wr_index,-1)))
+6286  0c0a aeffff        	ldw	x,#65535
+6287  0c0d 89            	pushw	x
+6288  0c0e be1c          	ldw	x,_rx_wr_index
+6289  0c10 ad4b          	call	_index_offset
+6291  0c12 5b02          	addw	sp,#2
+6292  0c14 9f            	ld	a,xl
+6293  0c15 ad6e          	call	_control_check
+6295  0c17 4d            	tnz	a
+6296  0c18 2741          	jreq	L5503
+6297                     ; 1014     			rx_rd_index=index_offset(rx_wr_index,-3-temp);
+6299  0c1a a6ff          	ld	a,#255
+6300  0c1c 97            	ld	xl,a
+6301  0c1d a6fd          	ld	a,#253
+6302  0c1f 1001          	sub	a,(OFST-1,sp)
+6303  0c21 2401          	jrnc	L041
+6304  0c23 5a            	decw	x
+6305  0c24               L041:
+6306  0c24 02            	rlwa	x,a
+6307  0c25 89            	pushw	x
+6308  0c26 01            	rrwa	x,a
+6309  0c27 be1c          	ldw	x,_rx_wr_index
+6310  0c29 ad32          	call	_index_offset
+6312  0c2b 5b02          	addw	sp,#2
+6313  0c2d bf1a          	ldw	_rx_rd_index,x
+6314                     ; 1015     			for(i=0;i<temp;i++)
+6316  0c2f 0f02          	clr	(OFST+0,sp)
+6318  0c31 2018          	jra	L7603
+6319  0c33               L3603:
+6320                     ; 1017 				UIB[i]=rx_buffer[index_offset(rx_rd_index,i)];
+6322  0c33 7b02          	ld	a,(OFST+0,sp)
+6323  0c35 5f            	clrw	x
+6324  0c36 97            	ld	xl,a
+6325  0c37 89            	pushw	x
+6326  0c38 7b04          	ld	a,(OFST+2,sp)
+6327  0c3a 5f            	clrw	x
+6328  0c3b 97            	ld	xl,a
+6329  0c3c 89            	pushw	x
+6330  0c3d be1a          	ldw	x,_rx_rd_index
+6331  0c3f ad1c          	call	_index_offset
+6333  0c41 5b02          	addw	sp,#2
+6334  0c43 e654          	ld	a,(_rx_buffer,x)
+6335  0c45 85            	popw	x
+6336  0c46 d70000        	ld	(_UIB,x),a
+6337                     ; 1015     			for(i=0;i<temp;i++)
+6339  0c49 0c02          	inc	(OFST+0,sp)
+6340  0c4b               L7603:
+6343  0c4b 7b02          	ld	a,(OFST+0,sp)
+6344  0c4d 1101          	cp	a,(OFST-1,sp)
+6345  0c4f 25e2          	jrult	L3603
+6346                     ; 1019 			rx_rd_index=rx_wr_index;
+6348  0c51 be1c          	ldw	x,_rx_wr_index
+6349  0c53 bf1a          	ldw	_rx_rd_index,x
+6350                     ; 1020 			rx_counter=0;
+6352  0c55 5f            	clrw	x
+6353  0c56 bf1e          	ldw	_rx_counter,x
+6354                     ; 1030 			uart_in_an();
+6356  0c58 cd023c        	call	_uart_in_an
+6358  0c5b               L5503:
+6359                     ; 1039 }
+6362  0c5b 85            	popw	x
+6363  0c5c 81            	ret
+6406                     ; 1042 signed short index_offset (signed short index,signed short offset)
+6406                     ; 1043 {
+6407                     	switch	.text
+6408  0c5d               _index_offset:
+6410  0c5d 89            	pushw	x
+6411       00000000      OFST:	set	0
+6414                     ; 1044 index=index+offset;
+6416  0c5e 1e01          	ldw	x,(OFST+1,sp)
+6417  0c60 72fb05        	addw	x,(OFST+5,sp)
+6418  0c63 1f01          	ldw	(OFST+1,sp),x
+6419                     ; 1045 if(index>=RX_BUFFER_SIZE) index-=RX_BUFFER_SIZE; 
+6421  0c65 9c            	rvf
+6422  0c66 1e01          	ldw	x,(OFST+1,sp)
+6423  0c68 a30064        	cpw	x,#100
+6424  0c6b 2f07          	jrslt	L5113
+6427  0c6d 1e01          	ldw	x,(OFST+1,sp)
+6428  0c6f 1d0064        	subw	x,#100
+6429  0c72 1f01          	ldw	(OFST+1,sp),x
+6430  0c74               L5113:
+6431                     ; 1046 if(index<0) index+=RX_BUFFER_SIZE;
+6433  0c74 9c            	rvf
+6434  0c75 1e01          	ldw	x,(OFST+1,sp)
+6435  0c77 2e07          	jrsge	L7113
+6438  0c79 1e01          	ldw	x,(OFST+1,sp)
+6439  0c7b 1c0064        	addw	x,#100
+6440  0c7e 1f01          	ldw	(OFST+1,sp),x
+6441  0c80               L7113:
+6442                     ; 1047 return index;
+6444  0c80 1e01          	ldw	x,(OFST+1,sp)
+6447  0c82 5b02          	addw	sp,#2
+6448  0c84 81            	ret
+6511                     ; 1051 char control_check(char index)
+6511                     ; 1052 {
+6512                     	switch	.text
+6513  0c85               _control_check:
+6515  0c85 88            	push	a
+6516  0c86 5203          	subw	sp,#3
+6517       00000003      OFST:	set	3
+6520                     ; 1053 char i=0,ii=0,iii;
+6524                     ; 1055 if(rx_buffer[index]!=END) return 0;
+6526  0c88 5f            	clrw	x
+6527  0c89 97            	ld	xl,a
+6528  0c8a e654          	ld	a,(_rx_buffer,x)
+6529  0c8c a10a          	cp	a,#10
+6530  0c8e 2703          	jreq	L3513
+6533  0c90 4f            	clr	a
+6535  0c91 2051          	jra	L251
+6536  0c93               L3513:
+6537                     ; 1057 ii=rx_buffer[index_offset(index,-2)];
+6539  0c93 aefffe        	ldw	x,#65534
+6540  0c96 89            	pushw	x
+6541  0c97 7b06          	ld	a,(OFST+3,sp)
+6542  0c99 5f            	clrw	x
+6543  0c9a 97            	ld	xl,a
+6544  0c9b adc0          	call	_index_offset
+6546  0c9d 5b02          	addw	sp,#2
+6547  0c9f e654          	ld	a,(_rx_buffer,x)
+6548  0ca1 6b02          	ld	(OFST-1,sp),a
+6549                     ; 1058 iii=0;
+6551  0ca3 0f01          	clr	(OFST-2,sp)
+6552                     ; 1059 for(i=0;i<=ii;i++)
+6554  0ca5 0f03          	clr	(OFST+0,sp)
+6556  0ca7 2022          	jra	L1613
+6557  0ca9               L5513:
+6558                     ; 1061 	iii^=rx_buffer[index_offset(index,-2-ii+i)];
+6560  0ca9 a6ff          	ld	a,#255
+6561  0cab 97            	ld	xl,a
+6562  0cac a6fe          	ld	a,#254
+6563  0cae 1002          	sub	a,(OFST-1,sp)
+6564  0cb0 2401          	jrnc	L641
+6565  0cb2 5a            	decw	x
+6566  0cb3               L641:
+6567  0cb3 1b03          	add	a,(OFST+0,sp)
+6568  0cb5 2401          	jrnc	L051
+6569  0cb7 5c            	incw	x
+6570  0cb8               L051:
+6571  0cb8 02            	rlwa	x,a
+6572  0cb9 89            	pushw	x
+6573  0cba 01            	rrwa	x,a
+6574  0cbb 7b06          	ld	a,(OFST+3,sp)
+6575  0cbd 5f            	clrw	x
+6576  0cbe 97            	ld	xl,a
+6577  0cbf ad9c          	call	_index_offset
+6579  0cc1 5b02          	addw	sp,#2
+6580  0cc3 7b01          	ld	a,(OFST-2,sp)
+6581  0cc5 e854          	xor	a,	(_rx_buffer,x)
+6582  0cc7 6b01          	ld	(OFST-2,sp),a
+6583                     ; 1059 for(i=0;i<=ii;i++)
+6585  0cc9 0c03          	inc	(OFST+0,sp)
+6586  0ccb               L1613:
+6589  0ccb 7b03          	ld	a,(OFST+0,sp)
+6590  0ccd 1102          	cp	a,(OFST-1,sp)
+6591  0ccf 23d8          	jrule	L5513
+6592                     ; 1063 if (iii!=rx_buffer[index_offset(index,-1)]) return 0;	
+6594  0cd1 aeffff        	ldw	x,#65535
+6595  0cd4 89            	pushw	x
+6596  0cd5 7b06          	ld	a,(OFST+3,sp)
+6597  0cd7 5f            	clrw	x
+6598  0cd8 97            	ld	xl,a
+6599  0cd9 ad82          	call	_index_offset
+6601  0cdb 5b02          	addw	sp,#2
+6602  0cdd e654          	ld	a,(_rx_buffer,x)
+6603  0cdf 1101          	cp	a,(OFST-2,sp)
+6604  0ce1 2704          	jreq	L5613
+6607  0ce3 4f            	clr	a
+6609  0ce4               L251:
+6611  0ce4 5b04          	addw	sp,#4
+6612  0ce6 81            	ret
+6613  0ce7               L5613:
+6614                     ; 1065 return 1;
+6616  0ce7 a601          	ld	a,#1
+6618  0ce9 20f9          	jra	L251
+6660                     ; 1074 @far @interrupt void TIM4_UPD_Interrupt (void) {
+6662                     	switch	.text
+6663  0ceb               f_TIM4_UPD_Interrupt:
+6667                     ; 1076 	if(play) {
+6669                     	btst	_play
+6670  0cf0 2445          	jruge	L7713
+6671                     ; 1077 		TIM2->CCR3H= 0x00;	
+6673  0cf2 725f5315      	clr	21269
+6674                     ; 1078 		TIM2->CCR3L= sample;
+6676  0cf6 5500195316    	mov	21270,_sample
+6677                     ; 1079 		sample_cnt++;
+6679  0cfb be23          	ldw	x,_sample_cnt
+6680  0cfd 1c0001        	addw	x,#1
+6681  0d00 bf23          	ldw	_sample_cnt,x
+6682                     ; 1080 		if(sample_cnt>=256) {
+6684  0d02 9c            	rvf
+6685  0d03 be23          	ldw	x,_sample_cnt
+6686  0d05 a30100        	cpw	x,#256
+6687  0d08 2f03          	jrslt	L1023
+6688                     ; 1081 			sample_cnt=0;
+6690  0d0a 5f            	clrw	x
+6691  0d0b bf23          	ldw	_sample_cnt,x
+6692  0d0d               L1023:
+6693                     ; 1085 		sample=buff[sample_cnt];
+6695  0d0d be23          	ldw	x,_sample_cnt
+6696  0d0f d60050        	ld	a,(_buff,x)
+6697  0d12 b719          	ld	_sample,a
+6698                     ; 1087 		if(sample_cnt==132)	{
+6700  0d14 be23          	ldw	x,_sample_cnt
+6701  0d16 a30084        	cpw	x,#132
+6702  0d19 2604          	jrne	L3023
+6703                     ; 1088 			bBUFF_LOAD=1;
+6705  0d1b 7210000b      	bset	_bBUFF_LOAD
+6706  0d1f               L3023:
+6707                     ; 1092 		if(sample_cnt==5) {
+6709  0d1f be23          	ldw	x,_sample_cnt
+6710  0d21 a30005        	cpw	x,#5
+6711  0d24 2604          	jrne	L5023
+6712                     ; 1093 			bBUFF_READ_H=1;
+6714  0d26 7210000a      	bset	_bBUFF_READ_H
+6715  0d2a               L5023:
+6716                     ; 1096 		if(sample_cnt==150) {
+6718  0d2a be23          	ldw	x,_sample_cnt
+6719  0d2c a30096        	cpw	x,#150
+6720  0d2f 2615          	jrne	L1123
+6721                     ; 1097 			bBUFF_READ_L=1;
+6723  0d31 72100009      	bset	_bBUFF_READ_L
+6724  0d35 200f          	jra	L1123
+6725  0d37               L7713:
+6726                     ; 1104 	else if(!bSTART) {
+6728                     	btst	_bSTART
+6729  0d3c 2508          	jrult	L1123
+6730                     ; 1105 		TIM2->CCR3H= 0x00;	
+6732  0d3e 725f5315      	clr	21269
+6733                     ; 1106 		TIM2->CCR3L= 0x7f;//pwm_fade_in;
+6735  0d42 357f5316      	mov	21270,#127
+6736  0d46               L1123:
+6737                     ; 1161 		if(but_block_cnt)but_on_drv_cnt=0;
+6739  0d46 be02          	ldw	x,_but_block_cnt
+6740  0d48 2702          	jreq	L5123
+6743  0d4a 3fb9          	clr	_but_on_drv_cnt
+6744  0d4c               L5123:
+6745                     ; 1162 		if((((GPIOC->IDR)&(1<<4))) && (but_on_drv_cnt<100)) {
+6747  0d4c c6500b        	ld	a,20491
+6748  0d4f a510          	bcp	a,#16
+6749  0d51 271f          	jreq	L7123
+6751  0d53 b6b9          	ld	a,_but_on_drv_cnt
+6752  0d55 a164          	cp	a,#100
+6753  0d57 2419          	jruge	L7123
+6754                     ; 1163 			but_on_drv_cnt++;
+6756  0d59 3cb9          	inc	_but_on_drv_cnt
+6757                     ; 1164 			if((but_on_drv_cnt>2)&&(bRELEASE))
+6759  0d5b b6b9          	ld	a,_but_on_drv_cnt
+6760  0d5d a103          	cp	a,#3
+6761  0d5f 2517          	jrult	L3223
+6763                     	btst	_bRELEASE
+6764  0d66 2410          	jruge	L3223
+6765                     ; 1166 				bRELEASE=0;
+6767  0d68 72110000      	bres	_bRELEASE
+6768                     ; 1167 				bSTART=1;
+6770  0d6c 7210000c      	bset	_bSTART
+6771  0d70 2006          	jra	L3223
+6772  0d72               L7123:
+6773                     ; 1171 			but_on_drv_cnt=0;
+6775  0d72 3fb9          	clr	_but_on_drv_cnt
+6776                     ; 1172 			bRELEASE=1;
+6778  0d74 72100000      	bset	_bRELEASE
+6779  0d78               L3223:
+6780                     ; 1177 	if(++t0_cnt0>=125){
+6782  0d78 3c00          	inc	_t0_cnt0
+6783  0d7a b600          	ld	a,_t0_cnt0
+6784  0d7c a17d          	cp	a,#125
+6785  0d7e 2530          	jrult	L5223
+6786                     ; 1178     		t0_cnt0=0;
+6788  0d80 3f00          	clr	_t0_cnt0
+6789                     ; 1179     		b100Hz=1;
+6791  0d82 72100008      	bset	_b100Hz
+6792                     ; 1189 		if(++t0_cnt1>=10){
+6794  0d86 3c01          	inc	_t0_cnt1
+6795  0d88 b601          	ld	a,_t0_cnt1
+6796  0d8a a10a          	cp	a,#10
+6797  0d8c 2506          	jrult	L7223
+6798                     ; 1190 			t0_cnt1=0;
+6800  0d8e 3f01          	clr	_t0_cnt1
+6801                     ; 1191 			b10Hz=1;
+6803  0d90 72100007      	bset	_b10Hz
+6804  0d94               L7223:
+6805                     ; 1194 		if(++t0_cnt2>=20){
+6807  0d94 3c02          	inc	_t0_cnt2
+6808  0d96 b602          	ld	a,_t0_cnt2
+6809  0d98 a114          	cp	a,#20
+6810  0d9a 2506          	jrult	L1323
+6811                     ; 1195 			t0_cnt2=0;
+6813  0d9c 3f02          	clr	_t0_cnt2
+6814                     ; 1196 			b5Hz=1;
+6816  0d9e 72100006      	bset	_b5Hz
+6817  0da2               L1323:
+6818                     ; 1199 		if(++t0_cnt3>=100){
+6820  0da2 3c03          	inc	_t0_cnt3
+6821  0da4 b603          	ld	a,_t0_cnt3
+6822  0da6 a164          	cp	a,#100
+6823  0da8 2506          	jrult	L5223
+6824                     ; 1200 			t0_cnt3=0;
+6826  0daa 3f03          	clr	_t0_cnt3
+6827                     ; 1201 			b1Hz=1;
+6829  0dac 72100005      	bset	_b1Hz
+6830  0db0               L5223:
+6831                     ; 1205 	TIM4->SR1&=~TIM4_SR1_UIF;			// disable break interrupt
+6833  0db0 72115344      	bres	21316,#0
+6834                     ; 1206 	return;
+6837  0db4 80            	iret
+6863                     ; 1210 @far @interrupt void UARTTxInterrupt (void) {
+6864                     	switch	.text
+6865  0db5               f_UARTTxInterrupt:
+6869                     ; 1212 	if (tx_counter){
+6871  0db5 3d22          	tnz	_tx_counter
+6872  0db7 271a          	jreq	L5423
+6873                     ; 1213 		--tx_counter;
+6875  0db9 3a22          	dec	_tx_counter
+6876                     ; 1214 		UART1->DR=tx_buffer[tx_rd_index];
+6878  0dbb 5f            	clrw	x
+6879  0dbc b620          	ld	a,_tx_rd_index
+6880  0dbe 2a01          	jrpl	L061
+6881  0dc0 53            	cplw	x
+6882  0dc1               L061:
+6883  0dc1 97            	ld	xl,a
+6884  0dc2 e604          	ld	a,(_tx_buffer,x)
+6885  0dc4 c75231        	ld	21041,a
+6886                     ; 1215 		if (++tx_rd_index == TX_BUFFER_SIZE) tx_rd_index=0;
+6888  0dc7 3c20          	inc	_tx_rd_index
+6889  0dc9 b620          	ld	a,_tx_rd_index
+6890  0dcb a150          	cp	a,#80
+6891  0dcd 260c          	jrne	L1523
+6894  0dcf 3f20          	clr	_tx_rd_index
+6895  0dd1 2008          	jra	L1523
+6896  0dd3               L5423:
+6897                     ; 1218 		bOUT_FREE=1;
+6899  0dd3 72100003      	bset	_bOUT_FREE
+6900                     ; 1219 		UART1->CR2&= ~UART1_CR2_TIEN;
+6902  0dd7 721f5235      	bres	21045,#7
+6903  0ddb               L1523:
+6904                     ; 1221 }
+6907  0ddb 80            	iret
+6936                     ; 1224 @far @interrupt void UARTRxInterrupt (void) {
+6937                     	switch	.text
+6938  0ddc               f_UARTRxInterrupt:
+6942                     ; 1229 	rx_status=UART1->SR;
+6944  0ddc 5552300008    	mov	_rx_status,21040
+6945                     ; 1230 	rx_data=UART1->DR;
+6947  0de1 5552310007    	mov	_rx_data,21041
+6948                     ; 1232 	if (rx_status & (UART1_SR_RXNE)){
+6950  0de6 b608          	ld	a,_rx_status
+6951  0de8 a520          	bcp	a,#32
+6952  0dea 272c          	jreq	L3623
+6953                     ; 1233 		rx_buffer[rx_wr_index]=rx_data;
+6955  0dec be1c          	ldw	x,_rx_wr_index
+6956  0dee b607          	ld	a,_rx_data
+6957  0df0 e754          	ld	(_rx_buffer,x),a
+6958                     ; 1234 		bRXIN=1;
+6960  0df2 72100002      	bset	_bRXIN
+6961                     ; 1235 		if (++rx_wr_index == RX_BUFFER_SIZE) rx_wr_index=0;
+6963  0df6 be1c          	ldw	x,_rx_wr_index
+6964  0df8 1c0001        	addw	x,#1
+6965  0dfb bf1c          	ldw	_rx_wr_index,x
+6966  0dfd a30064        	cpw	x,#100
+6967  0e00 2603          	jrne	L5623
+6970  0e02 5f            	clrw	x
+6971  0e03 bf1c          	ldw	_rx_wr_index,x
+6972  0e05               L5623:
+6973                     ; 1236 		if (++rx_counter == RX_BUFFER_SIZE){
+6975  0e05 be1e          	ldw	x,_rx_counter
+6976  0e07 1c0001        	addw	x,#1
+6977  0e0a bf1e          	ldw	_rx_counter,x
+6978  0e0c a30064        	cpw	x,#100
+6979  0e0f 2607          	jrne	L3623
+6980                     ; 1237 			rx_counter=0;
+6982  0e11 5f            	clrw	x
+6983  0e12 bf1e          	ldw	_rx_counter,x
+6984                     ; 1238 			rx_buffer_overflow=1;
+6986  0e14 72100001      	bset	_rx_buffer_overflow
+6987  0e18               L3623:
+6988                     ; 1241 }
+6991  0e18 80            	iret
+7055                     ; 1247 main()
+7055                     ; 1248 {
+7057                     	switch	.text
+7058  0e19               _main:
+7062                     ; 1249 CLK->CKDIVR=0;
+7064  0e19 725f50c6      	clr	20678
+7065                     ; 1251 rele_cnt_index=0;
+7067  0e1d 3fbb          	clr	_rele_cnt_index
+7068                     ; 1253 GPIOD->DDR&=~(1<<6);
+7070  0e1f 721d5011      	bres	20497,#6
+7071                     ; 1254 GPIOD->CR1|=(1<<6);
+7073  0e23 721c5012      	bset	20498,#6
+7074                     ; 1255 GPIOD->CR2|=(1<<6);
+7076  0e27 721c5013      	bset	20499,#6
+7077                     ; 1257 GPIOD->DDR|=(1<<5);
+7079  0e2b 721a5011      	bset	20497,#5
+7080                     ; 1258 GPIOD->CR1|=(1<<5);
+7082  0e2f 721a5012      	bset	20498,#5
+7083                     ; 1259 GPIOD->CR2|=(1<<5);	
+7085  0e33 721a5013      	bset	20499,#5
+7086                     ; 1260 GPIOD->ODR|=(1<<5);
+7088  0e37 721a500f      	bset	20495,#5
+7089                     ; 1262 delay_ms(10);
+7091  0e3b ae000a        	ldw	x,#10
+7092  0e3e cd0060        	call	_delay_ms
+7094                     ; 1264 if(!(GPIOD->IDR&=(1<<6))) 
+7096  0e41 c65010        	ld	a,20496
+7097  0e44 a440          	and	a,#64
+7098  0e46 c75010        	ld	20496,a
+7099  0e49 2606          	jrne	L1033
+7100                     ; 1266 	rele_cnt_index=1;
+7102  0e4b 350100bb      	mov	_rele_cnt_index,#1
+7104  0e4f 2018          	jra	L3033
+7105  0e51               L1033:
+7106                     ; 1270 	GPIOD->ODR&=~(1<<5);
+7108  0e51 721b500f      	bres	20495,#5
+7109                     ; 1271 	delay_ms(10);
+7111  0e55 ae000a        	ldw	x,#10
+7112  0e58 cd0060        	call	_delay_ms
+7114                     ; 1272 	if(!(GPIOD->IDR&=(1<<6))) 
+7116  0e5b c65010        	ld	a,20496
+7117  0e5e a440          	and	a,#64
+7118  0e60 c75010        	ld	20496,a
+7119  0e63 2604          	jrne	L3033
+7120                     ; 1274 		rele_cnt_index=2;
+7122  0e65 350200bb      	mov	_rele_cnt_index,#2
+7123  0e69               L3033:
+7124                     ; 1278 gpio_init();
+7126  0e69 cd0ba4        	call	_gpio_init
+7128                     ; 1285 spi_init();
+7130  0e6c cd08e8        	call	_spi_init
+7132                     ; 1287 t4_init();
+7134  0e6f cd0039        	call	_t4_init
+7136                     ; 1289 FLASH_DUKR=0xae;
+7138  0e72 35ae5064      	mov	_FLASH_DUKR,#174
+7139                     ; 1290 FLASH_DUKR=0x56;
+7141  0e76 35565064      	mov	_FLASH_DUKR,#86
+7142                     ; 1295 dumm[1]++;
+7144  0e7a 725c017d      	inc	_dumm+1
+7145                     ; 1297 uart_init();
+7147  0e7e cd00a2        	call	_uart_init
+7149                     ; 1299 ST_RDID_read();
+7151  0e81 cd0973        	call	_ST_RDID_read
+7153                     ; 1300 if(mdr0==0x20) memory_manufacturer='S';	
+7155  0e84 b618          	ld	a,_mdr0
+7156  0e86 a120          	cp	a,#32
+7157  0e88 2606          	jrne	L7033
+7160  0e8a 355300bc      	mov	_memory_manufacturer,#83
+7162  0e8e 200d          	jra	L1133
+7163  0e90               L7033:
+7164                     ; 1303 	DF_mf_dev_read();
+7166  0e90 cd0a6b        	call	_DF_mf_dev_read
+7168                     ; 1304 	if(mdr0==0x1F) memory_manufacturer='A';
+7170  0e93 b618          	ld	a,_mdr0
+7171  0e95 a11f          	cp	a,#31
+7172  0e97 2604          	jrne	L1133
+7175  0e99 354100bc      	mov	_memory_manufacturer,#65
+7176  0e9d               L1133:
+7177                     ; 1307 t2_init();
+7179  0e9d cd0000        	call	_t2_init
+7181                     ; 1309 ST_WREN();
+7183  0ea0 cd09c4        	call	_ST_WREN
+7185                     ; 1311 enableInterrupts();	
+7188  0ea3 9a            rim
+7190  0ea4               L5133:
+7191                     ; 1316 	if(bBUFF_LOAD)
+7193                     	btst	_bBUFF_LOAD
+7194  0ea9 2425          	jruge	L1233
+7195                     ; 1318 		bBUFF_LOAD=0;
+7197  0eab 7211000b      	bres	_bBUFF_LOAD
+7198                     ; 1320 		if(current_page<last_page)
+7200  0eaf be11          	ldw	x,_current_page
+7201  0eb1 b30f          	cpw	x,_last_page
+7202  0eb3 2409          	jruge	L3233
+7203                     ; 1322 			current_page++;
+7205  0eb5 be11          	ldw	x,_current_page
+7206  0eb7 1c0001        	addw	x,#1
+7207  0eba bf11          	ldw	_current_page,x
+7209  0ebc 2007          	jra	L5233
+7210  0ebe               L3233:
+7211                     ; 1326 			current_page=0;
+7213  0ebe 5f            	clrw	x
+7214  0ebf bf11          	ldw	_current_page,x
+7215                     ; 1327 			play=0;
+7217  0ec1 72110004      	bres	_play
+7218  0ec5               L5233:
+7219                     ; 1329 		if(memory_manufacturer=='A')
+7221  0ec5 b6bc          	ld	a,_memory_manufacturer
+7222  0ec7 a141          	cp	a,#65
+7223  0ec9 2605          	jrne	L1233
+7224                     ; 1331 			DF_page_to_buffer(/*///current_buffer_H*//*1,*/current_page);
+7226  0ecb be11          	ldw	x,_current_page
+7227  0ecd cd0ad9        	call	_DF_page_to_buffer
+7229  0ed0               L1233:
+7230                     ; 1335 	if(bBUFF_READ_L)
+7232                     	btst	_bBUFF_READ_L
+7233  0ed5 243a          	jruge	L1333
+7234                     ; 1337 		bBUFF_READ_L=0;
+7236  0ed7 72110009      	bres	_bBUFF_READ_L
+7237                     ; 1338 		if(memory_manufacturer=='A')
+7239  0edb b6bc          	ld	a,_memory_manufacturer
+7240  0edd a141          	cp	a,#65
+7241  0edf 260e          	jrne	L3333
+7242                     ; 1340 			DF_buffer_read(/*///current_buffer_L*//*1,*/0,128,buff);
+7244  0ee1 ae0050        	ldw	x,#_buff
+7245  0ee4 89            	pushw	x
+7246  0ee5 ae0080        	ldw	x,#128
+7247  0ee8 89            	pushw	x
+7248  0ee9 5f            	clrw	x
+7249  0eea cd0b1f        	call	_DF_buffer_read
+7251  0eed 5b04          	addw	sp,#4
+7252  0eef               L3333:
+7253                     ; 1342 		if(memory_manufacturer=='S')
+7255  0eef b6bc          	ld	a,_memory_manufacturer
+7256  0ef1 a153          	cp	a,#83
+7257  0ef3 261c          	jrne	L1333
+7258                     ; 1344 			ST_READ((unsigned long)((unsigned long)(current_page*256UL)),128,buff);
+7260  0ef5 ae0050        	ldw	x,#_buff
+7261  0ef8 89            	pushw	x
+7262  0ef9 ae0080        	ldw	x,#128
+7263  0efc 89            	pushw	x
+7264  0efd be11          	ldw	x,_current_page
+7265  0eff 90ae0100      	ldw	y,#256
+7266  0f03 cd0000        	call	c_umul
+7268  0f06 be02          	ldw	x,c_lreg+2
+7269  0f08 89            	pushw	x
+7270  0f09 be00          	ldw	x,c_lreg
+7271  0f0b 89            	pushw	x
+7272  0f0c cd0a1d        	call	_ST_READ
+7274  0f0f 5b08          	addw	sp,#8
+7275  0f11               L1333:
+7276                     ; 1348 	if(bBUFF_READ_H) 
+7278                     	btst	_bBUFF_READ_H
+7279  0f16 2441          	jruge	L7333
+7280                     ; 1350 		bBUFF_READ_H=0;
+7282  0f18 7211000a      	bres	_bBUFF_READ_H
+7283                     ; 1351 		if(memory_manufacturer=='A') 
+7285  0f1c b6bc          	ld	a,_memory_manufacturer
+7286  0f1e a141          	cp	a,#65
+7287  0f20 2610          	jrne	L1433
+7288                     ; 1353 			DF_buffer_read(/*///current_buffer_L*//*1,*/128,128,&buff[128]);
+7290  0f22 ae00d0        	ldw	x,#_buff+128
+7291  0f25 89            	pushw	x
+7292  0f26 ae0080        	ldw	x,#128
+7293  0f29 89            	pushw	x
+7294  0f2a ae0080        	ldw	x,#128
+7295  0f2d cd0b1f        	call	_DF_buffer_read
+7297  0f30 5b04          	addw	sp,#4
+7298  0f32               L1433:
+7299                     ; 1355 		if(memory_manufacturer=='S') 
+7301  0f32 b6bc          	ld	a,_memory_manufacturer
+7302  0f34 a153          	cp	a,#83
+7303  0f36 2621          	jrne	L7333
+7304                     ; 1357 			ST_READ((unsigned long)((unsigned long)(current_page*256UL)+128UL),128,&buff[128]);
+7306  0f38 ae00d0        	ldw	x,#_buff+128
+7307  0f3b 89            	pushw	x
+7308  0f3c ae0080        	ldw	x,#128
+7309  0f3f 89            	pushw	x
+7310  0f40 be11          	ldw	x,_current_page
+7311  0f42 90ae0100      	ldw	y,#256
+7312  0f46 cd0000        	call	c_umul
+7314  0f49 a680          	ld	a,#128
+7315  0f4b cd0000        	call	c_ladc
+7317  0f4e be02          	ldw	x,c_lreg+2
+7318  0f50 89            	pushw	x
+7319  0f51 be00          	ldw	x,c_lreg
+7320  0f53 89            	pushw	x
+7321  0f54 cd0a1d        	call	_ST_READ
+7323  0f57 5b08          	addw	sp,#8
+7324  0f59               L7333:
+7325                     ; 1361 	if(bRXIN)
+7327                     	btst	_bRXIN
+7328  0f5e 2407          	jruge	L5433
+7329                     ; 1363 		bRXIN=0;
+7331  0f60 72110002      	bres	_bRXIN
+7332                     ; 1365 		uart_in();
+7334  0f64 cd0bcd        	call	_uart_in
+7336  0f67               L5433:
+7337                     ; 1369 	if(b100Hz)
+7339                     	btst	_b100Hz
+7340  0f6c 2503cc1003    	jruge	L7433
+7341                     ; 1371 		b100Hz=0;
+7343  0f71 72110008      	bres	_b100Hz
+7344                     ; 1373 		if(but_block_cnt)but_block_cnt--;
+7346  0f75 be02          	ldw	x,_but_block_cnt
+7347  0f77 2707          	jreq	L1533
+7350  0f79 be02          	ldw	x,_but_block_cnt
+7351  0f7b 1d0001        	subw	x,#1
+7352  0f7e bf02          	ldw	_but_block_cnt,x
+7353  0f80               L1533:
+7354                     ; 1375 		if(bSTART==1) 
+7356                     	btst	_bSTART
+7357  0f85 247c          	jruge	L7433
+7358                     ; 1377 			if(play) 
+7360                     	btst	_play
+7361  0f8c 2406          	jruge	L5533
+7362                     ; 1387 				bSTART=0;
+7364  0f8e 7211000c      	bres	_bSTART
+7366  0f92 206f          	jra	L7433
+7367  0f94               L5533:
+7368                     ; 1394 				current_page=1;
+7370  0f94 ae0001        	ldw	x,#1
+7371  0f97 bf11          	ldw	_current_page,x
+7372                     ; 1399 				last_page=EE_PAGE_LEN-1;
+7374  0f99 ce0000        	ldw	x,_EE_PAGE_LEN
+7375  0f9c 5a            	decw	x
+7376  0f9d bf0f          	ldw	_last_page,x
+7377                     ; 1401 				if(memory_manufacturer=='A')
+7379  0f9f b6bc          	ld	a,_memory_manufacturer
+7380  0fa1 a141          	cp	a,#65
+7381  0fa3 2630          	jrne	L1633
+7382                     ; 1403 					DF_page_to_buffer(/*///current_buffer_H*//*1,*/current_page);
+7384  0fa5 ae0001        	ldw	x,#1
+7385  0fa8 cd0ad9        	call	_DF_page_to_buffer
+7387                     ; 1404 					delay_ms(10);
+7389  0fab ae000a        	ldw	x,#10
+7390  0fae cd0060        	call	_delay_ms
+7392                     ; 1405 					DF_buffer_read(/*///current_buffer_L*//*1,*/0,128,buff);
+7394  0fb1 ae0050        	ldw	x,#_buff
+7395  0fb4 89            	pushw	x
+7396  0fb5 ae0080        	ldw	x,#128
+7397  0fb8 89            	pushw	x
+7398  0fb9 5f            	clrw	x
+7399  0fba cd0b1f        	call	_DF_buffer_read
+7401  0fbd 5b04          	addw	sp,#4
+7402                     ; 1406 					delay_ms(10);
+7404  0fbf ae000a        	ldw	x,#10
+7405  0fc2 cd0060        	call	_delay_ms
+7407                     ; 1407 					DF_buffer_read(/*///current_buffer_L*//*1,*/128,128,&buff[128]);         
+7409  0fc5 ae00d0        	ldw	x,#_buff+128
+7410  0fc8 89            	pushw	x
+7411  0fc9 ae0080        	ldw	x,#128
+7412  0fcc 89            	pushw	x
+7413  0fcd ae0080        	ldw	x,#128
+7414  0fd0 cd0b1f        	call	_DF_buffer_read
+7416  0fd3 5b04          	addw	sp,#4
+7417  0fd5               L1633:
+7418                     ; 1409 				if(memory_manufacturer=='S') 
+7420  0fd5 b6bc          	ld	a,_memory_manufacturer
+7421  0fd7 a153          	cp	a,#83
+7422  0fd9 2615          	jrne	L3633
+7423                     ; 1411 					ST_READ(0,256,buff);
+7425  0fdb ae0050        	ldw	x,#_buff
+7426  0fde 89            	pushw	x
+7427  0fdf ae0100        	ldw	x,#256
+7428  0fe2 89            	pushw	x
+7429  0fe3 ae0000        	ldw	x,#0
+7430  0fe6 89            	pushw	x
+7431  0fe7 ae0000        	ldw	x,#0
+7432  0fea 89            	pushw	x
+7433  0feb cd0a1d        	call	_ST_READ
+7435  0fee 5b08          	addw	sp,#8
+7436  0ff0               L3633:
+7437                     ; 1413 				play=1;
+7439  0ff0 72100004      	bset	_play
+7440                     ; 1414 				bSTART=0;
+7442  0ff4 7211000c      	bres	_bSTART
+7443                     ; 1416 				rele_cnt=rele_cnt_const[rele_cnt_index];
+7445  0ff8 b6bb          	ld	a,_rele_cnt_index
+7446  0ffa 5f            	clrw	x
+7447  0ffb 97            	ld	xl,a
+7448  0ffc d60000        	ld	a,(_rele_cnt_const,x)
+7449  0fff 5f            	clrw	x
+7450  1000 97            	ld	xl,a
+7451  1001 bf05          	ldw	_rele_cnt,x
+7452  1003               L7433:
+7453                     ; 1425 	if(b10Hz)
+7455                     	btst	_b10Hz
+7456  1008 2441          	jruge	L5633
+7457                     ; 1427 		b10Hz=0;
+7459  100a 72110007      	bres	_b10Hz
+7460                     ; 1429 		rele_drv();
+7462  100e cd004a        	call	_rele_drv
+7464                     ; 1430 		pwm_fade_in++;
+7466  1011 3cba          	inc	_pwm_fade_in
+7467                     ; 1431 		if(pwm_fade_in>128)pwm_fade_in=128;
+7469  1013 b6ba          	ld	a,_pwm_fade_in
+7470  1015 a181          	cp	a,#129
+7471  1017 2504          	jrult	L7633
+7474  1019 358000ba      	mov	_pwm_fade_in,#128
+7475  101d               L7633:
+7476                     ; 1433 		if(current_page_cnt)
+7478  101d 3d01          	tnz	_current_page_cnt
+7479  101f 272a          	jreq	L5633
+7480                     ; 1435 			current_page_cnt--;
+7482  1021 3a01          	dec	_current_page_cnt
+7483                     ; 1436 			if(!current_page_cnt)
+7485  1023 3d01          	tnz	_current_page_cnt
+7486  1025 2624          	jrne	L5633
+7487                     ; 1438 				uart_out (5,CMND,21,current_page%256,current_page/256,1,0);
+7489  1027 4b00          	push	#0
+7490  1029 4b01          	push	#1
+7491  102b 3b0011        	push	_current_page
+7492  102e b612          	ld	a,_current_page+1
+7493  1030 a4ff          	and	a,#255
+7494  1032 88            	push	a
+7495  1033 4b15          	push	#21
+7496  1035 ae0016        	ldw	x,#22
+7497  1038 a605          	ld	a,#5
+7498  103a 95            	ld	xh,a
+7499  103b cd00d2        	call	_uart_out
+7501  103e 5b05          	addw	sp,#5
+7502                     ; 1439 				current_page_cnt=10;
+7504  1040 350a0001      	mov	_current_page_cnt,#10
+7505                     ; 1440 				current_page_cnt_=4;
+7507  1044 35040000      	mov	_current_page_cnt_,#4
+7508                     ; 1441 				current_byte_in_buffer=0;
+7510  1048 5f            	clrw	x
+7511  1049 bf0d          	ldw	_current_byte_in_buffer,x
+7512  104b               L5633:
+7513                     ; 1447 	if(b5Hz)
+7515                     	btst	_b5Hz
+7516  1050 2404          	jruge	L5733
+7517                     ; 1449 		b5Hz=0;
+7519  1052 72110006      	bres	_b5Hz
+7520  1056               L5733:
+7521                     ; 1455 	if(b1Hz)
+7523                     	btst	_b1Hz
+7524  105b 2503          	jrult	L661
+7525  105d cc0ea4        	jp	L5133
+7526  1060               L661:
+7527                     ; 1458 		b1Hz=0;
+7529  1060 72110005      	bres	_b1Hz
+7530  1064 aca40ea4      	jpf	L5133
+8044                     	xdef	_main
+8045                     	switch	.ubsct
+8046  0000               _current_page_cnt_:
+8047  0000 00            	ds.b	1
+8048                     	xdef	_current_page_cnt_
+8049  0001               _current_page_cnt:
+8050  0001 00            	ds.b	1
+8051                     	xdef	_current_page_cnt
+8052                     .eeprom:	section	.data
+8053  0000               _EE_PAGE_LEN:
+8054  0000 0000          	ds.b	2
+8055                     	xdef	_EE_PAGE_LEN
+8056                     	switch	.bss
+8057  0000               _UIB:
+8058  0000 000000000000  	ds.b	80
+8059                     	xdef	_UIB
+8060  0050               _buff:
+8061  0050 000000000000  	ds.b	300
+8062                     	xdef	_buff
+8063  017c               _dumm:
+8064  017c 000000000000  	ds.b	100
+8065                     	xdef	_dumm
+8066                     .bit:	section	.data,bit
+8067  0000               _bRELEASE:
+8068  0000 00            	ds.b	1
+8069                     	xdef	_bRELEASE
+8070  0001               _rx_buffer_overflow:
+8071  0001 00            	ds.b	1
+8072                     	xdef	_rx_buffer_overflow
+8073  0002               _bRXIN:
+8074  0002 00            	ds.b	1
+8075                     	xdef	_bRXIN
+8076  0003               _bOUT_FREE:
+8077  0003 00            	ds.b	1
+8078                     	xdef	_bOUT_FREE
+8079  0004               _play:
+8080  0004 00            	ds.b	1
+8081                     	xdef	_play
+8082  0005               _b1Hz:
+8083  0005 00            	ds.b	1
+8084                     	xdef	_b1Hz
+8085  0006               _b5Hz:
+8086  0006 00            	ds.b	1
+8087                     	xdef	_b5Hz
+8088  0007               _b10Hz:
+8089  0007 00            	ds.b	1
+8090                     	xdef	_b10Hz
+8091  0008               _b100Hz:
+8092  0008 00            	ds.b	1
+8093                     	xdef	_b100Hz
+8094  0009               _bBUFF_READ_L:
+8095  0009 00            	ds.b	1
+8096                     	xdef	_bBUFF_READ_L
+8097  000a               _bBUFF_READ_H:
+8098  000a 00            	ds.b	1
+8099                     	xdef	_bBUFF_READ_H
+8100  000b               _bBUFF_LOAD:
+8101  000b 00            	ds.b	1
+8102                     	xdef	_bBUFF_LOAD
+8103  000c               _bSTART:
+8104  000c 00            	ds.b	1
+8105                     	xdef	_bSTART
+8106                     	switch	.ubsct
+8107  0002               _but_block_cnt:
+8108  0002 0000          	ds.b	2
+8109                     	xdef	_but_block_cnt
+8110                     	xdef	_memory_manufacturer
+8111                     	xdef	_rele_cnt_const
+8112                     	xdef	_rele_cnt_index
+8113                     	xdef	_pwm_fade_in
+8114  0004               _rx_offset:
+8115  0004 00            	ds.b	1
+8116                     	xdef	_rx_offset
+8117  0005               _rele_cnt:
+8118  0005 0000          	ds.b	2
+8119                     	xdef	_rele_cnt
+8120  0007               _rx_data:
+8121  0007 00            	ds.b	1
+8122                     	xdef	_rx_data
+8123  0008               _rx_status:
+8124  0008 00            	ds.b	1
+8125                     	xdef	_rx_status
+8126  0009               _file_lengt:
+8127  0009 00000000      	ds.b	4
+8128                     	xdef	_file_lengt
+8129  000d               _current_byte_in_buffer:
+8130  000d 0000          	ds.b	2
+8131                     	xdef	_current_byte_in_buffer
+8132  000f               _last_page:
+8133  000f 0000          	ds.b	2
+8134                     	xdef	_last_page
+8135  0011               _current_page:
+8136  0011 0000          	ds.b	2
+8137                     	xdef	_current_page
+8138  0013               _file_lengt_in_pages:
+8139  0013 0000          	ds.b	2
+8140                     	xdef	_file_lengt_in_pages
+8141  0015               _mdr3:
+8142  0015 00            	ds.b	1
+8143                     	xdef	_mdr3
+8144  0016               _mdr2:
+8145  0016 00            	ds.b	1
+8146                     	xdef	_mdr2
+8147  0017               _mdr1:
+8148  0017 00            	ds.b	1
+8149                     	xdef	_mdr1
+8150  0018               _mdr0:
+8151  0018 00            	ds.b	1
+8152                     	xdef	_mdr0
+8153                     	xdef	_but_on_drv_cnt
+8154                     	xdef	_but_drv_cnt
+8155  0019               _sample:
+8156  0019 00            	ds.b	1
+8157                     	xdef	_sample
+8158  001a               _rx_rd_index:
+8159  001a 0000          	ds.b	2
+8160                     	xdef	_rx_rd_index
+8161  001c               _rx_wr_index:
+8162  001c 0000          	ds.b	2
+8163                     	xdef	_rx_wr_index
+8164  001e               _rx_counter:
+8165  001e 0000          	ds.b	2
+8166                     	xdef	_rx_counter
+8167                     	xdef	_rx_buffer
+8168  0020               _tx_rd_index:
+8169  0020 00            	ds.b	1
+8170                     	xdef	_tx_rd_index
+8171  0021               _tx_wr_index:
+8172  0021 00            	ds.b	1
+8173                     	xdef	_tx_wr_index
+8174  0022               _tx_counter:
+8175  0022 00            	ds.b	1
+8176                     	xdef	_tx_counter
+8177                     	xdef	_tx_buffer
+8178  0023               _sample_cnt:
+8179  0023 0000          	ds.b	2
+8180                     	xdef	_sample_cnt
+8181                     	xdef	_t0_cnt3
+8182                     	xdef	_t0_cnt2
+8183                     	xdef	_t0_cnt1
+8184                     	xdef	_t0_cnt0
+8185                     	xdef	_ST_bulk_erase
+8186                     	xdef	_ST_READ
+8187                     	xdef	_ST_WRITE
+8188                     	xdef	_ST_WREN
+8189                     	xdef	_ST_status_read
+8190                     	xdef	_ST_RDID_read
+8191                     	xdef	_uart_in_an
+8192                     	xdef	_control_check
+8193                     	xdef	_index_offset
+8194                     	xdef	_uart_in
+8195                     	xdef	_gpio_init
+8196                     	xdef	_spi_init
+8197                     	xdef	_spi
+8198                     	xdef	_DF_buffer_to_page_er
+8199                     	xdef	_DF_page_to_buffer
+8200                     	xdef	_DF_buffer_write
+8201                     	xdef	_DF_buffer_read
+8202                     	xdef	_DF_status_read
+8203                     	xdef	_DF_memo_to_256
+8204                     	xdef	_DF_mf_dev_read
+8205                     	xdef	_uart_init
+8206                     	xdef	f_UARTRxInterrupt
+8207                     	xdef	f_UARTTxInterrupt
+8208                     	xdef	_putchar
+8209                     	xdef	_uart_out_adr_block
+8210                     	xdef	_uart_out
+8211                     	xdef	f_TIM4_UPD_Interrupt
+8212                     	xdef	_delay_ms
+8213                     	xdef	_rele_drv
+8214                     	xdef	_t4_init
+8215                     	xdef	_t2_init
+8216                     	xref.b	c_lreg
+8217                     	xref.b	c_x
+8218                     	xref.b	c_y
+8238                     	xref	c_ladc
+8239                     	xref	c_itolx
+8240                     	xref	c_umul
+8241                     	xref	c_eewrw
+8242                     	xref	c_lglsh
+8243                     	xref	c_uitolx
+8244                     	xref	c_lgursh
+8245                     	xref	c_lcmp
+8246                     	xref	c_ltor
+8247                     	xref	c_lgadc
+8248                     	xref	c_rtol
+8249                     	xref	c_vmul
+8250                     	end

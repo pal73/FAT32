@@ -24,10 +24,13 @@ FILE *F;
 AnsiString SName = "Неизвестен";
 unsigned file_lengt;
 char block_cnt;
+char err_cnt;
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
 {
+//ComPort1->Port=COM9;
+ComboBox1->ItemIndex=8;
 }
 //---------------------------------------------------------------------------
 
@@ -76,12 +79,14 @@ Memo1->Clear();
 //---------------------------------------------------------------------------
 void __fastcall TForm1::FormCreate(TObject *Sender)
 {
-ComboBox1->ItemIndex=0;
+ComboBox1->ItemIndex=8;
 //Memo1->Clear();
 ComboBox4->ItemIndex=0;
 ComboBox2->ItemIndex=0;
 ComboBox3->ItemIndex=0;
-//mboBox6->ItemIndex=1;	
+//mboBox6->ItemIndex=1;
+CheckBox1->Checked=true;
+CheckBox1->Checked=false;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button2Click(TObject *Sender)
@@ -186,6 +191,26 @@ for (i=0;i<64;i++)
 UOB[66]=66;
 t^=UOB[66];
 UOB[67]=t;
+UOB[68]=0x0a;
+
+ComPort1->Write(UOB,69);
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::out_adr_blok_to_page_err(char* ptr)
+{
+char i,t=0;
+UOB[0]=CMND;
+UOB[1]=21;
+t= UOB[0]^UOB[1];
+for (i=0;i<64;i++)
+	{
+     UOB[i+2]=ptr[i];
+	t^=UOB[i+2];
+	}
+UOB[66]=66;
+t^=UOB[66];
+UOB[67]=~t;
 UOB[68]=0x0a;
 
 ComPort1->Write(UOB,69);
@@ -302,19 +327,37 @@ if((UIB[0]==CMND)&&(UIB[1]==21))
 
 
 
-     Memo1->Lines->Add("Запрос страницы " + IntToStr(*((short*)&UIB[2])));
-     if(!block_cnt)out_adr_blok_to_page( &damp[ (*((short*)&UIB[2]))*256 ] );
+     if(UIB[4]==0)	Memo1->Lines->Add("Запрос страницы " + IntToStr(*((short*)&UIB[2])));
+     else 		Memo1->Lines->Add("Повторный запрос страницы " + IntToStr(*((short*)&UIB[2])));
+
+     if(!block_cnt)
+     	{
+          out_adr_blok_to_page( &damp[ (*((short*)&UIB[2]))*256 ] );
+          Sleep(20);
+     	out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+64 ]);
+          }
      else
         {
         block_cnt--;
         Label4->Caption=IntToStr(block_cnt);
         }
-     Sleep(50);
-     out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+64 ]);
-     Sleep(50);
-     out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+128 ]);
-     Sleep(50);
-     out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+192 ]); 
+
+     Sleep(20);
+     if(err_cnt)
+     	{
+          out_adr_blok_to_page_err( &damp[ ((*((short*)&UIB[2]))*256)+128 ]);
+          err_cnt--;
+          Label7->Caption=IntToStr(err_cnt);
+          }
+     else out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+128 ]);
+     Sleep(20);
+     out_adr_blok_to_page( &damp[ ((*((short*)&UIB[2]))*256)+192 ]);
+     }
+
+else if((UIB[0]==CMND)&&(UIB[1]==26))  		//Запрос телеметрии
+	{
+     Label5->Caption= IntToStr(UIB[2]);
+     Label6->Caption= IntToStr(UIB[3]);
      }
 
 if((UIB[0]==CMND)&&(UIB[1]==11))
@@ -544,8 +587,89 @@ Memo1->Lines->Add("Стирание микросхемы");
 
 void __fastcall TForm1::Button20Click(TObject *Sender)
 {
- block_cnt=20;
+ block_cnt=10;
  Label4->Caption=IntToStr(block_cnt);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button21Click(TObject *Sender)
+{
+ block_cnt=0;
+ err_cnt=0;
+ Label4->Caption=IntToStr(block_cnt);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button22Click(TObject *Sender)
+{
+uart_out_out(3,CMND,26,1,0,0,0,0,0);
+Memo1->Lines->Add("Запрос телеметрии");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button23Click(TObject *Sender)
+{
+err_cnt=10;
+Label7->Caption=IntToStr(err_cnt);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::CheckBox1Click(TObject *Sender)
+{
+if(CheckBox1->Checked)
+	{
+     Button20->Visible=true;
+     Button21->Visible=true;
+     Button22->Visible=true;
+     Button23->Visible=true;
+     Label4->Visible=true;
+     Label5->Visible=true;
+     Label6->Visible=true;
+     Label7->Visible=true;
+     Button5->Visible=true;
+     Button6->Visible=true;
+     Button7->Visible=true;
+     Button8->Visible=true;
+     Button18->Visible=true;
+     Button11->Visible=true;
+     Button12->Visible=true;
+     Button13->Visible=true;
+     Button9->Visible=true;
+     Button10->Visible=true;
+     ComboBox4->Visible=true;
+     ComboBox2->Visible=true;
+     ComboBox3->Visible=true;
+     Label1->Visible=true;
+     Label2->Visible=true;
+     Label3->Visible=true;
+     }
+else
+	{
+     Button20->Visible=false;
+     Button21->Visible=false;
+     Button22->Visible=false;
+	Button23->Visible=false;
+     Label4->Visible=false;
+     Label5->Visible=false;
+     Label6->Visible=false;
+     Label7->Visible=false;
+     Button5->Visible=false;
+     Button6->Visible=false;
+     Button7->Visible=false;
+	Button8->Visible=false;
+     Button18->Visible=false;
+     Button11->Visible=false;
+     Button12->Visible=false;
+	Button13->Visible=false;
+     Button9->Visible=false;
+	Button10->Visible=false;
+     ComboBox4->Visible=false;
+     ComboBox2->Visible=false;
+     ComboBox3->Visible=false;
+     Label1->Visible=false;
+     Label2->Visible=false;
+     Label3->Visible=false;
+	}
 }
 //---------------------------------------------------------------------------
 
