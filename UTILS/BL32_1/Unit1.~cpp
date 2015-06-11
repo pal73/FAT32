@@ -77,9 +77,9 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 {
 ComboBox1->ItemIndex=2;
 Memo1->Clear();
-ComboBox4->ItemIndex=0;
-ComboBox2->ItemIndex=0;
-ComboBox3->ItemIndex=0;
+//ComboBox4->ItemIndex=0;
+//ComboBox2->ItemIndex=0;
+//ComboBox3->ItemIndex=0;
 //mboBox6->ItemIndex=1;	
 }
 //---------------------------------------------------------------------------
@@ -320,6 +320,15 @@ if((UIB[0]==CMND)&&(UIB[1]==11))
           else if(UIB[7]==0x0a)Memo1->Lines->Add("Поиск файла \"" + AnsiString(UIB[3]) + AnsiString(UIB[4]) + ".wav\"");
           }
 	}
+
+if((UIB[0]==CMND)&&(UIB[1]==33))
+        {
+        Memo1->Lines->Add("Стирание микросхемы завершено");
+ 	}
+if((UIB[0]==CMND)&&(UIB[1]==44))
+        {
+        Memo1->Lines->Add("Стирание микросхемы инициализировано");
+ 	}
 }
 
 
@@ -496,7 +505,7 @@ adr[2]=temp_adress%256;
 temp_adress/=256;
 adr[3]=temp_adress%256;
 
-uart_out_out(4,CMND,91,adr[0],adr[1],adr[2],adr[3],0,0);
+uart_out_out(6,CMND,91,adr[0],adr[1],adr[2],adr[3],0,0);
 }
 //---------------------------------------------------------------------------
 
@@ -514,7 +523,7 @@ adr[2]=temp_adress%256;
 temp_adress/=256;
 adr[3]=temp_adress%256;
 
-uart_out_out(4,CMND,92,adr[0],adr[1],adr[2],adr[3],0,0);
+uart_out_out(6,CMND,92,adr[0],adr[1],adr[2],adr[3],0,0);
 }
 //---------------------------------------------------------------------------
 
@@ -532,22 +541,32 @@ adr[2]=temp_adress%256;
 temp_adress/=256;
 adr[3]=temp_adress%256;
 
-uart_out_out(4,CMND,93,adr[0],adr[1],adr[2],adr[3],0,0);}
+uart_out_out(6,CMND,93,adr[0],adr[1],adr[2],adr[3],0,0);}
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::Button10Click(TObject *Sender)
 {
-uart_out_out(4,CMND,13,(ComboBox2->ItemIndex)+1,(ComboBox3->ItemIndex),0,0,0,0);
-Memo1->Lines->Add("Чтение страниц "+IntToStr(ComboBox3->ItemIndex)+ " в буфер "+IntToStr((ComboBox2->ItemIndex)+1));
+uart_out_out(4,CMND,13,0,0,0,0,0,0);
+Memo1->Lines->Add("Чтение страниц "+IntToStr(0)+ " в буфер "+IntToStr((0)+1));
 	
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::Button9Click(TObject *Sender)
 {
-uart_out_out(4,CMND,14,(ComboBox2->ItemIndex)+1,(ComboBox3->ItemIndex),0,0,0,0);
-Memo1->Lines->Add("Чтение страниц "+IntToStr(ComboBox3->ItemIndex)+ " в буфер "+IntToStr((ComboBox2->ItemIndex)+1));
+int temp_adress;
+char adr[4];
+temp_adress= StrToInt(Edit2->Text);
+Memo1->Lines->Add("Чтение 256 байт по адресу " + IntToStr(temp_adress));
+adr[0]=temp_adress%256;
+temp_adress/=256;
+adr[1]=temp_adress%256;
+temp_adress/=256;
+adr[2]=temp_adress%256;
+temp_adress/=256;
+adr[3]=temp_adress%256; 
 
+uart_out_out(6,CMND,81,adr[0],adr[1],adr[2],adr[3],0,0);
 }
 //---------------------------------------------------------------------------
 
@@ -561,11 +580,18 @@ Memo1->Lines->Add("Инициализация записи "+IntToStr(file_lengt)+" байт со страниц
 
 void __fastcall TForm1::Button19Click(TObject *Sender)
 {
-uart_out_out(3,CMND,55,1,0,0,0,0,0);
-Memo1->Lines->Add("Стирание микросхемы");
+uart_out_out(3,CMND,100,1,0,0,0,0,0);
+//Memo1->Lines->Add("Стирание микросхемы");
 }
 //---------------------------------------------------------------------------
 
 
 
+
+
+void __fastcall TForm1::Button17Click(TObject *Sender)
+{
+uart_out_out(3,CMND,101,1,0,0,0,0,0);
+}
+//---------------------------------------------------------------------------
 
