@@ -6,5 +6,3 @@ stm8_interrupt_vector.c
 c:\program files\cosmic\cxstm8_32k\hstm8\iostm8s103.h
 c:\program files\cosmic\cxstm8_32k\hstm8\mods0.h
 main.h
-uart1.c
-uart1.h
