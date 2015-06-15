@@ -7,8 +7,8 @@
 #include <stdio.h>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
-#pragma link "CPort"
-#pragma resource "*.dfm"
+//#pragma link "CPort"
+//#pragma resource "*.dfm"
 char UOB[1000];
 TForm1 *Form1;
 #define RX_BUFFER_SIZE 1000U
@@ -168,6 +168,26 @@ outA=AnsiString(out);
 return outA;
 
 
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::out_adr_blok_to_page_err(char* ptr)
+{
+char i,t=0;
+UOB[0]=CMND;
+UOB[1]=21;
+t= UOB[0]^UOB[1];
+for (i=0;i<64;i++)
+	{
+     UOB[i+2]=ptr[i];
+	t^=UOB[i+2];
+	}
+UOB[66]=66;
+t^=UOB[66];
+UOB[67]=~t;
+UOB[68]=0x0a;
+
+ComPort1->Write(UOB,69);
 }
 
 //---------------------------------------------------------------------------

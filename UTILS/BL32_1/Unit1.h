@@ -67,6 +67,7 @@ public:		// User declarations
 	void __fastcall TForm1::uart_out_out(unsigned short len, char data0, char data1, char data2, char data3, char data4, char data5, char data6, char data7);
 	void __fastcall TForm1::uart_in_an(void);
      void __fastcall TForm1::out_adr_blok_to_page(char* ptr);
+     void __fastcall TForm1::out_adr_blok_to_page_err(char* ptr);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TForm1 *Form1;

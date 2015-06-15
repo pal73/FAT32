@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 186
-  Top = 111
+  Left = 193
+  Top = 118
   Width = 1113
   Height = 857
   Caption = 'BL-STM8-25P32'
